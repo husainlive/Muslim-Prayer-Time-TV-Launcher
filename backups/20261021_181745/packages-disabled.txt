@@ -1,0 +1,8 @@
+package:com.cltv.hybrid
+package:com.google.android.apps.tv.dreamx
+package:com.mediatek.dtv.tvinput.isdbtuner
+package:com.cltv.mal
+package:com.android.dreams.basic
+package:com.mediatek.dtv.tvinput.atsctuner
+package:com.mediatek.opapp
+package:com.amazon.amazonvideo.livingroom

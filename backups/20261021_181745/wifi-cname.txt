@@ -1,0 +1,16 @@
+cname=com.google.android.tungsten.setupwraith
+cname=android.uid.system:1000
+cname=android.uid.system:1000
+cname=android.uid.system:1000
+cname=com.google.android.tungsten.setupwraith
+cname=android.uid.system:1000
+cname=android.uid.system:1000
+cname=android.uid.system:1000
+cname=com.google.android.tungsten.setupwraith
+cname=android.uid.system:1000
+cname=android.uid.system:1000
+cname=android.uid.system:1000
+cname=android.uid.system:1000
+cname=android.uid.system:1000
+cname=com.google.android.tungsten.setupwraith
+cname=android.uid.system:1000

@@ -1,0 +1,310 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.gathin.tvhome"
+4    android:versionCode="6"
+5    android:versionName="2.5" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-feature
+11-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:5:5-87
+12        android:name="android.software.leanback"
+12-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:5:19-59
+13        android:required="false" />
+13-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:5:60-84
+14    <uses-feature
+14-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:6:5-90
+15        android:name="android.hardware.touchscreen"
+15-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:6:19-62
+16        android:required="false" />
+16-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:6:63-87
+17    <uses-feature
+17-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:7:5-83
+18        android:name="android.hardware.wifi"
+18-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:7:19-55
+19        android:required="false" />
+19-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:7:56-80
+20    <uses-feature
+20-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:8:5-91
+21        android:name="android.hardware.location.gps"
+21-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:8:19-63
+22        android:required="false" />
+22-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:8:64-88
+23
+24    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+24-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:10:5-79
+24-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:10:22-76
+25    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+25-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:11:5-76
+25-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:11:22-73
+26    <!--
+27         Needed since Android 10 to read the Wi-Fi network name for the network pill. Never requested at
+28         runtime: build-and-install grants it with pm grant, so lint's Android 12 "ask for COARSE with
+29         FINE" rule does not apply here.
+30    -->
+31    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+31-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:15:5-16:45
+31-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:15:22-76
+32    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+32-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:17:5-82
+32-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:17:22-79
+33
+34    <!--
+35         Android 11+ package visibility: lets the launcher list the TV apps it shows as tiles, and the
+36         apps that declare a module card (docs/specs/card.md).
+37    -->
+38    <queries>
+38-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:21:5-36:15
+39        <intent>
+39-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:22:9-25:18
+40            <action android:name="android.intent.action.MAIN" />
+40-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:23:13-65
+40-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:23:21-62
+41
+42            <category android:name="android.intent.category.LAUNCHER" />
+42-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:24:13-73
+42-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:24:23-70
+43        </intent>
+44        <intent>
+44-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:26:9-29:18
+45            <action android:name="android.intent.action.MAIN" />
+45-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:23:13-65
+45-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:23:21-62
+46
+47            <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+47-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:28:13-82
+47-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:28:23-79
+48        </intent>
+49        <intent>
+49-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:30:9-33:18
+50            <action android:name="android.intent.action.MAIN" />
+50-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:23:13-65
+50-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:23:21-62
+51
+52            <category android:name="com.gathin.tvhome.category.DOCK_CARD" />
+52-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:32:13-77
+52-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:32:23-74
+53        </intent>
+54        <!-- China-market MIUI TV firmware: the Settings and Wi-Fi pills fall back to Xiaomi's settings app. -->
+55        <package android:name="com.xiaomi.mitv.settings" />
+55-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:35:9-60
+55-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:35:18-57
+56    </queries>
+57
+58    <application
+58-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:38:5-146:19
+59        android:allowBackup="false"
+59-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:43:9-36
+60        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+60-->[androidx.core:core:1.7.0] /home/husainpc/.gradle/caches/8.9/transforms/3afe7fa58a47c7b182ae0caccac05374/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+61        android:banner="@drawable/banner"
+61-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:41:9-42
+62        android:extractNativeLibs="false"
+63        android:icon="@mipmap/ic_launcher"
+63-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:40:9-43
+64        android:label="@string/app_name"
+64-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:39:9-41
+65        android:localeConfig="@xml/locales_config"
+65-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:44:9-51
+66        android:theme="@style/Theme.TvHome" >
+66-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:42:9-44
+67        <activity
+67-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:46:9-65:20
+68            android:name="com.gathin.tvhome.MainActivity"
+68-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:47:13-41
+69            android:clearTaskOnLaunch="true"
+69-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:52:13-45
+70            android:configChanges="orientation|screenSize|keyboard|keyboardHidden|uiMode"
+70-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:53:13-90
+71            android:excludeFromRecents="true"
+71-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:51:13-46
+72            android:exported="true"
+72-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:48:13-36
+73            android:launchMode="singleTask"
+73-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:49:13-44
+74            android:screenOrientation="landscape"
+74-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:54:13-50
+75            android:stateNotNeeded="true" >
+75-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:50:13-42
+76            <intent-filter>
+76-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:55:13-59:29
+77                <action android:name="android.intent.action.MAIN" />
+77-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:23:13-65
+77-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:23:21-62
+78
+79                <category android:name="android.intent.category.HOME" />
+79-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:57:17-73
+79-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:57:27-70
+80                <category android:name="android.intent.category.DEFAULT" />
+80-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:58:17-76
+80-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:58:27-73
+81            </intent-filter>
+82            <!-- Listed in the TV's own app list, so it can be opened from the stock home screen too. -->
+83            <intent-filter>
+83-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:61:13-64:29
+84                <action android:name="android.intent.action.MAIN" />
+84-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:23:13-65
+84-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:23:21-62
+85
+86                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+86-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:28:13-82
+86-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:28:23-79
+87            </intent-filter>
+88        </activity>
+89        <activity
+89-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:67:9-71:53
+90            android:name="com.gathin.tvhome.LauncherSettingsActivity"
+90-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:68:13-53
+91            android:excludeFromRecents="true"
+91-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:70:13-46
+92            android:exported="false"
+92-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:69:13-37
+93            android:screenOrientation="landscape" />
+93-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:71:13-50
+94        <!-- Remote Settings button panel (settings_key_panel); own task so the app behind stays put. -->
+95        <activity
+95-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:73:9-81:86
+96            android:name="com.gathin.tvhome.QuickSettingsActivity"
+96-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:74:13-50
+97            android:excludeFromRecents="true"
+97-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:78:13-46
+98            android:exported="false"
+98-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:75:13-37
+99            android:launchMode="singleTop"
+99-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:77:13-43
+100            android:noHistory="true"
+100-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:79:13-37
+101            android:screenOrientation="landscape"
+101-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:80:13-50
+102            android:taskAffinity=""
+102-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:76:13-36
+103            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+103-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:81:13-83
+104        <activity
+104-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:82:9-87:62
+105            android:name="com.gathin.tvhome.HomeSettingsActivity"
+105-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:83:13-49
+106            android:excludeFromRecents="true"
+106-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:86:13-46
+107            android:exported="false"
+107-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:84:13-37
+108            android:taskAffinity=""
+108-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:85:13-36
+109            android:theme="@android:style/Theme.NoDisplay" />
+109-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:87:13-59
+110        <!--
+111             Home button for remotes that send KEYCODE_ALL_APPS (Xiaomi). Opt-in: HOME_KEY_SERVICE=1
+112             build-and-install.sh; see HomeKeyService.
+113        -->
+114        <service
+114-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:90:9-101:19
+115            android:name="com.gathin.tvhome.HomeKeyService"
+115-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:91:13-43
+116            android:exported="true"
+116-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:93:13-36
+117            android:label="@string/home_key_name"
+117-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:92:13-50
+118            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
+118-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:94:13-79
+119            <intent-filter>
+119-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:95:13-97:29
+120                <action android:name="android.accessibilityservice.AccessibilityService" />
+120-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:96:17-92
+120-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:96:25-89
+121            </intent-filter>
+122
+123            <meta-data
+123-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:98:13-100:60
+124                android:name="android.accessibilityservice"
+124-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:99:17-60
+125                android:resource="@xml/home_key_service" />
+125-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:100:17-57
+126        </service>
+127
+128        <!-- The same clock, started by Home itself after home_idle_clock_minutes without input. -->
+129        <activity
+129-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:104:9-109:80
+130            android:name="com.gathin.tvhome.ClockActivity"
+130-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:105:13-42
+131            android:excludeFromRecents="true"
+131-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:107:13-46
+132            android:exported="false"
+132-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:106:13-37
+133            android:noHistory="true"
+133-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:108:13-37
+134            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+134-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:109:13-77
+135
+136        <!--
+137             Screensaver: pick it in Settings, or `settings put secure screensaver_components
+138             com.gathin.tvhome/.ClockDream` over adb.
+139        -->
+140        <service
+140-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:113:9-122:19
+141            android:name="com.gathin.tvhome.ClockDream"
+141-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:114:13-39
+142            android:exported="true"
+142-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:116:13-36
+143            android:label="@string/dream_name"
+143-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:115:13-47
+144            android:permission="android.permission.BIND_DREAM_SERVICE" >
+144-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:117:13-71
+145            <intent-filter>
+145-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:118:13-121:29
+146                <action android:name="android.service.dreams.DreamService" />
+146-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:119:17-78
+146-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:119:25-75
+147
+148                <category android:name="android.intent.category.DEFAULT" />
+148-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:58:17-76
+148-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:58:27-73
+149            </intent-filter>
+150        </service>
+151
+152        <!--
+153             tools/theme.sh writes the theme through this where the shell can't reach Android/data;
+154             see ThemeProvider. WRITE_SECURE_SETTINGS: the adb shell has it, ordinary apps don't.
+155        -->
+156        <provider
+157            android:name="com.gathin.tvhome.ThemeProvider"
+157-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:127:13-42
+158            android:authorities="com.gathin.tvhome.theme"
+158-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:128:13-57
+159            android:exported="true"
+159-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:129:13-36
+160            android:permission="android.permission.WRITE_SECURE_SETTINGS" />
+160-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:130:13-74
+161
+162        <!--
+163         The remote's Input button (KEYCODE_TV or KEYCODE_TV_INPUT) opens the input switcher, and input_key_keycodes and
+164         app_keys (config.xml or a theme) bring back other remote buttons; see InputKeyService.
+165        -->
+166        <service
+166-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:134:9-145:19
+167            android:name="com.gathin.tvhome.InputKeyService"
+167-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:135:13-44
+168            android:exported="false"
+168-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:136:13-37
+169            android:label="@string/app_name"
+169-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:137:13-45
+170            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
+170-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:138:13-79
+171            <intent-filter>
+171-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:95:13-97:29
+172                <action android:name="android.accessibilityservice.AccessibilityService" />
+172-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:96:17-92
+172-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:96:25-89
+173            </intent-filter>
+174
+175            <meta-data
+175-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:98:13-100:60
+176                android:name="android.accessibilityservice"
+176-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:99:17-60
+177                android:resource="@xml/input_key_service" />
+177-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:100:17-57
+178        </service>
+179    </application>
+180
+181</manifest>

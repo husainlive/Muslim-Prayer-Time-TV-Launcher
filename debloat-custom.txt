@@ -1,0 +1,24 @@
+# Custom debloat for Skyworth SWTV-24AE-4K NF
+# Generated based on user preferences on 2026-10-21
+
+# Skyworth telemetry and trackers
+com.smartdevice.recordactivation
+com.google.android.feedback
+com.android.tv.feedbackconsent
+
+# Android ad and personalization services
+com.android.ondevicepersonalization.services
+com.android.federatedcompute.services
+
+# Unused system services / bloat
+com.android.healthconnect.controller
+com.android.health.connect.backuprestore
+com.smartdevice.leanbacklauncher.customizer
+
+# Voice assistant (not selected by user)
+com.google.android.katniss
+com.android.hotwordenrollment.okgoogle
+com.android.hotwordenrollment.xgoogle
+
+# Chromecast (not selected by user)
+com.google.android.apps.mediashell
