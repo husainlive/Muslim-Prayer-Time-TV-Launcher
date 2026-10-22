@@ -86,6 +86,7 @@ id ambient
 id ampm
 id animationsChoice
 id app
+id azanSleepModeChoice
 id azanSoundChoice
 id azanSoundEnabledChoice
 id banner
@@ -266,6 +267,7 @@ string good_afternoon
 string good_evening
 string good_morning
 string good_night
+string greeting_islamic
 string greeting_name
 string greeting_with_name
 string hijri_adjustment
@@ -302,6 +304,8 @@ string not_connected
 string off
 string offline
 string on
+string permission_battery_message
+string permission_battery_title
 string permission_overlay_message
 string permission_overlay_title
 string permissions_dialog_title
@@ -311,6 +315,8 @@ string prayer_adjustments_hint
 string prayer_asr
 string prayer_azan_section
 string prayer_azan_section_hint
+string prayer_azan_sleep_mode
+string prayer_azan_sleep_mode_hint
 string prayer_azan_sound_enabled
 string prayer_dhuhr
 string prayer_fajr
@@ -325,6 +331,7 @@ string prayer_refresh_failed
 string prayer_refreshed
 string prayer_select_azan
 string prayer_settings
+string prayer_settings_state
 string prayer_show_bar
 string prayer_sunrise
 string prayer_test_alert_now
@@ -349,12 +356,14 @@ string reorder_hint
 string reorder_not_saved
 string reset_adjustments
 string rows_below_dock_label
+string screensaver_adb_synced
 string screensaver_app
 string screensaver_builtin_clock
 string screensaver_choose_from_apps
 string screensaver_enable
 string screensaver_minute_singular
 string screensaver_minutes_format
+string screensaver_off_turn_off_screen
 string screensaver_preview
 string screensaver_select_app
 string screensaver_select_installed_app

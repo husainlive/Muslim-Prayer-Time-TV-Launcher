@@ -190,10 +190,11 @@
     <string name="ethernet">Ethernet</string>
     <string name="follow_theme">Follow theme (reset on-TV choices)</string>
     <string name="follow_theme_hint">Uses the current theme or built-in layout and motion settings. Pushing or resetting a theme also clears your on-TV choices.</string>
-    <string name="good_afternoon">Good afternoon</string>
-    <string name="good_evening">Good evening</string>
-    <string name="good_morning">Good morning</string>
-    <string name="good_night">Good night</string>
+    <string name="good_afternoon">Assalamu Alaikum</string>
+    <string name="good_evening">Assalamu Alaikum</string>
+    <string name="good_morning">Assalamu Alaikum</string>
+    <string name="good_night">Assalamu Alaikum</string>
+    <string name="greeting_islamic">Assalamu Alaikum</string>
     <string name="greeting_name" translatable="false"/>
     <string name="greeting_with_name">%1$s, %2$s</string>
     <string name="hijri_adjustment">Hijri date adjustment</string>
@@ -230,6 +231,8 @@
     <string name="off">Off</string>
     <string name="offline">Offline</string>
     <string name="on">On</string>
+    <string name="permission_battery_message">To play Azan reliably while the TV is in standby or sleep mode, battery optimization must be disabled (Unrestricted) for this launcher. Would you like to open settings to enable this now?</string>
+    <string name="permission_battery_title">TV Sleep Mode (Battery Optimization)</string>
     <string name="permission_overlay_message">To display prayer time alert banners over YouTube or other TV apps, please enable \"Display over other apps\" in the system settings.</string>
     <string name="permission_overlay_title">Display Over Other Apps</string>
     <string name="permissions_dialog_title">App Permissions Status</string>
@@ -239,6 +242,8 @@
     <string name="prayer_asr">Asr</string>
     <string name="prayer_azan_section">Adhan &amp; Prayer Alerts</string>
     <string name="prayer_azan_section_hint">Play sound and show notification banner when prayer time arrives</string>
+    <string name="prayer_azan_sleep_mode">Azan in TV sleep mode: %1$s</string>
+    <string name="prayer_azan_sleep_mode_hint">Wakes screen and plays Azan audio even when the TV is in standby or sleep mode</string>
     <string name="prayer_azan_sound_enabled">Play Azan audio: %1$s</string>
     <string name="prayer_dhuhr">Dhuhr</string>
     <string name="prayer_fajr">Fajr</string>
@@ -253,6 +258,7 @@
     <string name="prayer_refreshed">Prayer times updated</string>
     <string name="prayer_select_azan">Azan sound: %1$s</string>
     <string name="prayer_settings">Prayer times settings</string>
+    <string name="prayer_settings_state">Prayer &amp; Azan Settings: Azan %1$s · Sleep mode %2$s</string>
     <string name="prayer_show_bar">Prayer times bar: %1$s</string>
     <string name="prayer_sunrise">Sunrise</string>
     <string name="prayer_test_alert_now">Test prayer alert popup now</string>
@@ -277,12 +283,14 @@
     <string name="reorder_not_saved">Couldn\'t save the new order</string>
     <string name="reset_adjustments">Reset adjustments to 0</string>
     <string name="rows_below_dock_label">Rows below dock</string>
+    <string name="screensaver_adb_synced">✅ Synced with system</string>
     <string name="screensaver_app">Screen saver app: %1$s</string>
     <string name="screensaver_builtin_clock">Built-in Drift Clock</string>
     <string name="screensaver_choose_from_apps">Choose from installed apps…</string>
     <string name="screensaver_enable">Screen saver: %1$s</string>
     <string name="screensaver_minute_singular">1 minute</string>
     <string name="screensaver_minutes_format">%1$d minutes</string>
+    <string name="screensaver_off_turn_off_screen">Off (Turn off screen)</string>
     <string name="screensaver_preview">Preview screen saver now ▶</string>
     <string name="screensaver_select_app">Select Screen Saver App</string>
     <string name="screensaver_select_installed_app">Select Installed App</string>

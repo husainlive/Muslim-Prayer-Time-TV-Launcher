@@ -73,16 +73,19 @@ final class ClockScene {
     /** A random spot that keeps the whole clock on screen, with the glow centred behind it. */
     private void placeClock() {
         View parent = (View) content.getParent();
+        if (parent == null) return;
+        if (parent.getWidth() <= 0 || parent.getHeight() <= 0) {
+            content.post(this::placeClock);
+            return;
+        }
         int maxX = Math.max(0, parent.getWidth() - content.getWidth());
         int maxY = Math.max(0, parent.getHeight() - content.getHeight());
         float x = maxX * (0.1f + 0.8f * random.nextFloat());
         float y = maxY * (0.1f + 0.8f * random.nextFloat());
         content.setX(x);
         content.setY(y);
-        if (parent.getWidth() > 0 && parent.getHeight() > 0) {
-            glow.setGradientCenter((x + content.getWidth() / 2f) / parent.getWidth(),
-                    (y + content.getHeight() / 2f) / parent.getHeight());
-        }
+        glow.setGradientCenter((x + content.getWidth() / 2f) / parent.getWidth(),
+                (y + content.getHeight() / 2f) / parent.getHeight());
     }
 
     private void shiftGlow() {

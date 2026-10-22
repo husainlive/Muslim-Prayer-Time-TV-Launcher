@@ -18,6 +18,9 @@ public class ClockActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().addFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
+                | android.view.WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
+                | android.view.WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
         setContentView(R.layout.dream_clock);
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN
                 | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE);

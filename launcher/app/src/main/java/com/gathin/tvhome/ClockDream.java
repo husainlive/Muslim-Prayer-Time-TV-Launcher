@@ -20,6 +20,13 @@ public class ClockDream extends DreamService {
             ssm.turnScreenOff(this);
             return;
         }
+        String currentApp = ssm.getScreenSaverApp();
+        if (currentApp != null && !ScreenSaverManager.ID_BUILTIN_CLOCK.equals(currentApp)) {
+            android.util.Log.d("ClockDream", "Forwarding from ClockDream to selected screensaver: " + currentApp);
+            finish();
+            ssm.startScreenSaver(this);
+            return;
+        }
         setInteractive(false);   // any key wakes the TV back to where it was
         setFullscreen(true);
         setScreenBright(false);

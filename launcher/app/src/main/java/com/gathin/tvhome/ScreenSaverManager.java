@@ -184,8 +184,24 @@ public class ScreenSaverManager {
             if (id.startsWith("dream:")) {
                 String comp = id.substring("dream:".length());
                 String[] parts = comp.split("/");
-                if (parts.length == 2) {
-                    Intent launchIntent = ctx.getPackageManager().getLaunchIntentForPackage(parts[0]);
+                android.content.ComponentName cn = android.content.ComponentName.unflattenFromString(comp);
+                if (cn == null && parts.length == 2) {
+                    cn = new android.content.ComponentName(parts[0], parts[1]);
+                }
+
+                // 1. Try launching dream service via IDreamManager system service
+                if (launchDreamService(ctx, cn)) return;
+
+                // 2. Try launching via Sandman
+                if (launchSandman(ctx)) return;
+
+                // 3. Try leanback or standard launch intent for the package
+                if (parts.length >= 1) {
+                    PackageManager pm = ctx.getPackageManager();
+                    Intent launchIntent = pm.getLeanbackLaunchIntentForPackage(parts[0]);
+                    if (launchIntent == null) {
+                        launchIntent = pm.getLaunchIntentForPackage(parts[0]);
+                    }
                     if (launchIntent != null) {
                         launchIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         ctx.startActivity(launchIntent);
@@ -194,7 +210,11 @@ public class ScreenSaverManager {
                 }
             } else if (id.startsWith("app:")) {
                 String pkg = id.substring("app:".length());
-                Intent launchIntent = ctx.getPackageManager().getLaunchIntentForPackage(pkg);
+                PackageManager pm = ctx.getPackageManager();
+                Intent launchIntent = pm.getLeanbackLaunchIntentForPackage(pkg);
+                if (launchIntent == null) {
+                    launchIntent = pm.getLaunchIntentForPackage(pkg);
+                }
                 if (launchIntent != null) {
                     launchIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     ctx.startActivity(launchIntent);
@@ -209,6 +229,53 @@ public class ScreenSaverManager {
         Intent fallback = new Intent(ctx, ClockActivity.class);
         fallback.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         ctx.startActivity(fallback);
+    }
+
+    private boolean launchDreamService(Context ctx, android.content.ComponentName cn) {
+        try {
+            Class<?> sm = Class.forName("android.os.ServiceManager");
+            java.lang.reflect.Method getService = sm.getMethod("getService", String.class);
+            android.os.IBinder binder = (android.os.IBinder) getService.invoke(null, "dreams");
+            if (binder != null) {
+                Class<?> stub = Class.forName("android.service.dreams.IDreamManager$Stub");
+                java.lang.reflect.Method asInterface = stub.getMethod("asInterface", android.os.IBinder.class);
+                Object dm = asInterface.invoke(null, binder);
+                if (dm != null) {
+                    if (cn != null) {
+                        try {
+                            java.lang.reflect.Method testDream = dm.getClass().getMethod("testDream", android.content.ComponentName.class);
+                            testDream.invoke(dm, cn);
+                            Log.d(TAG, "Started dream via IDreamManager.testDream: " + cn);
+                            return true;
+                        } catch (NoSuchMethodException ignored) {
+                        }
+                    }
+                    try {
+                        java.lang.reflect.Method dream = dm.getClass().getMethod("dream");
+                        dream.invoke(dm);
+                        Log.d(TAG, "Started dream via IDreamManager.dream()");
+                        return true;
+                    } catch (Exception ignored) {
+                    }
+                }
+            }
+        } catch (Throwable t) {
+            Log.w(TAG, "IDreamManager failed: " + t.getMessage());
+        }
+        return false;
+    }
+
+    private boolean launchSandman(Context ctx) {
+        try {
+            Class<?> sandmanClass = Class.forName("android.service.dreams.Sandman");
+            java.lang.reflect.Method startDream = sandmanClass.getMethod("startDreamByUserRequest", Context.class);
+            startDream.invoke(null, ctx);
+            Log.d(TAG, "Started dream via Sandman.startDreamByUserRequest");
+            return true;
+        } catch (Throwable t) {
+            Log.w(TAG, "Sandman failed: " + t.getMessage());
+        }
+        return false;
     }
 
     public void onIdleTimeout(Context ctx) {
@@ -271,9 +338,11 @@ public class ScreenSaverManager {
             android.provider.Settings.Secure.putInt(context.getContentResolver(), "screensaver_enabled", enabled ? 1 : 0);
             android.provider.Settings.Secure.putInt(context.getContentResolver(), "screensaver_activate_on_sleep", enabled ? 1 : 0);
             android.provider.Settings.Secure.putInt(context.getContentResolver(), "screensaver_activate_on_dock", enabled ? 1 : 0);
-            android.provider.Settings.Secure.putInt(context.getContentResolver(), "sleep_timeout", timeoutMs);
-
             if (enabled) {
+                // When screensaver is enabled, do not set sleep_timeout to the screensaver start timeout;
+                // keep it long (e.g. 2 hours) so the screensaver can stay active without powering off.
+                android.provider.Settings.Secure.putInt(context.getContentResolver(), "sleep_timeout", 7200_000);
+
                 String currentApp = getScreenSaverApp();
                 if (ID_BUILTIN_CLOCK.equals(currentApp)) {
                     android.provider.Settings.Secure.putString(context.getContentResolver(), "screensaver_components",
@@ -283,6 +352,7 @@ public class ScreenSaverManager {
                             currentApp.substring("dream:".length()));
                 }
             } else {
+                android.provider.Settings.Secure.putInt(context.getContentResolver(), "sleep_timeout", timeoutMs);
                 // TV is plugged into AC power; by default Android TVs stay on when plugged in!
                 // Setting stay_on_while_plugged_in to 0 allows the panel/display to turn off and sleep.
                 android.provider.Settings.Global.putInt(context.getContentResolver(),
@@ -297,9 +367,15 @@ public class ScreenSaverManager {
 
         // Try writing to Settings.System for display timeout
         try {
-            android.provider.Settings.System.putInt(context.getContentResolver(),
-                    android.provider.Settings.System.SCREEN_OFF_TIMEOUT, timeoutMs);
-            Log.d(TAG, "Synced SCREEN_OFF_TIMEOUT=" + timeoutMs);
+            if (enabled) {
+                // Keep display on during screensaver so screen doesn't turn off into blackness
+                android.provider.Settings.System.putInt(context.getContentResolver(),
+                        android.provider.Settings.System.SCREEN_OFF_TIMEOUT, 7200_000);
+            } else {
+                android.provider.Settings.System.putInt(context.getContentResolver(),
+                        android.provider.Settings.System.SCREEN_OFF_TIMEOUT, timeoutMs);
+            }
+            Log.d(TAG, "Synced SCREEN_OFF_TIMEOUT for enabled=" + enabled);
         } catch (Exception e) {
             Log.w(TAG, "Settings.System write skipped: " + e.getMessage());
         }

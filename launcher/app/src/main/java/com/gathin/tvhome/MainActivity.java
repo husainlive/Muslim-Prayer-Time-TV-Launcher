@@ -116,6 +116,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
 
     private AppAdapter adapter;
     private RecyclerView grid;
+    private FrameLayout gridContainer;
     private FrameLayout root;
     private WallpaperPlayer wallpaperPlayer;
     private GlassView glass;
@@ -398,6 +399,8 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         hiddenApps = new HashSet<>(cfg.hiddenApps);
 
         grid = findViewById(R.id.grid);
+        gridContainer = findViewById(R.id.gridContainer);
+        if (gridContainer != null) gridContainer.setClipChildren(true);
         rtlAppGrid = getResources().getBoolean(R.bool.rtl_app_grid);
         // Mirror only the app grid; the header and other locales keep their own layouts.
         grid.setLayoutManager(new GridLayoutManager(this, COLUMNS) {
@@ -406,33 +409,11 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
                 return rtlAppGrid;
             }
 
-            /**
-             * Every "bring this tile on screen" scroll lands here, both RecyclerView's own on focus and
-             * onTileFocused's. The stock version treats the grid's top padding as the visible top, but that
-             * padding only pushes the dock down the screen: grid rows scroll up into it. With the stock rule,
-             * Up into a row above the padding dragged that row down to the padding line, cut it off at the
-             * bottom of the screen and could scroll the focused tile out entirely, dropping focus into the
-             * top bar. Grid tiles now scroll just enough to show the rect between the grid's top edge and its
-             * bottom; dock tiles are left to onTileFocused, which parks the dock row on the padding line.
-             */
             @Override
             public boolean requestChildRectangleOnScreen(@NonNull RecyclerView parent, @NonNull View child,
                                                          @NonNull Rect rect, boolean immediate,
                                                          boolean focusedChildVisible) {
-                if (dockRow && getPosition(child) < COLUMNS) return false;
-                int top = child.getTop() + rect.top;
-                int bottom = top + rect.height();
-                // A row already fully on screen stays put, even inside the bottom padding (the last row
-                // rows_below_dock leaves visible ends there; nudging it up was the bug). A row that has to scroll
-                // in still stops at the padding line, clear of the screen edge, as before.
-                int limitBottom = getHeight() - getPaddingBottom();
-                int dy;
-                if (top < 0) dy = top;
-                else if (bottom <= getHeight()) dy = 0;
-                else dy = Math.min(top, bottom - limitBottom);
-                if (dy == 0) return false;
-                if (immediate || reducedMotion || !animations) parent.scrollBy(0, dy);
-                else parent.smoothScrollBy(0, dy);
+                // Prevent uncontrolled default RecyclerView scrolling; onTileFocused aligns rows precisely
                 return true;
             }
         });
@@ -466,35 +447,39 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         adapter.setSavedOrder(Order.ranks(Order.load(Order.file(this)), dockApps));
         grid.setAdapter(adapter);
 
-        // tvOS layout: push the dock row towards the bottom of the screen, leaving room for
-        // rows_below_dock grid rows under it; the rest of the grid stays below until you press Down.
+        // Fixed screen layout: the app tiles row sits right under the prayer bar,
+        // and only the active row in the translucent bar is visible at one time.
         int rowsBelowDock = cfg.rowsBelowDock;
         grid.addOnLayoutChangeListener((v, l, t, r, b, ol, ot, or, ob) -> {
             int h = b - t;
-            // Item height follows the tile size, which follows the columns and the rows that must fit (AppAdapter.tileWidthPx).
             int inner = (r - l) - grid.getPaddingLeft() - grid.getPaddingRight();
             int tileW = AppAdapter.tileWidthPx(inner, h, COLUMNS, rowsBelowDock, cfg.dockTitle, cfg.dockRow, density);
             int itemH = AppAdapter.itemHeightPx(AppAdapter.tileHeightPx(tileW), density);
-            int dockRow = itemH + (int) (AppAdapter.DOCK_EXTRA_DP * density);   // item height plus DockDecoration offsets
-            int gridRows = itemH * rowsBelowDock;
-            // Keep the hero below the header when the library is enabled on a short screen,
-            // even when the theme requests an extra visible row below the dock.
-            int shelfClearance = cfg.appLibrary ? hero.getMeasuredHeight() + (int) (40 * density) : 0;
-            int want = Math.max(shelfClearance, h - dockRow - gridRows - (int) (AppAdapter.BOTTOM_ROOM_DP * density));
-            // Where the rows cannot fit even at the smallest tile (3 rows with the title on), the title keeps its
-            // room above the dock and the last rows run off the bottom instead of the title drawing over the clock.
-            if (MainActivity.this.dockRow && cfg.dockTitle && rowsBelowDock > 0) want = Math.max(want, (int) (AppAdapter.TITLE_ROOM_DP * density));
-            // No dock to push down: the grid starts at the top, with room for the first row's zoom and glass.
-            if (!MainActivity.this.dockRow) want = (int) (AppAdapter.TOP_ROOM_DP * density);
+            int dockRowHeight = itemH + (int) (AppAdapter.DOCK_EXTRA_DP * density);
+
+            // Move the app tile row up directly below the prayer bar
+            int want = (int) (8 * density);
             if (grid.getPaddingTop() != want) {
-                grid.setPadding(grid.getPaddingLeft(), want, grid.getPaddingRight(), grid.getPaddingBottom());
+                grid.setPadding(grid.getPaddingLeft(), want, grid.getPaddingRight(), (int) (12 * density));
             }
-            // Cold start or column count > 4: the first focus can run before the grid has its final width or
-            // padding, leaving the glass at the XML design size until a key is pressed.
+
+            // Size gridContainer to strictly fit the single active dock row and clip other rows
+            int containerH = dockRowHeight + (int) (18 * density);
+            if (gridContainer != null) {
+                android.view.ViewGroup.LayoutParams lp = gridContainer.getLayoutParams();
+                if (lp.height != containerH) {
+                    lp.height = containerH;
+                    if (lp instanceof android.widget.LinearLayout.LayoutParams) {
+                        ((android.widget.LinearLayout.LayoutParams) lp).weight = 0;
+                    }
+                    gridContainer.setLayoutParams(lp);
+                }
+            }
+
             grid.post(this::refitGlass);
         });
 
-        // Keep the glass glued to its tile while the grid scrolls, and scroll prayer bar.
+        // Keep the glass glued to its tile while the grid scrolls, and animate tile transitions
         grid.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrolled(@NonNull RecyclerView rv, int dx, int dy) {
@@ -504,6 +489,17 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
                     glass.setTranslationY(glass.getTranslationY() - dy);
                 }
                 updatePrayerBarScroll(rv.computeVerticalScrollOffset());
+
+                // Animate row transition: fade tiles smoothly as they leave/enter the dock slot
+                int padTop = rv.getPaddingTop();
+                float slotCenter = padTop + (60f * density);
+                for (int i = 0; i < rv.getChildCount(); i++) {
+                    View child = rv.getChildAt(i);
+                    float childCenter = child.getTop() + (child.getHeight() * 0.5f);
+                    float dist = Math.abs(childCenter - slotCenter);
+                    float alpha = Math.max(0.15f, Math.min(1f, 1f - (dist / (child.getHeight() * 1.05f))));
+                    child.setAlpha(alpha);
+                }
             }
         });
 
@@ -1316,26 +1312,14 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
             springY.animateToFinalPosition(y - glassScrollShift);
         }
         View item = (View) card.getParent();
-        if (dockRow && position < COLUMNS) {
-            // Dock: park it at the bottom of the screen and show the top shelf for this app.
-            int decoratedTop = item.getTop() - (int) (6 * density);
-            int dy = decoratedTop - grid.getPaddingTop();
-            // A 1px mismatch used to start a scroll on every dock move. Only scroll when the row is
-            // actually off; reduced motion does it in one jump so it does not fight the highlight.
-            boolean scroll = Math.abs(dy) > (int) (8 * density);
-            if (scroll) {
-                if (!animations || reducedMotion) grid.scrollBy(0, dy);
-                else grid.smoothScrollBy(0, dy);
-            }
-            showHero(position, scroll ? r.top - dy : r.top);
-        } else {
-            // Below the dock (or in a plain grid) the glow follows the tile without the big name; letting it
-            // fade out left the grid on plain black.
-            showGlowOnly(position);
-            // Scroll just enough so the whole glass (not only the tile) is visible.
-            revealRect.set(0, -(int) pad * 2, item.getWidth(), item.getHeight() + (int) pad);
-            grid.requestChildRectangleOnScreen(item, revealRect, reducedMotion);
+        int decoratedTop = item.getTop() - (int) (6 * density);
+        int dy = decoratedTop - grid.getPaddingTop();
+        boolean scroll = Math.abs(dy) > (int) (4 * density);
+        if (scroll) {
+            if (!animations || reducedMotion) grid.scrollBy(0, dy);
+            else grid.smoothScrollBy(0, dy, new android.view.animation.DecelerateInterpolator(1.6f), 240);
         }
+        showHero(position, gridContainer != null ? gridContainer.getTop() : 0);
     }
 
     /** Refits the glass to the focused holder once the grid layout and tile dimensions settle. */
@@ -1359,7 +1343,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
     private void showHero(int position, float dockTopInRoot) {
         String label = adapter.labelAt(position);
         int color = adapter.ambientColorAt(position);
-        float y = dockTopInRoot - 14 * density - 26 * density - hero.getHeight();
+        float y = (gridContainer != null ? gridContainer.getBottom() : dockTopInRoot) + (18 * density);
         boolean changed = !label.contentEquals(heroName.getText());
         if (cinematic) showHeroArt(position);
 
@@ -1964,9 +1948,17 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
             else card.requestFocus();
             return;
         }
-        // Not laid out yet: scroll there, then focus once the scroll settles.
-        if (!animations) {
-            grid.scrollToPosition(pos);
+        // Not laid out yet: scroll by exact row distance, then focus once settled
+        int tileW = AppAdapter.tileWidthPx(grid.getWidth() - grid.getPaddingLeft() - grid.getPaddingRight(), COLUMNS, density);
+        int itemH = AppAdapter.itemHeightPx(AppAdapter.tileHeightPx(tileW), density);
+        int rowTotalHeight = itemH + (int) (AppAdapter.DOCK_EXTRA_DP * density);
+        int targetRow = pos / COLUMNS;
+        int currentScrollY = grid.computeVerticalScrollOffset();
+        int targetScrollY = targetRow * rowTotalHeight;
+        int dy = targetScrollY - currentScrollY;
+
+        if (!animations || reducedMotion) {
+            grid.scrollBy(0, dy);
             grid.post(() -> {
                 RecyclerView.ViewHolder h = grid.findViewHolderForAdapterPosition(pos);
                 if (h != null) h.itemView.findViewById(R.id.card).requestFocus();
@@ -1986,7 +1978,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
             }
         };
         grid.addOnScrollListener(pendingFocusScroll);
-        grid.smoothScrollToPosition(pos);
+        grid.smoothScrollBy(0, dy, new android.view.animation.DecelerateInterpolator(1.6f), 240);
     }
 
     // ---- top bar ---------------------------------------------------------------------------------
@@ -2105,20 +2097,9 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
     }
 
     private void updatePrayerBarScroll(int scrollY) {
-        if (prayerScrollView == null || prayerScrollView.getVisibility() != View.VISIBLE) return;
-        PrayerManager pm = PrayerManager.getInstance(this);
-        if (pm.isLockBarEnabled()) {
-            prayerScrollView.setTranslationY(0f);
-            prayerScrollView.setAlpha(1f);
-            return;
-        }
-        int h = prayerScrollView.getHeight();
-        if (h <= 0) return;
-        float maxShift = h + (10 * density);
-        float shift = Math.min(maxShift, scrollY);
-        prayerScrollView.setTranslationY(-shift);
-        float alpha = Math.max(0f, 1f - (shift / (float) h));
-        prayerScrollView.setAlpha(alpha);
+        if (prayerScrollView == null) return;
+        prayerScrollView.setTranslationY(0f);
+        prayerScrollView.setAlpha(1f);
     }
 
     // ---- race-weekend panel (a theme's race_calendar) -----------------------------------------------
