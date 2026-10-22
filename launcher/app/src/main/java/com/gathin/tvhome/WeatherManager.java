@@ -154,11 +154,12 @@ public class WeatherManager {
                 Log.w(TAG, "ipwho.is detection failed: " + e.getMessage());
             }
 
-            // Fallback: ip-api.com
+            // Fallback: ipapi.co (HTTPS)
             if (!success) {
                 try {
-                    URL url = new URL("http://ip-api.com/json/");
+                    URL url = new URL("https://ipapi.co/json/");
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                    conn.setRequestProperty("User-Agent", "TvHome/1.0");
                     conn.setConnectTimeout(6000);
                     conn.setReadTimeout(6000);
                     conn.setRequestMethod("GET");
@@ -171,20 +172,18 @@ public class WeatherManager {
                         conn.disconnect();
 
                         JSONObject root = new JSONObject(sb.toString());
-                        if ("success".equalsIgnoreCase(root.optString("status", ""))) {
-                            detectedCity = root.optString("city", "");
-                            detectedCountry = root.optString("country", "");
-                            lat = root.optDouble("lat", 0);
-                            lon = root.optDouble("lon", 0);
-                            if (!detectedCity.isEmpty()) {
-                                success = true;
-                            }
+                        detectedCity = root.optString("city", "");
+                        detectedCountry = root.optString("country_name", "");
+                        lat = root.optDouble("latitude", 0);
+                        lon = root.optDouble("longitude", 0);
+                        if (!detectedCity.isEmpty()) {
+                            success = true;
                         }
                     } else {
                         conn.disconnect();
                     }
                 } catch (Exception e) {
-                    Log.w(TAG, "ip-api fallback failed: " + e.getMessage());
+                    Log.w(TAG, "ipapi.co fallback failed: " + e.getMessage());
                 }
             }
 
