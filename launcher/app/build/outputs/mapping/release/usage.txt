@@ -2982,12 +2982,13 @@ androidx.versionedparcelable.VersionedParcelStream$1
 androidx.versionedparcelable.VersionedParcelStream$FieldBuffer
 androidx.versionedparcelable.VersionedParcelStream
 androidx.versionedparcelable.VersionedParcelize
-com.gathin.tvhome.AppAdapter$Entry:
+com.google.common.util.concurrent.ListenableFuture
+com.islam.tv.AppAdapter$Entry:
     static final int APP
     static final int CARD
     static final int EMPTY
     static final int HOME_SETTINGS
-com.gathin.tvhome.AppAdapter:
+com.islam.tv.AppAdapter:
     static final float BOTTOM_ROOM_DP
     static final float COMPACT_BOTTOM_ROOM_DP
     static final float COMPACT_ITEM_EXTRA_DP
@@ -2999,7 +3000,7 @@ com.gathin.tvhome.AppAdapter:
     static final float MIN_HEIGHT_FIT
     static final float TITLE_ROOM_DP
     static final float TOP_ROOM_DP
-com.gathin.tvhome.BellDrawable:
+com.islam.tv.BellDrawable:
     private static final float AMPLITUDE
     private static final float BOX
     private static final float CLAPPER_MAX
@@ -3009,10 +3010,10 @@ com.gathin.tvhome.BellDrawable:
     private static final float PY
     private static final long RING_MS
     private static final float TAU
-com.gathin.tvhome.CardFeature:
+com.islam.tv.CardFeature:
     private void <init>()
     static void reset()
-com.gathin.tvhome.Cards:
+com.islam.tv.Cards:
     static final int CAPTION_MAX
     static final java.lang.String CATEGORY
     static final java.lang.String DECISION_HIDE
@@ -3039,9 +3040,9 @@ com.gathin.tvhome.Cards:
     static final java.lang.String TAG
     private static final java.lang.String TEXT_PUNCTUATION
     private void <init>()
-com.gathin.tvhome.ClockScene:
+com.islam.tv.ClockScene:
     private static final long MOVE_MS
-com.gathin.tvhome.Config:
+com.islam.tv.Config:
     static final java.lang.String FILE_NAME
     static final java.lang.String ROWS_BELOW_DOCK_KEY
     static final java.lang.String SETTINGS_NAME
@@ -3050,7 +3051,7 @@ com.gathin.tvhome.Config:
     private static final java.lang.String THEME_SIGNATURE_KEY
     static final java.lang.String WALLPAPER_CHOICE_KEY
     static final java.lang.String WALLPAPER_NAME
-com.gathin.tvhome.DiyaDrawable:
+com.islam.tv.DiyaDrawable:
     private static final float BOX
     private static final float FLAME_H
     private static final float FLAME_W
@@ -3068,29 +3069,29 @@ com.gathin.tvhome.DiyaDrawable:
     private static final long SPARK_MS
     private static final float WICK_X
     private static final float WICK_Y
-com.gathin.tvhome.DockSlots:
+com.islam.tv.DockSlots:
     private void <init>()
-com.gathin.tvhome.Festival:
+com.islam.tv.Festival:
     static final int DEFAULT_ACCENT
-com.gathin.tvhome.GridNavigation:
+com.islam.tv.GridNavigation:
     private void <init>()
-com.gathin.tvhome.HeroArt:
+com.islam.tv.HeroArt:
     static final int H
     private static final float SATURATION
     static final int W
     private void <init>()
-com.gathin.tvhome.InputKeyService:
+com.islam.tv.InputKeyService:
     private static final java.lang.String ACTION_VIEW_INPUTS
-com.gathin.tvhome.LastOpened:
+com.islam.tv.LastOpened:
     private static final java.lang.String PREFS
     private void <init>()
-com.gathin.tvhome.LibraryApps:
+com.islam.tv.LibraryApps:
     static final int MAX_ADDED
     private static final int MAX_BYTES
     private static final long RECENT_MS
     private void <init>()
     static boolean visible(boolean,boolean,boolean)
-com.gathin.tvhome.MainActivity:
+com.islam.tv.MainActivity:
     static final java.lang.String ACTION_LAUNCHER_SETTINGS
     private static final int CPU_UNREADABLE
     private static final float HERO_ART_ALPHA
@@ -3102,7 +3103,9 @@ com.gathin.tvhome.MainActivity:
     private static final int REORDER_ACCENT
     private static final long STATS_MS
     private static final long TIME_VALID_AFTER_MS
-com.gathin.tvhome.MarigoldDrawable:
+    private synthetic void lambda$showGlowOnly$29(int)
+    private void showGlowOnly(int)
+com.islam.tv.MarigoldDrawable:
     private static final float BOX
     private static final float C
     private static final float CORE_R
@@ -3114,30 +3117,30 @@ com.gathin.tvhome.MarigoldDrawable:
     private static final float SHADOW_DX
     private static final float SHADOW_DY
     private static final long TURN_MS
-com.gathin.tvhome.Order:
+com.islam.tv.Order:
     private static final java.lang.String DOCK
     static final java.lang.String FILE_NAME
     private static final java.lang.String MAGIC
     private static final java.lang.String TAG
-com.gathin.tvhome.PetalShowerView:
+com.islam.tv.PetalShowerView:
     private static final int EDGE
     private static final double TAU
-com.gathin.tvhome.PrayerAlarmReceiver:
+com.islam.tv.PrayerAlarmReceiver:
     private static final java.lang.String TAG
-com.gathin.tvhome.PrayerAlarmScheduler:
+com.islam.tv.PrayerAlarmScheduler:
     public static final java.lang.String ACTION_PRAYER_ALARM
     public static final java.lang.String EXTRA_PRAYER_NAME
     public static final java.lang.String EXTRA_PRAYER_TIME
     private static final java.lang.String TAG
     public void <init>()
-com.gathin.tvhome.PrayerAlarmService:
+com.islam.tv.PrayerAlarmService:
     public static final java.lang.String ACTION_DISMISS
     private static final java.lang.String CHANNEL_ID
     private static final int NOTIFICATION_ID
     private static final java.lang.String TAG
-com.gathin.tvhome.PrayerBootReceiver:
+com.islam.tv.PrayerBootReceiver:
     private static final java.lang.String TAG
-com.gathin.tvhome.PrayerDatabase:
+com.islam.tv.PrayerDatabase:
     public static final java.lang.String COLUMN_ASR
     public static final java.lang.String COLUMN_CITY
     public static final java.lang.String COLUMN_COUNTRY
@@ -3151,13 +3154,14 @@ com.gathin.tvhome.PrayerDatabase:
     private static final int DATABASE_VERSION
     public static final java.lang.String TABLE_NAME
     private static final java.lang.String TAG
-com.gathin.tvhome.PrayerManager$PrayerItem:
+com.islam.tv.PrayerManager$PrayerItem:
     public void <init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean)
-com.gathin.tvhome.PrayerManager$PrayerSchedule:
+com.islam.tv.PrayerManager$PrayerSchedule:
     public void <init>(java.util.List,java.lang.String,java.lang.String)
-com.gathin.tvhome.PrayerManager:
+com.islam.tv.PrayerManager:
     public static final java.lang.String KEY_ADJUSTMENT_PREFIX
     public static final java.lang.String KEY_AZAN_ENABLED
+    public static final java.lang.String KEY_AZAN_SLEEP_MODE
     public static final java.lang.String KEY_AZAN_SOUND
     public static final java.lang.String KEY_CITY
     public static final java.lang.String KEY_COUNTRY
@@ -3172,14 +3176,14 @@ com.gathin.tvhome.PrayerManager:
     private static final java.lang.String TAG
     static java.lang.String findNextPrayer(java.util.Map,java.util.Calendar)
     public void setPrayerNotificationEnabled(java.lang.String,boolean)
-com.gathin.tvhome.R$anim:
+com.islam.tv.R$anim:
     private void <init>()
-com.gathin.tvhome.R$array:
+com.islam.tv.R$array:
     private void <init>()
-com.gathin.tvhome.R$bool:
+com.islam.tv.R$bool:
     public static int date_single_line
     private void <init>()
-com.gathin.tvhome.R$drawable:
+com.islam.tv.R$drawable:
     public static int banner
     public static int banner_tv
     public static int input_row_bg
@@ -3196,35 +3200,34 @@ com.gathin.tvhome.R$drawable:
     public static int status_dot
     public static int tile_bg
     private void <init>()
-com.gathin.tvhome.R$font:
+com.islam.tv.R$font:
     public static int outfit
     public static int outfit_extralight
     public static int outfit_light
     public static int outfit_regular
     private void <init>()
-com.gathin.tvhome.R$id:
+com.islam.tv.R$id:
     public static int alertSubtitle
     public static int ampm
     public static int clock
-    public static int gridContainer
     public static int hint
     public static int panel
     public static int topButtons
     private void <init>()
-com.gathin.tvhome.R$integer:
+com.islam.tv.R$integer:
     private void <init>()
-com.gathin.tvhome.R$layout:
+com.islam.tv.R$layout:
     public static int item_prayer_time
     public static int layout_prayer_bar
     private void <init>()
-com.gathin.tvhome.R$mipmap:
+com.islam.tv.R$mipmap:
     private void <init>()
-com.gathin.tvhome.R$plurals:
+com.islam.tv.R$plurals:
     private void <init>()
-com.gathin.tvhome.R$raw:
+com.islam.tv.R$raw:
     public static int keep
     private void <init>()
-com.gathin.tvhome.R$string:
+com.islam.tv.R$string:
     public static int azan_alaqsa
     public static int azan_madinah
     public static int azan_makkah
@@ -3236,6 +3239,10 @@ com.gathin.tvhome.R$string:
     public static int date_format_home
     public static int follow_theme
     public static int follow_theme_hint
+    public static int good_afternoon
+    public static int good_evening
+    public static int good_morning
+    public static int good_night
     public static int hijri_adjustment
     public static int hijri_adjustment_hint
     public static int home_key_description
@@ -3245,6 +3252,7 @@ com.gathin.tvhome.R$string:
     public static int prayer_adjustments_hint
     public static int prayer_azan_section
     public static int prayer_azan_section_hint
+    public static int prayer_azan_sleep_mode_hint
     public static int prayer_refresh_failed
     public static int prayer_settings
     public static int prayer_test_alert_now
@@ -3253,7 +3261,6 @@ com.gathin.tvhome.R$string:
     public static int rows_below_dock_label
     public static int screensaver_preview
     public static int screensaver_settings
-    public static int screensaver_system_settings
     public static int standby
     public static int weather_auto_detect_action
     public static int weather_refresh
@@ -3261,53 +3268,53 @@ com.gathin.tvhome.R$string:
     public static int weather_section
     public static int weather_settings
     private void <init>()
-com.gathin.tvhome.R$style
-com.gathin.tvhome.R$xml
-com.gathin.tvhome.R
-com.gathin.tvhome.RaceWeekend$State:
+com.islam.tv.R$style
+com.islam.tv.R$xml
+com.islam.tv.R
+com.islam.tv.RaceWeekend$State:
     boolean finished()
-com.gathin.tvhome.RaceWeekend:
+com.islam.tv.RaceWeekend:
     private void <init>()
-com.gathin.tvhome.RemoteKeys:
+com.islam.tv.RemoteKeys:
     private void <init>()
     static java.util.Map parseAppKeys(java.lang.String[])
-com.gathin.tvhome.ScreenSaverManager:
+com.islam.tv.ScreenSaverManager:
     public static final java.lang.String ID_BUILTIN_CLOCK
     public static final java.lang.String KEY_SCREENSAVER_APP
     public static final java.lang.String KEY_SCREENSAVER_APP_LABEL
     public static final java.lang.String KEY_SCREENSAVER_ENABLED
     public static final java.lang.String KEY_SCREENSAVER_TIMEOUT_MINUTES
     private static final java.lang.String TAG
-com.gathin.tvhome.Shamsi:
+com.islam.tv.Shamsi:
     private void <init>()
-com.gathin.tvhome.Sky:
+com.islam.tv.Sky:
     private static final int NIGHT_BOTTOM
     private static final int NIGHT_MID
     private static final int NIGHT_TOP
     static final int REF_SUNRISE
     static final int REF_SUNSET
     private void <init>()
-com.gathin.tvhome.SkyView:
+com.islam.tv.SkyView:
     private static final int TEX_H
     private static final int TEX_W
-com.gathin.tvhome.Sun:
+com.islam.tv.Sun:
     private void <init>()
-com.gathin.tvhome.ThemeFiles:
+com.islam.tv.ThemeFiles:
     static final java.lang.String WALLPAPERS
     private void <init>()
-com.gathin.tvhome.VpnBadge:
+com.islam.tv.VpnBadge:
     private static final int GREEN
     private static final int INK
     private static final int INK_OFF
     private static final int RED
-com.gathin.tvhome.WallpaperRotation:
+com.islam.tv.WallpaperRotation:
     static final java.lang.String ORDER_SEQUENTIAL
     static final java.lang.String ORDER_SHUFFLE
     void <init>()
-com.gathin.tvhome.WallpaperSize:
+com.islam.tv.WallpaperSize:
     static final long MAX_PIXELS
     private void <init>()
-com.gathin.tvhome.WeatherManager:
+com.islam.tv.WeatherManager:
     private static final long CACHE_DURATION_MS
     private static final java.lang.String KEY_TEMP_UNIT
     private static final java.lang.String KEY_WEATHER_ENABLED
@@ -3317,7 +3324,6 @@ com.gathin.tvhome.WeatherManager:
     private static final java.lang.String PREFS_NAME
     private static final java.lang.String TAG
     public java.lang.String getCountry()
-com.google.common.util.concurrent.ListenableFuture
 kotlin.ArrayIntrinsicsKt
 kotlin.BuilderInference
 kotlin.CharCodeJVMKt
@@ -6024,6 +6030,7 @@ androidx.recyclerview.widget.RecyclerView:
     public static androidx.recyclerview.widget.RecyclerView$ViewHolder findViewHolderForItemId()
     public static androidx.recyclerview.widget.RecyclerView$ViewHolder findViewHolderForPosition()
     public static boolean fling()
+    public static int getChildAdapterPosition(android.view.View)
     public static int getChildLayoutPosition()
     public static int getDeepestFocusedViewWithId()
     public static java.lang.String getFullClassName()
@@ -6065,9 +6072,9 @@ androidx.recyclerview.widget.RecyclerView:
     public final void setChildImportantForAccessibilityInternal(androidx.recyclerview.widget.RecyclerView$ViewHolder,int)
     public static boolean shouldDeferAccessibilityEvent()
     public static void smoothScrollBy()
-    public final void smoothScrollBy(int,int)
     public static void smoothScrollBy$1()
-    public final void smoothScrollToPosition(int)
+    public static void smoothScrollBy$2()
+    public static void smoothScrollToPosition()
     public final void startNestedScroll(int,int)
     public static boolean stopGlowAnimations()
     public final void stopScrollersInternal()
@@ -6224,33 +6231,33 @@ androidx.versionedparcelable.VersionedParcelParcel:
     public final void writeInt(int)
     public final void writeParcelable()
     public final void writeString(java.lang.String)
-com.gathin.tvhome.AppAdapter$1:
-    public final synthetic com.gathin.tvhome.AppAdapter this$0
-com.gathin.tvhome.AppAdapter$Holder$1:
-    public final synthetic com.gathin.tvhome.AppAdapter$Holder this$0
-com.gathin.tvhome.AppAdapter$Holder:
+com.islam.tv.AppAdapter$1:
+    public final synthetic com.islam.tv.AppAdapter this$0
+com.islam.tv.AppAdapter$Holder$1:
+    public final synthetic com.islam.tv.AppAdapter$Holder this$0
+com.islam.tv.AppAdapter$Holder:
     public final boolean advancedEffects
     public final boolean animations
     public final boolean reducedMotion
     public final float restNameAlpha
     public static boolean lambda$new$0()
     public static synthetic void lambda$new$1()
-com.gathin.tvhome.AppAdapter$TileListener:
+com.islam.tv.AppAdapter$TileListener:
     public abstract void onLibraryFocused()
     public abstract void onLibraryRequested()
     public abstract void onLibraryUp()
     public abstract void onTileFocused(int,android.view.View)
     public abstract void onTileLongClick()
     public abstract boolean onTileVerticalKey()
-com.gathin.tvhome.AppAdapter:
+com.islam.tv.AppAdapter:
     public static android.graphics.drawable.Drawable artworkAt()
     public static android.graphics.drawable.Drawable bundledBanner()
     public static void clear()
     public static boolean containsPackage()
-    public static float cornerRadius(int,float)
     public final int dockFilled()
     public final int focusablePosition(int)
     public static boolean hasEmptySlots()
+    public static int itemHeightPx(int,float)
     public static java.lang.String labelAt()
     public static void lambda$onBindViewHolder$4()
     public static boolean lambda$onBindViewHolder$5()
@@ -6264,22 +6271,21 @@ com.gathin.tvhome.AppAdapter:
     public static void reload()
     public static void setReordering()
     public static void setSavedOrder()
-    public static int tileHeightPx(int)
-com.gathin.tvhome.AppLibraryDialog$$InternalSyntheticLambda$7$e5b154d025041b80e22a252c34a63e515055759f533bdae4094b46b0ca4d3dc7$0
-com.gathin.tvhome.AppLibraryDialog$2:
+com.islam.tv.AppLibraryDialog$$InternalSyntheticLambda$7$edf0741677b9e4a6ed4002b37f6888aed44e31c9c31b3ef68119f43c8cab337f$0
+com.islam.tv.AppLibraryDialog$2:
     public final float getValue()
     public final void setValue()
-com.gathin.tvhome.AppLibraryDialog$Catalog-IA
-com.gathin.tvhome.AppLibraryDialog$Catalog:
+com.islam.tv.AppLibraryDialog$Catalog-IA
+com.islam.tv.AppLibraryDialog$Catalog:
     public static synthetic void lambda$onBindViewHolder$0()
     public static boolean lambda$onBindViewHolder$1()
     public static void lambda$onBindViewHolder$2()
     public static synthetic void lambda$onBindViewHolder$3()
     public static synthetic boolean lambda$onBindViewHolder$4()
     public static void onBindViewHolder$1()
-    public static com.gathin.tvhome.AppLibraryDialog$Row onCreateViewHolder()
-com.gathin.tvhome.AppLibraryDialog:
-    public static android.graphics.drawable.GradientDrawable -$$Nest$msurface(com.gathin.tvhome.AppLibraryDialog,int,int)
+    public static com.islam.tv.AppLibraryDialog$Row onCreateViewHolder()
+com.islam.tv.AppLibraryDialog:
+    public static android.graphics.drawable.GradientDrawable -$$Nest$msurface(com.islam.tv.AppLibraryDialog,int,int)
     public final void close()
     public static void heading()
     public static void highlight()
@@ -6299,27 +6305,27 @@ com.gathin.tvhome.AppLibraryDialog:
     public static void showCatalog()
     public final void stopHighlight()
     public static android.graphics.drawable.GradientDrawable surface()
-com.gathin.tvhome.BellDrawable:
+com.islam.tv.BellDrawable:
     public static void buildPaths()
     public final void drawBand(android.graphics.Canvas,android.graphics.Path)
     public static android.graphics.Paint fill()
     public static synthetic void lambda$new$0()
     public static void ring()
     public static void setReducedMotion()
-com.gathin.tvhome.CardFeature$$InternalSyntheticLambda$2$24275c87ab89ddcc718ac6232e4e7e0cf3648abdd5afe5acb7ce5714386b5c66$0
-com.gathin.tvhome.CardFeature$Reporter
-com.gathin.tvhome.CardFeature:
-    public static com.gathin.tvhome.CardFeature$$InternalSyntheticLambda$2$24275c87ab89ddcc718ac6232e4e7e0cf3648abdd5afe5acb7ce5714386b5c66$0 reporter
+com.islam.tv.CardFeature$$InternalSyntheticLambda$2$29f29b75ff34823cec23624c043d67ef56b5510ff419ba16f63ea16af00c6064$0
+com.islam.tv.CardFeature$Reporter
+com.islam.tv.CardFeature:
+    public static com.islam.tv.CardFeature$$InternalSyntheticLambda$2$29f29b75ff34823cec23624c043d67ef56b5510ff419ba16f63ea16af00c6064$0 reporter
     static void <clinit>()
-com.gathin.tvhome.Cards$Card:
+com.islam.tv.Cards$Card:
     public final boolean pending()
-com.gathin.tvhome.Cards$State$EnumUnboxingLocalUtility
-com.gathin.tvhome.Cards$State
-com.gathin.tvhome.Cards:
-    public static int byLabel(com.gathin.tvhome.Cards$Card,com.gathin.tvhome.Cards$Card)
+com.islam.tv.Cards$State$EnumUnboxingLocalUtility
+com.islam.tv.Cards$State
+com.islam.tv.Cards:
+    public static int byLabel(com.islam.tv.Cards$Card,com.islam.tv.Cards$Card)
     public static boolean isDigest(java.lang.String)
     public static java.io.File storeFile(android.content.Context)
-com.gathin.tvhome.ClockScene:
+com.islam.tv.ClockScene:
     public static synthetic void lambda$moveClock$2()
     public static synthetic void lambda$new$0()
     public static synthetic void lambda$shiftGlow$3()
@@ -6329,11 +6335,11 @@ com.gathin.tvhome.ClockScene:
     public static void shiftGlow()
     public final void start()
     public final void stop()
-com.gathin.tvhome.Config:
+com.islam.tv.Config:
     public final int homeIdleClockMinutes
     public final boolean overlayApplied
     public final java.io.File wallpaper
-com.gathin.tvhome.DiyaDrawable:
+com.islam.tv.DiyaDrawable:
     public static boolean animates()
     public static void buildLamp()
     public static float clamp01(float)
@@ -6345,18 +6351,18 @@ com.gathin.tvhome.DiyaDrawable:
     public static void setFlame()
     public static void setReducedMotion()
     public static void setSteady()
-com.gathin.tvhome.DockSlots
-com.gathin.tvhome.Festival:
+com.islam.tv.DockSlots
+com.islam.tv.Festival:
     public final int accentColor()
     public final boolean active(java.time.LocalDate)
     public static java.lang.String greetingText()
-com.gathin.tvhome.GridNavigation
-com.gathin.tvhome.HomeKeyService:
+com.islam.tv.GridNavigation
+com.islam.tv.HomeKeyService:
     public static boolean isSettingsKey()
-com.gathin.tvhome.InputKeyService:
+com.islam.tv.InputKeyService:
     public static boolean isInputKey()
-com.gathin.tvhome.LastOpened
-com.gathin.tvhome.LauncherSettingsActivity:
+com.islam.tv.LastOpened
+com.islam.tv.LauncherSettingsActivity:
     public static synthetic void lambda$onCreate$0()
     public static synthetic void lambda$onCreate$1()
     public static synthetic void lambda$onCreate$10()
@@ -6375,91 +6381,92 @@ com.gathin.tvhome.LauncherSettingsActivity:
     public static void reverseRow(android.widget.TextView[])
     public final void setAdvanced(boolean)
     public static void showWallpaperPicker()
-com.gathin.tvhome.LibraryApps:
+com.islam.tv.LibraryApps:
     public static java.util.Set read(android.util.AtomicFile)
-com.gathin.tvhome.MainActivity$$InternalSyntheticLambda$1$ebe6759a03754f3c2b5d855a6298336c16a91ca84dc3280ed7e183c9a93e28da$1
-com.gathin.tvhome.MainActivity$$InternalSyntheticLambda$2$6ced91fc8f2a4aa0094d8b7dc063175bfb28ab27b1938e97bdc7f8ee58a00970$0
-com.gathin.tvhome.MainActivity$11:
+com.islam.tv.MainActivity$$InternalSyntheticLambda$1$dd5816be10c70e7d5c53113626c323b3cc67f1296273f1f99a60977656b146d9$1
+com.islam.tv.MainActivity$$InternalSyntheticLambda$2$a0d4487bfc2005d27537e916d31136208f2ab294be567867727dd1b825cf8c18$0
+com.islam.tv.MainActivity$11:
     public final float getValue()
     public final void setValue()
-com.gathin.tvhome.MainActivity$13:
+com.islam.tv.MainActivity$13:
     public static synthetic void lambda$run$0()
-com.gathin.tvhome.MainActivity$16:
+com.islam.tv.MainActivity$16:
     public static synthetic void lambda$onPreDraw$0()
-com.gathin.tvhome.MainActivity$17
-com.gathin.tvhome.MainActivity$1:
-    public static synthetic void $r8$lambda$EaN4pnXpARi4ND9-QopX9lexMls(com.gathin.tvhome.MainActivity)
-com.gathin.tvhome.MainActivity$3:
-    public static synthetic void $r8$lambda$EaN4pnXpARi4ND9-QopX9lexMls(com.gathin.tvhome.MainActivity)
-com.gathin.tvhome.MainActivity$9:
+com.islam.tv.MainActivity$17
+com.islam.tv.MainActivity$1:
+    public static synthetic void $r8$lambda$CXk69IKX4r5kJYkMjXk7w12TqBg(com.islam.tv.MainActivity)
+com.islam.tv.MainActivity$3:
+    public static synthetic void $r8$lambda$CXk69IKX4r5kJYkMjXk7w12TqBg(com.islam.tv.MainActivity)
+com.islam.tv.MainActivity$9:
     public static void onChildViewAttachedToWindow()
     public static void onChildViewDetachedFromWindow()
-com.gathin.tvhome.MainActivity:
+com.islam.tv.MainActivity:
     public float glassTargetX
     public float glassTargetY
     public boolean iconOnlyButtons
     public android.view.View prayerTimesBar
+    public final android.graphics.Rect revealRect
     static void <clinit>()
     public static void addFocusAction(android.view.View,java.lang.Runnable)
     public static void appendStat(java.lang.StringBuilder,java.lang.String)
     public static void applyFestiveSkin()
-    public final com.gathin.tvhome.Cards$Card cardFor(java.lang.String)
+    public final com.islam.tv.Cards$Card cardFor(java.lang.String)
     public static void checkAndRequestRequiredPermissions()
     public static int cpuFromIdle()
     public static int cpuFromProcStat()
     public static boolean dispatchDockEdit()
     public final void drop()
     public static boolean handleSettingsKey()
-    public static java.lang.Boolean lambda$decideCard$55()
-    public static synthetic void lambda$focusLibrary$29()
-    public static synthetic void lambda$focusTile$30()
-    public static synthetic void lambda$glassPopup$38()
-    public static synthetic void lambda$moveBy$19()
-    public static synthetic void lambda$new$0()
+    public static java.lang.Boolean lambda$decideCard$56()
+    public static synthetic void lambda$focusLibrary$30()
+    public static synthetic void lambda$focusTile$31()
+    public static synthetic void lambda$glassPopup$39()
+    public static synthetic void lambda$moveBy$20()
+    public static void lambda$new$0()
     public static void lambda$onCreate$1()
-    public static synthetic void lambda$onCreate$11()
-    public static void lambda$onCreate$2()
+    public static synthetic boolean lambda$onCreate$10()
+    public static synthetic void lambda$onCreate$12()
+    public static synthetic void lambda$onCreate$2()
     public static void lambda$onCreate$3()
-    public static synthetic boolean lambda$onCreate$4()
-    public static synthetic void lambda$onCreate$5()
+    public static void lambda$onCreate$4()
+    public static synthetic boolean lambda$onCreate$5()
     public static synthetic void lambda$onCreate$6()
     public static synthetic void lambda$onCreate$7()
-    public static boolean lambda$onCreate$8()
-    public static synthetic boolean lambda$onCreate$9()
-    public static synthetic void lambda$onLibraryRequested$20()
+    public static synthetic void lambda$onCreate$8()
+    public static boolean lambda$onCreate$9()
     public static synthetic void lambda$onLibraryRequested$21()
     public static synthetic void lambda$onLibraryRequested$22()
-    public static synthetic void lambda$onNewIntent$13()
-    public static synthetic void lambda$onRequestPermissionsResult$12()
-    public static synthetic void lambda$onTileFocused$23()
-    public static synthetic void lambda$playPetalShower$33()
-    public static synthetic java.util.Map lambda$reloadTiles$14()
-    public static java.util.List lambda$reloadTiles$15()
-    public static synthetic java.util.List lambda$reloadTiles$16()
-    public static synthetic void lambda$restoreFocus$17()
-    public static java.lang.Object lambda$showCardPrompt$50()
-    public static synthetic void lambda$showCardPromptNow$51()
-    public static synthetic void lambda$showCardPromptNow$53()
-    public static synthetic void lambda$showGlowOnly$28()
-    public static synthetic void lambda$showHero$24()
+    public static synthetic void lambda$onLibraryRequested$23()
+    public static synthetic void lambda$onNewIntent$14()
+    public static synthetic void lambda$onRequestPermissionsResult$13()
+    public static synthetic void lambda$onTileFocused$24()
+    public static synthetic void lambda$playPetalShower$34()
+    public static synthetic java.util.Map lambda$reloadTiles$15()
+    public static java.util.List lambda$reloadTiles$16()
+    public static synthetic java.util.List lambda$reloadTiles$17()
+    public static synthetic void lambda$restoreFocus$18()
+    public static java.lang.Object lambda$showCardPrompt$51()
+    public static synthetic void lambda$showCardPromptNow$52()
+    public static synthetic void lambda$showCardPromptNow$54()
     public static synthetic void lambda$showHero$25()
-    public static synthetic void lambda$showHeroArt$26()
-    public static synthetic int lambda$showInputs$34()
-    public static synthetic void lambda$showInputs$35()
+    public static synthetic void lambda$showHero$26()
+    public static synthetic void lambda$showHeroArt$27()
+    public static synthetic int lambda$showInputs$35()
     public static synthetic void lambda$showInputs$36()
     public static synthetic void lambda$showInputs$37()
-    public static java.lang.Object lambda$showModuleCards$56()
-    public static synthetic java.lang.Object lambda$showModuleCardsNow$57()
-    public static synthetic void lambda$showModuleCardsNow$58()
-    public static synthetic void lambda$showSettingsMenu$40()
-    public static synthetic void lambda$showTileMenu$43()
+    public static synthetic void lambda$showInputs$38()
+    public static java.lang.Object lambda$showModuleCards$57()
+    public static synthetic java.lang.Object lambda$showModuleCardsNow$58()
+    public static synthetic void lambda$showModuleCardsNow$59()
+    public static synthetic void lambda$showSettingsMenu$41()
     public static synthetic void lambda$showTileMenu$44()
     public static synthetic void lambda$showTileMenu$45()
     public static synthetic void lambda$showTileMenu$46()
     public static synthetic void lambda$showTileMenu$47()
-    public static synthetic void lambda$swapIntoDock$18()
-    public static synthetic void lambda$transitionAmbient$27()
-    public static synthetic void lambda$updatePrayerDisplay$31()
+    public static synthetic void lambda$showTileMenu$48()
+    public static synthetic void lambda$swapIntoDock$19()
+    public static synthetic void lambda$transitionAmbient$28()
+    public static synthetic void lambda$updatePrayerDisplay$32()
     public static long memAvailableMb()
     public static void moveBy()
     public final void onLibraryFocused()
@@ -6479,7 +6486,6 @@ com.gathin.tvhome.MainActivity:
     public static void setFestiveIcon(android.widget.TextView,android.graphics.drawable.Drawable)
     public static void setUpCinematicShelf()
     public static void showCardPromptNow()
-    public static void showGlowOnly()
     public static void showHero()
     public static void showHeroArt()
     public static void showInputs()
@@ -6490,51 +6496,53 @@ com.gathin.tvhome.MainActivity:
     public static void startDockEdit()
     public static void startStats()
     public static java.lang.String stateText()
+    public final void stopAmbientAnimation()
     public static void stopStats()
     public static void swapIntoDock()
+    public static float tileAlpha()
     public static void transitionAmbient()
     public static void updateHeroDots()
     public static void updateHeroMeta()
     public static void updatePrayerBarScroll()
-com.gathin.tvhome.MarigoldDrawable:
+com.islam.tv.MarigoldDrawable:
     public static void buildCore()
     public static void buildRing()
     public static synthetic void lambda$new$0()
     public static void setReducedMotion()
     public static void turn()
-com.gathin.tvhome.Order:
+com.islam.tv.Order:
     public static java.io.File file(android.content.Context)
-    public static java.util.HashMap ranks(com.gathin.tvhome.Order,java.util.List)
-com.gathin.tvhome.PetalShowerView:
+    public static java.util.HashMap ranks(com.islam.tv.Order,java.util.List)
+com.islam.tv.PetalShowerView:
     public static void ensureCapacity()
     public static void play()
-com.gathin.tvhome.PrayerAlarmService:
+com.islam.tv.PrayerAlarmService:
     public static void acquireWakeLock()
     public static void createNotificationChannel()
     public static synthetic void lambda$playAzanSound$0()
     public static synthetic boolean lambda$playAzanSound$1()
     public static void playAzanSound()
-com.gathin.tvhome.PrayerAlertActivity:
+com.islam.tv.PrayerAlertActivity:
     public static synthetic void lambda$onCreate$0()
-com.gathin.tvhome.PrayerDatabase$PrayerDayTimes:
+com.islam.tv.PrayerDatabase$PrayerDayTimes:
     public final java.lang.String date
-com.gathin.tvhome.PrayerDatabase:
-    public static com.gathin.tvhome.PrayerDatabase$PrayerDayTimes getPrayerTimes()
-com.gathin.tvhome.PrayerManager$NextPrayerInfo:
+com.islam.tv.PrayerDatabase:
+    public static com.islam.tv.PrayerDatabase$PrayerDayTimes getPrayerTimes()
+com.islam.tv.PrayerManager$NextPrayerInfo:
     public final boolean isIqama
     public final long minutesRemaining
-com.gathin.tvhome.PrayerManager$PrayerItem:
+com.islam.tv.PrayerManager$PrayerItem:
     public final java.lang.String rawTime
-com.gathin.tvhome.PrayerManager$PrayerSchedule:
+com.islam.tv.PrayerManager$PrayerSchedule:
     public final java.lang.String countdownText
     public final java.lang.String hijriDate
     public final java.lang.String nextPrayerName
-com.gathin.tvhome.PrayerManager:
+com.islam.tv.PrayerManager:
     public static java.util.Map getFallbackTimes()
     public final int getHijriAdjustment()
     public final int getMethod()
     public final java.lang.String getSelectedAzanSound()
-    public static com.gathin.tvhome.PrayerManager$PrayerSchedule getTodaySchedule()
+    public static com.islam.tv.PrayerManager$PrayerSchedule getTodaySchedule()
     public final boolean is24HourFormat()
     public final boolean isAzanSoundEnabled()
     public final boolean isLockBarEnabled()
@@ -6544,6 +6552,7 @@ com.gathin.tvhome.PrayerManager:
     public static synthetic void lambda$fetchPrayerCalendarAsync$0()
     public static void set24HourFormat()
     public final void setAdjustment(java.lang.String,int)
+    public static void setAzanSleepModeEnabled()
     public static void setAzanSoundEnabled()
     public final void setHijriAdjustment(int)
     public static void setLockBarEnabled()
@@ -6551,17 +6560,17 @@ com.gathin.tvhome.PrayerManager:
     public static void setNotificationOverlayEnabled()
     public static void setSelectedAzanSound()
     public static void setShowPrayerBar()
-com.gathin.tvhome.PrayerSettingsActivity:
+com.islam.tv.PrayerSettingsActivity:
     public static java.lang.String getSoundDisplayName()
-    public static synthetic void lambda$fetchUpdatedTimes$32()
+    public static synthetic void lambda$fetchUpdatedTimes$33()
     public static void lambda$setupClickListeners$0()
     public static void lambda$setupClickListeners$1()
     public static void lambda$setupClickListeners$10()
-    public static synthetic void lambda$setupClickListeners$11()
-    public static void lambda$setupClickListeners$12()
-    public static synthetic void lambda$setupClickListeners$13()
-    public static void lambda$setupClickListeners$14()
-    public static synthetic void lambda$setupClickListeners$15()
+    public static void lambda$setupClickListeners$11()
+    public static synthetic void lambda$setupClickListeners$12()
+    public static void lambda$setupClickListeners$13()
+    public static synthetic void lambda$setupClickListeners$14()
+    public static void lambda$setupClickListeners$15()
     public static synthetic void lambda$setupClickListeners$16()
     public static synthetic void lambda$setupClickListeners$17()
     public static synthetic void lambda$setupClickListeners$18()
@@ -6572,6 +6581,7 @@ com.gathin.tvhome.PrayerSettingsActivity:
     public static synthetic void lambda$setupClickListeners$22()
     public static synthetic void lambda$setupClickListeners$23()
     public static synthetic void lambda$setupClickListeners$24()
+    public static synthetic void lambda$setupClickListeners$25()
     public static void lambda$setupClickListeners$3()
     public static void lambda$setupClickListeners$4()
     public static synthetic void lambda$setupClickListeners$5()
@@ -6579,60 +6589,66 @@ com.gathin.tvhome.PrayerSettingsActivity:
     public static synthetic void lambda$setupClickListeners$7()
     public static void lambda$setupClickListeners$8()
     public static void lambda$setupClickListeners$9()
-    public static synthetic void lambda$showAdjustmentPicker$31()
-    public static void lambda$showAzanSoundPicker$26()
-    public static synthetic void lambda$showCustomLocationDialog$29()
-    public static void lambda$showLocationPicker$28()
-    public static void lambda$showMethodPicker$30()
-    public static void lambda$showPermissionsStatusDialog$33()
-    public static synthetic void lambda$toggleTestAzanSound$25()
-    public static synthetic void lambda$triggerAutoDetect$27()
+    public static synthetic void lambda$showAdjustmentPicker$32()
+    public static void lambda$showAzanSoundPicker$27()
+    public static synthetic void lambda$showBatteryOptimizationDialog$35()
+    public static synthetic void lambda$showCustomLocationDialog$30()
+    public static void lambda$showLocationPicker$29()
+    public static void lambda$showMethodPicker$31()
+    public static void lambda$showPermissionsStatusDialog$34()
+    public static synthetic void lambda$toggleTestAzanSound$26()
+    public static synthetic void lambda$triggerAutoDetect$28()
+    public static void requestExactAlarmPermission()
     public static void requestMissingPermissions()
+    public static void requestOverlayPermission()
     public static void setupClickListeners()
     public static void showAzanSoundPicker()
+    public static void showBatteryOptimizationDialog()
     public static void showCustomLocationDialog()
     public static void showLocationPicker()
     public static void showMethodPicker()
     public static void showPermissionsStatusDialog()
     public static void toggleTestAzanSound()
     public static void triggerAutoDetect()
-com.gathin.tvhome.QuickSettingsActivity:
+com.islam.tv.QuickSettingsActivity:
     public static synthetic void lambda$addRow$1()
     public static synthetic void lambda$onCreate$0()
-com.gathin.tvhome.R$anim
-com.gathin.tvhome.R$array
-com.gathin.tvhome.R$bool
-com.gathin.tvhome.R$drawable
-com.gathin.tvhome.R$font
-com.gathin.tvhome.R$id
-com.gathin.tvhome.R$integer
-com.gathin.tvhome.R$layout
-com.gathin.tvhome.R$mipmap
-com.gathin.tvhome.R$plurals
-com.gathin.tvhome.R$raw
-com.gathin.tvhome.R$string
-com.gathin.tvhome.RaceWeekend$Race:
+com.islam.tv.R$anim
+com.islam.tv.R$array
+com.islam.tv.R$bool
+com.islam.tv.R$drawable
+com.islam.tv.R$font
+com.islam.tv.R$id
+com.islam.tv.R$integer
+com.islam.tv.R$layout
+com.islam.tv.R$mipmap
+com.islam.tv.R$plurals
+com.islam.tv.R$raw
+com.islam.tv.R$string
+com.islam.tv.RaceWeekend$Race:
     public final java.lang.String shortName()
-com.gathin.tvhome.RaceWeekend$Session:
+com.islam.tv.RaceWeekend$Session:
     public final boolean isRace()
     public static java.time.Duration length()
     public static java.lang.String shortName()
-com.gathin.tvhome.RemoteKeys$$InternalSyntheticLambda$1$2ef9c0b5765f046d63a7010058517be0f949fe851067325a27ed0134174c93cc$0
-com.gathin.tvhome.ScreenSaverManager$ScreenSaverOption:
+com.islam.tv.RemoteKeys$$InternalSyntheticLambda$1$e41b684a4d210d5b9950b7ebda04592cf61b90de488abe8ea974297574e328ea$0
+com.islam.tv.ScreenSaverManager$ScreenSaverOption:
     public final boolean isBuiltIn
     public final java.lang.String packageName
-com.gathin.tvhome.ScreenSaverManager:
+com.islam.tv.ScreenSaverManager:
     public static java.util.List getAvailableScreenSavers()
     public static java.util.List getInstalledApps()
     public final java.lang.String getScreenSaverApp()
     public final java.lang.String getScreenSaverAppLabel()
     public final long getTimeoutMillis()
     public final int getTimeoutMinutes()
-    public final boolean isScreenSaverEnabled()
+    public final boolean hasSecureSettingsPermission()
+    public static void onIdleTimeout()
     public final void setScreenSaverApp(java.lang.String,java.lang.String)
     public static void setScreenSaverEnabled()
     public static void setTimeoutMinutes()
-com.gathin.tvhome.ScreenSaverSettingsActivity:
+    public final void syncWithSystem()
+com.islam.tv.ScreenSaverSettingsActivity:
     public static void lambda$setupClickListeners$0()
     public static void lambda$setupClickListeners$1()
     public static void lambda$setupClickListeners$2()
@@ -6645,29 +6661,29 @@ com.gathin.tvhome.ScreenSaverSettingsActivity:
     public static void showAppPicker()
     public static void showInstalledAppsPicker()
     public static void showTimeoutPicker()
-com.gathin.tvhome.SkyView:
+com.islam.tv.SkyView:
     public static int[] sunTimes()
     public final void update()
-com.gathin.tvhome.ThemeFiles:
+com.islam.tv.ThemeFiles:
     public static boolean collectionImage(java.lang.String)
-com.gathin.tvhome.VpnBadge:
+com.islam.tv.VpnBadge:
     public final float lockGap()
     public final float lockSize(android.graphics.Paint)
     public static float textSize()
-com.gathin.tvhome.WallpaperPlayer:
+com.islam.tv.WallpaperPlayer:
     public static void close()
     public static synthetic void lambda$update$0()
     public static synthetic void lambda$update$1()
     public static void showFirst()
     public static void start()
     public static void stop()
-com.gathin.tvhome.WallpaperSize
-com.gathin.tvhome.WeatherManager$$InternalSyntheticLambda$4$f911ce641614db6ee9b67f54550684c5b42b4dcbae11cd2522af35815ea1c7b1$0:
+com.islam.tv.WallpaperSize
+com.islam.tv.WeatherManager$$InternalSyntheticLambda$4$fcc3f4226ea2ef7dc370171671379e37971dd3d92753f0214e4d348a5924355b$0:
     public final synthetic double f$4
     public final synthetic double f$5
-com.gathin.tvhome.WeatherManager:
+com.islam.tv.WeatherManager:
     public final android.content.Context context
-    public final void autoDetectLocation(com.gathin.tvhome.WeatherManager$LocationDetectCallback)
+    public final void autoDetectLocation(com.islam.tv.WeatherManager$LocationDetectCallback)
     public static java.lang.String fetchFromOpenMeteo()
     public static java.lang.String fetchFromWttrIn()
     public static java.lang.String getCachedWeather()
@@ -6677,7 +6693,7 @@ com.gathin.tvhome.WeatherManager:
     public static java.lang.String parseWeatherCode()
     public final void setCountry(java.lang.String)
     public final void setWeatherEnabled(boolean)
-com.gathin.tvhome.WeatherSettingsActivity:
+com.islam.tv.WeatherSettingsActivity:
     public static synthetic void lambda$setupClickListeners$0()
     public static void lambda$setupClickListeners$1()
     public static synthetic void lambda$setupClickListeners$2()

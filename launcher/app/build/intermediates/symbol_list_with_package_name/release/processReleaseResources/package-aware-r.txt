@@ -1,4 +1,4 @@
-com.gathin.tvhome
+com.islam.tv
 anim app_open_enter
 anim app_open_exit
 anim tile_enter

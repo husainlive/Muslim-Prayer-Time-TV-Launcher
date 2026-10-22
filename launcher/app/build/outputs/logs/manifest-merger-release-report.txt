@@ -1,5 +1,5 @@
 -- Merging decision tree log ---
-provider#com.gathin.tvhome.ThemeProvider
+provider#com.islam.tv.ThemeProvider
 INJECTED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:139:9-143:77
 	android:authorities
 		INJECTED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml
@@ -161,12 +161,12 @@ category#android.intent.category.LEANBACK_LAUNCHER
 ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:41:13-82
 	android:name
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:41:23-79
-intent#action:name:android.intent.action.MAIN+category:name:com.gathin.tvhome.category.DOCK_CARD
+intent#action:name:android.intent.action.MAIN+category:name:com.islam.tv.category.DOCK_CARD
 ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:43:9-46:18
-category#com.gathin.tvhome.category.DOCK_CARD
-ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:45:13-77
+category#com.islam.tv.category.DOCK_CARD
+ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:45:13-72
 	android:name
-		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:45:23-74
+		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:45:23-69
 package#com.xiaomi.mitv.settings
 ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:48:9-60
 	android:name
@@ -194,7 +194,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/husai
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:54:9-42
 	android:theme
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:55:9-44
-activity#com.gathin.tvhome.MainActivity
+activity#com.islam.tv.MainActivity
 ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:59:9-78:20
 	android:screenOrientation
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:67:13-50
@@ -224,7 +224,7 @@ ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/a
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:71:27-73
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LEANBACK_LAUNCHER
 ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:74:13-77:29
-activity#com.gathin.tvhome.LauncherSettingsActivity
+activity#com.islam.tv.LauncherSettingsActivity
 ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:80:9-84:53
 	android:screenOrientation
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:84:13-50
@@ -234,7 +234,7 @@ ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/a
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:82:13-36
 	android:name
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:81:13-53
-activity#com.gathin.tvhome.QuickSettingsActivity
+activity#com.islam.tv.QuickSettingsActivity
 ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:86:9-94:86
 	android:screenOrientation
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:93:13-50
@@ -252,7 +252,7 @@ ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/a
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:89:13-36
 	android:name
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:87:13-50
-activity#com.gathin.tvhome.HomeSettingsActivity
+activity#com.islam.tv.HomeSettingsActivity
 ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:95:9-100:62
 	android:excludeFromRecents
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:99:13-46
@@ -264,7 +264,7 @@ ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/a
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:98:13-36
 	android:name
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:96:13-49
-service#com.gathin.tvhome.HomeKeyService
+service#com.islam.tv.HomeKeyService
 ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:103:9-114:19
 	android:label
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:105:13-50
@@ -286,7 +286,7 @@ ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/a
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:113:17-57
 	android:name
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:112:17-60
-activity#com.gathin.tvhome.ClockActivity
+activity#com.islam.tv.ClockActivity
 ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:117:9-122:80
 	android:excludeFromRecents
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:120:13-46
@@ -298,7 +298,7 @@ ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/a
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:122:13-77
 	android:name
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:118:13-42
-service#com.gathin.tvhome.ClockDream
+service#com.islam.tv.ClockDream
 ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:126:9-135:19
 	android:label
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:128:13-47
@@ -314,7 +314,7 @@ action#android.service.dreams.DreamService
 ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:132:17-78
 	android:name
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:132:25-75
-service#com.gathin.tvhome.InputKeyService
+service#com.islam.tv.InputKeyService
 ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:147:9-158:19
 	android:label
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:150:13-45
@@ -324,7 +324,7 @@ ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/a
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:151:13-79
 	android:name
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:148:13-44
-activity#com.gathin.tvhome.PrayerSettingsActivity
+activity#com.islam.tv.PrayerSettingsActivity
 ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:159:9-163:53
 	android:screenOrientation
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:163:13-50
@@ -334,7 +334,7 @@ ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/a
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:162:13-48
 	android:name
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:160:13-51
-activity#com.gathin.tvhome.WeatherSettingsActivity
+activity#com.islam.tv.WeatherSettingsActivity
 ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:165:9-169:53
 	android:screenOrientation
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:169:13-50
@@ -344,7 +344,7 @@ ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/a
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:168:13-48
 	android:name
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:166:13-52
-activity#com.gathin.tvhome.ScreenSaverSettingsActivity
+activity#com.islam.tv.ScreenSaverSettingsActivity
 ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:171:9-175:53
 	android:screenOrientation
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:175:13-50
@@ -354,7 +354,7 @@ ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/a
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:174:13-48
 	android:name
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:172:13-56
-activity#com.gathin.tvhome.PrayerAlertActivity
+activity#com.islam.tv.PrayerAlertActivity
 ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:177:9-185:53
 	android:screenOrientation
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:185:13-50
@@ -372,7 +372,7 @@ ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/a
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:180:13-58
 	android:name
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:178:13-48
-service#com.gathin.tvhome.PrayerAlarmService
+service#com.islam.tv.PrayerAlarmService
 ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:187:9-190:61
 	android:exported
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:189:13-37
@@ -380,13 +380,13 @@ ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/a
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:190:13-58
 	android:name
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:188:13-47
-receiver#com.gathin.tvhome.PrayerAlarmReceiver
+receiver#com.islam.tv.PrayerAlarmReceiver
 ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:192:9-194:40
 	android:exported
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:194:13-37
 	android:name
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:193:13-48
-receiver#com.gathin.tvhome.PrayerBootReceiver
+receiver#com.islam.tv.PrayerBootReceiver
 ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:196:9-205:20
 	android:exported
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:198:13-36

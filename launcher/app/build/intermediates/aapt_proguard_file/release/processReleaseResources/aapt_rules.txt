@@ -1,23 +1,23 @@
 -keep class androidx.core.app.CoreComponentFactory { <init>(); }
--keep class com.gathin.tvhome.ClockActivity { <init>(); }
--keep class com.gathin.tvhome.ClockDream { <init>(); }
--keep class com.gathin.tvhome.HomeKeyService { <init>(); }
--keep class com.gathin.tvhome.HomeSettingsActivity { <init>(); }
--keep class com.gathin.tvhome.InputKeyService { <init>(); }
--keep class com.gathin.tvhome.LauncherSettingsActivity { <init>(); }
--keep class com.gathin.tvhome.MainActivity { <init>(); }
--keep class com.gathin.tvhome.PrayerAlarmReceiver { <init>(); }
--keep class com.gathin.tvhome.PrayerAlarmService { <init>(); }
--keep class com.gathin.tvhome.PrayerAlertActivity { <init>(); }
--keep class com.gathin.tvhome.PrayerBootReceiver { <init>(); }
--keep class com.gathin.tvhome.PrayerSettingsActivity { <init>(); }
--keep class com.gathin.tvhome.QuickSettingsActivity { <init>(); }
--keep class com.gathin.tvhome.ScreenSaverSettingsActivity { <init>(); }
--keep class com.gathin.tvhome.ThemeProvider { <init>(); }
--keep class com.gathin.tvhome.WeatherSettingsActivity { <init>(); }
+-keep class com.islam.tv.ClockActivity { <init>(); }
+-keep class com.islam.tv.ClockDream { <init>(); }
+-keep class com.islam.tv.HomeKeyService { <init>(); }
+-keep class com.islam.tv.HomeSettingsActivity { <init>(); }
+-keep class com.islam.tv.InputKeyService { <init>(); }
+-keep class com.islam.tv.LauncherSettingsActivity { <init>(); }
+-keep class com.islam.tv.MainActivity { <init>(); }
+-keep class com.islam.tv.PrayerAlarmReceiver { <init>(); }
+-keep class com.islam.tv.PrayerAlarmService { <init>(); }
+-keep class com.islam.tv.PrayerAlertActivity { <init>(); }
+-keep class com.islam.tv.PrayerBootReceiver { <init>(); }
+-keep class com.islam.tv.PrayerSettingsActivity { <init>(); }
+-keep class com.islam.tv.QuickSettingsActivity { <init>(); }
+-keep class com.islam.tv.ScreenSaverSettingsActivity { <init>(); }
+-keep class com.islam.tv.ThemeProvider { <init>(); }
+-keep class com.islam.tv.WeatherSettingsActivity { <init>(); }
 -keep class androidx.recyclerview.widget.RecyclerView { <init>(android.content.Context, android.util.AttributeSet); }
 
--keep class com.gathin.tvhome.GlassView { <init>(android.content.Context, android.util.AttributeSet); }
+-keep class com.islam.tv.GlassView { <init>(android.content.Context, android.util.AttributeSet); }
 
--keep class com.gathin.tvhome.SkyView { <init>(android.content.Context, android.util.AttributeSet); }
+-keep class com.islam.tv.SkyView { <init>(android.content.Context, android.util.AttributeSet); }
 

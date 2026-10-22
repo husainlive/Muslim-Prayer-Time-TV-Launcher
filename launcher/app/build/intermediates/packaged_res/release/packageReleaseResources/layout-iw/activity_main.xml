@@ -8,7 +8,7 @@
 
     <!-- Time-of-day backdrop, drawn once a minute (config.xml sky_intensity; 0 keeps it hidden).
          Keep in step with layout/activity_main.xml: every view there must exist here too. -->
-    <com.gathin.tvhome.SkyView
+    <com.islam.tv.SkyView
         android:id="@+id/sky"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -121,7 +121,7 @@
             android:layout_gravity="right"
             android:gravity="right"
             android:textColor="#FFFFFFFF"
-            android:textSize="48sp"
+            android:textSize="36sp"
             android:fontFamily="@font/outfit_light"
             android:letterSpacing="-0.02"
             android:includeFontPadding="false"
@@ -394,7 +394,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:layout_marginTop="6dp">
+            android:layout_marginTop="46dp">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/grid"
@@ -411,7 +411,7 @@
     </LinearLayout>
 
     <!-- The single floating glass highlight that springs between tiles. -->
-    <com.gathin.tvhome.GlassView
+    <com.islam.tv.GlassView
         android:id="@+id/glass"
         android:layout_width="10dp"
         android:layout_height="10dp"

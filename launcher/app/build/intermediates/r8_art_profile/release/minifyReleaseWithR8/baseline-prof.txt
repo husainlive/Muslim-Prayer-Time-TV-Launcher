@@ -24,7 +24,7 @@ HSPLandroidx/recyclerview/widget/ChildHelper;->getOffset(I)I
 HSPLandroidx/recyclerview/widget/ChildHelper;->getUnfilteredChildAt(I)Landroid/view/View;
 HSPLandroidx/recyclerview/widget/ChildHelper;->getUnfilteredChildCount()I
 HSPLandroidx/recyclerview/widget/ChildHelper;->isHidden(Landroid/view/View;)Z
-HSPLcom/gathin/tvhome/MainActivity$13;-><init>(Ljava/lang/Object;Ljava/lang/Object;I)V
+HSPLcom/islam/tv/MainActivity$13;-><init>(Ljava/lang/Object;Ljava/lang/Object;I)V
 HSPLandroidx/recyclerview/widget/DefaultItemAnimator;->dispatchFinishedWhenDone()V
 HSPLandroidx/recyclerview/widget/DefaultItemAnimator;->endAnimation(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 HSPLandroidx/recyclerview/widget/DefaultItemAnimator;->endAnimations()V
@@ -116,7 +116,7 @@ HSPLandroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPaddingTop()I
 HSPLandroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPosition(Landroid/view/View;)I
 HSPLandroidx/recyclerview/widget/RecyclerView$LayoutManager;->getProperties(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroidx/recyclerview/widget/RecyclerView$LayoutManager$Properties;
 HSPLandroidx/recyclerview/widget/RecyclerView$LayoutManager;->getRowCountForAccessibility(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;)I
-HSPLandroidx/recyclerview/widget/RecyclerView$LayoutManager;->getTransformedBoundingBox(Landroid/view/View;Landroid/graphics/Rect;)V
+HSPLandroidx/recyclerview/widget/RecyclerView$LayoutManager;->getTransformedBoundingBox(Landroid/graphics/Rect;Landroid/view/View;)V
 HSPLandroidx/recyclerview/widget/RecyclerView$LayoutManager;->layoutDecoratedWithMargins(Landroid/view/View;IIII)V
 HSPLandroidx/recyclerview/widget/RecyclerView$LayoutManager;->offsetChildrenVertical(I)V
 HSPLandroidx/recyclerview/widget/RecyclerView$LayoutManager;->onAdapterChanged()V
@@ -266,13 +266,13 @@ HSPLkotlin/ResultKt;->computeScrollExtent(Landroidx/recyclerview/widget/Recycler
 HSPLkotlin/ResultKt;->computeScrollOffset(Landroidx/recyclerview/widget/RecyclerView$State;Landroidx/recyclerview/widget/OrientationHelper$1;Landroid/view/View;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView$LayoutManager;ZZ)I
 HSPLkotlin/ResultKt;->computeScrollRange(Landroidx/recyclerview/widget/RecyclerView$State;Landroidx/recyclerview/widget/OrientationHelper$1;Landroid/view/View;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView$LayoutManager;Z)I
 HSPLandroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->boundsMatch()Z
-HSPLcom/gathin/tvhome/Order;-><init>(Landroidx/recyclerview/widget/RecyclerView$LayoutManager$1;)V
-HSPLcom/gathin/tvhome/Order;->findOneViewWithinBoundFlags(IIII)Landroid/view/View;
+HSPLcom/islam/tv/Order;-><init>(Landroidx/recyclerview/widget/RecyclerView$LayoutManager$1;)V
+HSPLcom/islam/tv/Order;->findOneViewWithinBoundFlags(IIII)Landroid/view/View;
 HSPLandroidx/recyclerview/widget/ViewInfoStore$InfoRecord;-><clinit>()V
 HSPLandroidx/recyclerview/widget/ViewInfoStore$InfoRecord;->obtain()Landroidx/recyclerview/widget/ViewInfoStore$InfoRecord;
-HSPLcom/gathin/tvhome/Order;->addToPostLayout(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$ItemHolderInfo;)V
-HSPLcom/gathin/tvhome/Order;->removeFromDisappearedInLayout(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
-HSPLcom/gathin/tvhome/Order;->removeViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
+HSPLcom/islam/tv/Order;->addToPostLayout(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$ItemHolderInfo;)V
+HSPLcom/islam/tv/Order;->removeFromDisappearedInLayout(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
+HSPLcom/islam/tv/Order;->removeViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 Landroidx/core/app/NotificationCompatBuilder$$ExternalSyntheticThrowCCEIfNotNull4;
 HSPLandroidx/core/app/NotificationCompatBuilder$$ExternalSyntheticThrowCCEIfNotNull4;->m(Ljava/lang/Object;)V
 Landroidx/recyclerview/widget/ChildHelper$$ExternalSyntheticOutline0;
@@ -302,4 +302,4 @@ HSPLandroidx/recyclerview/widget/RecyclerView$LayoutManager$1;->getChildEnd(Land
 HSPLandroidx/recyclerview/widget/RecyclerView$LayoutManager$1;->getChildStart(Landroid/view/View;)I
 HSPLandroidx/recyclerview/widget/RecyclerView$LayoutManager$1;->getParentEnd()I
 HSPLandroidx/recyclerview/widget/RecyclerView$LayoutManager$1;->getParentStart()I
-HSPLcom/gathin/tvhome/MainActivity$13;->run()V
+HSPLcom/islam/tv/MainActivity$13;->run()V

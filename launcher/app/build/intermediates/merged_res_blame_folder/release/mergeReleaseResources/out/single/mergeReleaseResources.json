@@ -1,394 +1,398 @@
 [
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable-mdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/drawable-mdpi-v4/notification_bg_normal.9.png"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout_popup_cards.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/layout/popup_cards.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/layout_item_card_row.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/layout/item_card_row.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_glass_panel.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/glass_panel.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/layout_notification_template_part_chronometer.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/layout/notification_template_part_chronometer.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_status_dot.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/status_dot.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_ic_home_settings.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/ic_home_settings.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout-v21_notification_action_tombstone.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/layout-v21/notification_action_tombstone.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/layout_dream_clock.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/layout/dream_clock.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout-v21_notification_action.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/layout-v21/notification_action.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_ic_delete.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/ic_delete.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/drawable-mdpi-v4/notification_bg_low_normal.9.png"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_pill_text_dim.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/pill_text_dim.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_prayer_time_selector.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/prayer_time_selector.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_ic_ethernet.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/ic_ethernet.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_race_bar.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/race_bar.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_notification_tile_bg.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/drawable/notification_tile_bg.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout_activity_main.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/layout/activity_main.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout-iw_activity_main.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/layout-iw/activity_main.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_status_dot.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/status_dot.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout_item_prayer_time.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/layout/item_prayer_time.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_pill_text_mid.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/pill_text_mid.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_ic_input.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/ic_input.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_settings_choice_bg.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/settings_choice_bg.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_notification_bg_low.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/drawable/notification_bg_low.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/xml_locales_config.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/xml/locales_config.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/layout_popup_cards.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/layout/popup_cards.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/raw_azan_3.mp3.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/raw/azan_3.mp3"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/layout_popup_inputs.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/layout/popup_inputs.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/font_outfit.ttf.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/font/outfit.ttf"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_ic_swap_vert.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/ic_swap_vert.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_ic_swap_vert.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/ic_swap_vert.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/layout-v21_notification_action_tombstone.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/layout-v21/notification_action_tombstone.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_prayer_label_selector.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/prayer_label_selector.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout_item_card_row.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/layout/item_card_row.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/font_outfit_regular.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/font/outfit_regular.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout-iw_dream_clock.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/layout-iw/dream_clock.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/layout_dialog_card_prompt.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/layout/dialog_card_prompt.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable-mdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/drawable-mdpi-v4/notification_bg_normal.9.png"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/mipmap-xhdpi_ic_launcher.jpg.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/mipmap-xhdpi/ic_launcher.jpg"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_pill_bg.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/pill_bg.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout_activity_prayer_alert.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/layout/activity_prayer_alert.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/font_outfit_medium.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/font/outfit_medium.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout_popup_inputs.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/layout/popup_inputs.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/drawable-mdpi-v4/notification_bg_low_normal.9.png"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_pill_bg.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/pill_bg.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/layout-iw_dream_clock.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/layout-iw/dream_clock.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_input_row_bg.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/input_row_bg.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/layout_item_prayer_time.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/layout/item_prayer_time.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_ic_apps.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/ic_apps.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/layout_item_input.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/layout/item_input.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_input_row_bg.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/input_row_bg.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout_layout_prayer_bar.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/layout/layout_prayer_bar.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/mipmap-xhdpi_ic_launcher.jpg.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/mipmap-xhdpi/ic_launcher.jpg"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/layout_activity_main.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/layout/activity_main.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_notification_icon_background.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/drawable/notification_icon_background.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_ic_settings.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/ic_settings.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/drawable-hdpi-v4/notification_bg_low_normal.9.png"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/layout-iw_item_input.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/layout-iw/item_input.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_pill_text.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/pill_text.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/font_outfit.ttf.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/font/outfit.ttf"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable-nodpi_banner.jpg.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable-nodpi/banner.jpg"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_pill_text.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/pill_text.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/raw_azan_1.mp3.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/raw/azan_1.mp3"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_ic_picture.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/ic_picture.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_pill_text_mid.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/pill_text_mid.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable-hdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/drawable-hdpi-v4/notification_bg_normal.9.png"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout_activity_prayer_settings.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/layout/activity_prayer_settings.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable-nodpi_banner.jpg.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable-nodpi/banner.jpg"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout_dream_clock.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/layout/dream_clock.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/xml_home_key_service.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/xml/home_key_service.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/font_outfit_regular.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/font/outfit_regular.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/layout-v21_notification_template_icon_group.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/layout-v21/notification_template_icon_group.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout_activity_launcher_settings.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/layout/activity_launcher_settings.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_ic_av.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/ic_av.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/menu_example_menu.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/menu/example_menu.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png"
     },
     {
-        "merged": "com.gathin.tvhome.app-release-11:/layout_activity_prayer_settings.xml.flat",
-        "source": "com.gathin.tvhome.app-main-12:/layout/activity_prayer_settings.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_ic_settings.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/ic_settings.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/layout_item_app.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/layout/item_app.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_notification_tile_bg.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/drawable/notification_tile_bg.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_prayer_pill_selector.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/prayer_pill_selector.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/anim_app_open_exit.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/anim/app_open_exit.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_ic_apps.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/ic_apps.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_ic_disable.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/ic_disable.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/layout-v21_notification_template_custom_big.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/layout-v21/notification_template_custom_big.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/anim_tile_enter_reduced.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/anim/tile_enter_reduced.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/raw_azan_3.mp3.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/raw/azan_3.mp3"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout_notification_template_part_time.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/layout/notification_template_part_time.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/raw_keep.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/raw/keep.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_ic_home_settings.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/ic_home_settings.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/xml_input_key_service.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/xml/input_key_service.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/anim_tile_enter.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/anim/tile_enter.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_settings_choice_bg.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/settings_choice_bg.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/menu_example_menu2.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/menu/example_menu2.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/layout_activity_prayer_settings.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/layout/activity_prayer_settings.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/font_outfit_light.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/font/outfit_light.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_prayer_countdown_selector.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/prayer_countdown_selector.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout_dialog_card_prompt.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/layout/dialog_card_prompt.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_race_bar.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/race_bar.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_ic_pin.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/ic_pin.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/layout_activity_screensaver_settings.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/layout/activity_screensaver_settings.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout_activity_screensaver_settings.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/layout/activity_screensaver_settings.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/drawable-xhdpi-v4/notification_bg_normal.9.png"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout_activity_quick_settings.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/layout/activity_quick_settings.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/drawable-hdpi-v4/notification_bg_low_normal.9.png"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable-v21_notification_action_background.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/drawable-v21/notification_action_background.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/raw_azan_2.mp3.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/raw/azan_2.mp3"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/raw_keep.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/raw/keep.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_ic_disable.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/ic_disable.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/xml_input_key_service.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/xml/input_key_service.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/layout_layout_prayer_bar.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/layout/layout_prayer_bar.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout-iw_item_input.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/layout-iw/item_input.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/layout-iw_activity_main.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/layout-iw/activity_main.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/font_outfit_medium.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/font/outfit_medium.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_library_check.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/library_check.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_ic_picture.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/ic_picture.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/font_outfit_extralight.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/font/outfit_extralight.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_ic_lock.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/ic_lock.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_prayer_pill_selector.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/prayer_pill_selector.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/layout_activity_weather_settings.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/layout/activity_weather_settings.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_ic_lock.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/ic_lock.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/layout_custom_dialog.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/layout/custom_dialog.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_prayer_countdown_selector.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/prayer_countdown_selector.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/menu_example_menu2.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/menu/example_menu2.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/xml_home_key_service.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/xml/home_key_service.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/layout_notification_template_part_time.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/layout/notification_template_part_time.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable-hdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/drawable-hdpi-v4/notification_bg_normal.9.png"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/anim_app_open_exit.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/anim/app_open_exit.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_notification_bg.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/drawable/notification_bg.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/raw_azan_1.mp3.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/raw/azan_1.mp3"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/drawable-xhdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/layout_activity_launcher_settings.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/layout/activity_launcher_settings.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/drawable-mdpi-v4/notify_panel_notification_icon_bg.png"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_ic_livetv.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/ic_livetv.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_ic_livetv.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/ic_livetv.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_glass_panel.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/glass_panel.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_ic_input.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/ic_input.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/anim_app_open_enter.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/anim/app_open_enter.xml"
+        "merged": "com.islam.tv.app-release-11:/layout_activity_main.xml.flat",
+        "source": "com.islam.tv.app-main-12:/layout/activity_main.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/drawable-xhdpi-v4/notification_bg_low_pressed.9.png"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout_item_input.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/layout/item_input.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/drawable-mdpi-v4/notify_panel_notification_icon_bg.png"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_ic_delete.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/ic_delete.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/layout_activity_quick_settings.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/layout/activity_quick_settings.xml"
+        "merged": "com.islam.tv.app-release-11:/layout-iw_activity_main.xml.flat",
+        "source": "com.islam.tv.app-main-12:/layout-iw/activity_main.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/layout-v21_notification_action.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/layout-v21/notification_action.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout_notification_template_part_chronometer.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/layout/notification_template_part_chronometer.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable-v21_notification_action_background.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/drawable-v21/notification_action_background.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout-v21_notification_template_custom_big.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/layout-v21/notification_template_custom_big.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_notification_icon_background.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/drawable/notification_icon_background.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_ic_ethernet.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/ic_ethernet.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/anim_tile_enter_reduced.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/anim/tile_enter_reduced.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout_row_app_library.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/layout/row_app_library.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/font_outfit_light.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/font/outfit_light.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_tile_bg.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/tile_bg.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_ic_pin.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/ic_pin.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/anim_app_open_enter.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/anim/app_open_enter.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/menu_example_menu.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/menu/example_menu.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_pill_text_dim.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/pill_text_dim.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/layout_activity_prayer_alert.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/layout/activity_prayer_alert.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout_activity_weather_settings.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/layout/activity_weather_settings.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_prayer_label_selector.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/prayer_label_selector.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_ic_av.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/ic_av.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_tile_bg.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/tile_bg.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_banner_tv.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/banner_tv.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/layout_row_app_library.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/layout/row_app_library.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_notification_bg_low.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/drawable/notification_bg_low.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout-v21_notification_template_icon_group.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/layout-v21/notification_template_icon_group.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_notification_bg.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/drawable/notification_bg.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/raw_azan_2.mp3.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/raw/azan_2.mp3"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout_custom_dialog.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/layout/custom_dialog.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_banner_tv.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/banner_tv.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_library_check.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/library_check.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-core-1.7.0-0:/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/font_outfit_extralight.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/font/outfit_extralight.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/drawable_ic_wifi.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/drawable/ic_wifi.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_ic_wifi.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/ic_wifi.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/xml_locales_config.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/xml/locales_config.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/drawable-xhdpi-v4/notification_bg_normal.9.png"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-release-11:/anim_tile_enter.xml.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.gathin.tvhome.app-main-12:/anim/tile_enter.xml"
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout_item_app.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/layout/item_app.xml"
+    },
+    {
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_prayer_time_selector.xml.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/prayer_time_selector.xml"
     }
 ]

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.gathin.tvhome"
+    package="com.islam.tv"
     android:versionCode="6"
     android:versionName="2.5" >
 
@@ -41,6 +41,9 @@
     <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
     <!--
          Android 11+ package visibility: lets the launcher list the TV apps it shows as tiles, and the
@@ -60,7 +63,7 @@
         <intent>
             <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="com.gathin.tvhome.category.DOCK_CARD" />
+            <category android:name="com.islam.tv.category.DOCK_CARD" />
         </intent>
         <!-- China-market MIUI TV firmware: the Settings and Wi-Fi pills fall back to Xiaomi's settings app. -->
         <package android:name="com.xiaomi.mitv.settings" />
@@ -76,7 +79,7 @@
         android:localeConfig="@xml/locales_config"
         android:theme="@style/Theme.TvHome" >
         <activity
-            android:name="com.gathin.tvhome.MainActivity"
+            android:name="com.islam.tv.MainActivity"
             android:clearTaskOnLaunch="true"
             android:configChanges="orientation|screenSize|keyboard|keyboardHidden|uiMode"
             android:excludeFromRecents="true"
@@ -98,13 +101,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.gathin.tvhome.LauncherSettingsActivity"
+            android:name="com.islam.tv.LauncherSettingsActivity"
             android:excludeFromRecents="true"
             android:exported="true"
             android:screenOrientation="landscape" />
         <!-- Remote Settings button panel (settings_key_panel); own task so the app behind stays put. -->
         <activity
-            android:name="com.gathin.tvhome.QuickSettingsActivity"
+            android:name="com.islam.tv.QuickSettingsActivity"
             android:excludeFromRecents="true"
             android:exported="false"
             android:launchMode="singleTop"
@@ -113,7 +116,7 @@
             android:taskAffinity=""
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
         <activity
-            android:name="com.gathin.tvhome.HomeSettingsActivity"
+            android:name="com.islam.tv.HomeSettingsActivity"
             android:excludeFromRecents="true"
             android:exported="false"
             android:taskAffinity=""
@@ -123,7 +126,7 @@
              build-and-install.sh; see HomeKeyService.
         -->
         <service
-            android:name="com.gathin.tvhome.HomeKeyService"
+            android:name="com.islam.tv.HomeKeyService"
             android:exported="true"
             android:label="@string/home_key_name"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
@@ -138,7 +141,7 @@
 
         <!-- The same clock, started by Home itself after home_idle_clock_minutes without input. -->
         <activity
-            android:name="com.gathin.tvhome.ClockActivity"
+            android:name="com.islam.tv.ClockActivity"
             android:excludeFromRecents="true"
             android:exported="false"
             android:noHistory="true"
@@ -146,10 +149,10 @@
 
         <!--
              Screensaver: pick it in Settings, or `settings put secure screensaver_components
-             com.gathin.tvhome/.ClockDream` over adb.
+             com.islam.tv/.ClockDream` over adb.
         -->
         <service
-            android:name="com.gathin.tvhome.ClockDream"
+            android:name="com.islam.tv.ClockDream"
             android:exported="true"
             android:label="@string/dream_name"
             android:permission="android.permission.BIND_DREAM_SERVICE" >
@@ -165,8 +168,8 @@
              see ThemeProvider. WRITE_SECURE_SETTINGS: the adb shell has it, ordinary apps don't.
         -->
         <provider
-            android:name="com.gathin.tvhome.ThemeProvider"
-            android:authorities="com.gathin.tvhome.theme"
+            android:name="com.islam.tv.ThemeProvider"
+            android:authorities="com.islam.tv.theme"
             android:exported="true"
             android:permission="android.permission.WRITE_SECURE_SETTINGS" />
 
@@ -175,7 +178,7 @@
          app_keys (config.xml or a theme) bring back other remote buttons; see InputKeyService.
         -->
         <service
-            android:name="com.gathin.tvhome.InputKeyService"
+            android:name="com.islam.tv.InputKeyService"
             android:exported="false"
             android:label="@string/app_name"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
@@ -189,22 +192,22 @@
         </service>
 
         <activity
-            android:name="com.gathin.tvhome.PrayerSettingsActivity"
+            android:name="com.islam.tv.PrayerSettingsActivity"
             android:exported="true"
             android:screenOrientation="landscape"
             android:theme="@style/Theme.TvHome" />
         <activity
-            android:name="com.gathin.tvhome.WeatherSettingsActivity"
+            android:name="com.islam.tv.WeatherSettingsActivity"
             android:exported="true"
             android:screenOrientation="landscape"
             android:theme="@style/Theme.TvHome" />
         <activity
-            android:name="com.gathin.tvhome.ScreenSaverSettingsActivity"
+            android:name="com.islam.tv.ScreenSaverSettingsActivity"
             android:exported="true"
             android:screenOrientation="landscape"
             android:theme="@style/Theme.TvHome" />
         <activity
-            android:name="com.gathin.tvhome.PrayerAlertActivity"
+            android:name="com.islam.tv.PrayerAlertActivity"
             android:excludeFromRecents="true"
             android:exported="false"
             android:launchMode="singleTask"
@@ -214,15 +217,15 @@
             android:turnScreenOn="true" />
 
         <service
-            android:name="com.gathin.tvhome.PrayerAlarmService"
+            android:name="com.islam.tv.PrayerAlarmService"
             android:exported="false"
             android:foregroundServiceType="mediaPlayback" />
 
         <receiver
-            android:name="com.gathin.tvhome.PrayerAlarmReceiver"
+            android:name="com.islam.tv.PrayerAlarmReceiver"
             android:exported="false" />
         <receiver
-            android:name="com.gathin.tvhome.PrayerBootReceiver"
+            android:name="com.islam.tv.PrayerBootReceiver"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />

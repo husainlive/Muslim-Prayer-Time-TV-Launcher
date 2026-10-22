@@ -241,6 +241,7 @@
   <com.android.tools.screenshot/>
   <com.android.tools.smali/>
   <com.android.tools.studio.leakcanary/>
+  <com.android.tools.test/>
   <com.android.tools.utp/>
   <com.android.volley/>
   <com.crashlytics.sdk.android/>

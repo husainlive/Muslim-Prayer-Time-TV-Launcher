@@ -1,230 +1,314 @@
-Marking id:icon:2131296359 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking drawable:ic_apps:2131165187 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:title:2131296447 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:status:2131296427 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:library_on_home:2131755072 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:library_recent:2131755074 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:library_add_home:2131755067 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:dot:2131296334 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking drawable:library_check:2131165202 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:prayer_times:2131755118 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking layout:dream_clock:2131427337 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking layout:row_app_library:2131427351 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:btnLibrary:2131296318 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking layout:item_app:2131427338 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:card:2131296324 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:name:2131296378 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:btnInputs:2131296316 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking layout:popup_inputs:2131427350 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:rows:2131296411 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking drawable:ic_input:2131165193 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking drawable:ic_av:2131165188 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:inputs:2131755064 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:live_tv:2131755078 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking drawable:ic_livetv:2131165194 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:no_inputs:2131755083 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking bool:rtl_menu_bar:2130968592 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking layout:activity_prayer_alert:2131427330 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:alertTitle:2131296303 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:alertTime:2131296302 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:btnDismissAlert:2131296315 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking layout:activity_screensaver_settings:2131427333 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:screenSaverEnabledChoice:2131296417 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:screenSaverTimeoutChoice:2131296421 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:screenSaverAppChoice:2131296416 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:screenSaverPreviewChoice:2131296418 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:screenSaverSystemChoice:2131296420 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:on:2131755089 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:screensaver_off_turn_off_screen:2131755149 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:screensaver_enable:2131755146 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:screensaver_minute_singular:2131755147 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:screensaver_minutes_format:2131755148 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:screensaver_timeout:2131755157 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:screensaver_builtin_clock:2131755144 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:screensaver_app:2131755143 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:screensaver_system_settings:2131755156 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:screensaver_adb_synced:2131755142 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:not_available:2131755085 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:screensaver_select_installed_app:2131755152 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking attr:recyclerViewStyle:2130903061 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking dimen:fastscroll_default_thickness:2131099655 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking dimen:fastscroll_minimum_range:2131099657 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking dimen:fastscroll_margin:2131099656 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:is_pooling_container_tag:2131296364 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:pooling_container_listener_holder_tag:2131296388 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:advanced_effects:2131755008 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:advanced_effects_warning:2131755010 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:enable:2131755045 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:wallpaper_none:2131755183 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:wallpaper_label:2131755182 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:wallpaper_theme_default:2131755185 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:home_settings_help:2131755061 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:prayer_times:2131755124 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking layout:activity_prayer_settings:2131427331 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:showPrayerBarChoice:2131296423 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:lockPrayerBarChoice:2131296375 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:locationChoice:2131296374 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:timeFormatChoice:2131296446 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:methodChoice:2131296376 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:weatherShowChoice:2131296456 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:weatherRefreshChoice:2131296454 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:azanSoundEnabledChoice:2131296310 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:azanSoundChoice:2131296309 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:testAzanChoice:2131296442 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:overlayNotifChoice:2131296383 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:testAlertChoice:2131296441 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:permissionsChoice:2131296385 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:showPrayerBarChoice:2131296424 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:lockPrayerBarChoice:2131296376 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:locationChoice:2131296375 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:timeFormatChoice:2131296447 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:methodChoice:2131296377 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:weatherShowChoice:2131296457 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:weatherRefreshChoice:2131296455 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:azanSoundEnabledChoice:2131296311 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:azanSleepModeChoice:2131296309 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:azanSoundChoice:2131296310 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:testAzanChoice:2131296443 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:overlayNotifChoice:2131296384 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:testAlertChoice:2131296442 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:permissionsChoice:2131296386 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking id:adjFajr:2131296296 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking id:adjSunrise:2131296299 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking id:adjDhuhr:2131296295 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking id:adjAsr:2131296294 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking id:adjMaghrib:2131296298 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking id:adjIsha:2131296297 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:hijriMinus2:2131296354 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:hijriMinus1:2131296353 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:hijriZero:2131296357 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:hijriPlus1:2131296355 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:hijriPlus2:2131296356 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:refreshChoice:2131296405 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:resetChoice:2131296406 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:off:2131755086 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:on:2131755088 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:prayer_show_bar:2131755112 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:prayer_lock_bar:2131755103 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:prayer_location:2131755102 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:prayer_time_format:2131755117 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:prayer_method:2131755105 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:weather_show:2131755190 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:prayer_azan_sound_enabled:2131755098 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:prayer_select_azan:2131755110 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:prayer_overlay_notif:2131755106 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:prayer_fajr:2131755100 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:prayer_adj_item:2131755092 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:prayer_sunrise:2131755113 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:prayer_dhuhr:2131755099 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:prayer_asr:2131755095 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:prayer_maghrib:2131755104 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:prayer_isha:2131755101 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:prayer_permissions_check:2131755107 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:btnSettings:2131296320 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking layout:popup_cards:2131427349 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:rows:2131296410 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking layout:item_card_row:2131427339 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:app:2131296307 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:card_app_name:2131755018 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:pkg:2131296386 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:digest:2131296333 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking layout:dialog_card_prompt:2131427336 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:card_prompt_title:2131755027 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:body:2131296313 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:card_prompt_resigned:2131755026 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:card_prompt_relabelled:2131755025 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:card_prompt_body:2131755021 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:names:2131296378 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:card_prompt_names:2131755024 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:identity:2131296361 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:card_prompt_identity:2131755023 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:btnKeep:2131296316 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:btnShow:2131296321 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:home_settings_help:2131755060 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:not_available:2131755084 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:hijriMinus2:2131296355 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:hijriMinus1:2131296354 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:hijriZero:2131296358 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:hijriPlus1:2131296356 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:hijriPlus2:2131296357 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:refreshChoice:2131296406 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:resetChoice:2131296407 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:off:2131755087 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:prayer_show_bar:2131755118 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:prayer_lock_bar:2131755108 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:prayer_location:2131755107 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:prayer_time_format:2131755123 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:prayer_method:2131755110 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:weather_show:2131755198 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:prayer_azan_sound_enabled:2131755103 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:prayer_azan_sleep_mode:2131755101 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:prayer_select_azan:2131755115 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:prayer_overlay_notif:2131755111 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:prayer_fajr:2131755105 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:prayer_adj_item:2131755095 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:prayer_sunrise:2131755119 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:prayer_dhuhr:2131755104 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:prayer_asr:2131755098 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:prayer_maghrib:2131755109 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:prayer_isha:2131755106 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:prayer_permissions_check:2131755112 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking bool:rtl_app_grid:2130968591 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking drawable:glass_panel:2131165186 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking layout:item_input:2131427340 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:library_save_failed:2131755076 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:title:2131296448 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:icon:2131296360 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:dot:2131296335 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:status:2131296428 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:library_save_failed:2131755077 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking string:cant_open:2131755017 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking string:app_library:2131755012 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking plurals:library_app_count:2131623936 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:library_hint_add:2131755070 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:library_empty:2131755069 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:library_hint_add:2131755071 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:library_empty:2131755070 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking font:outfit_medium:2131230723 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:card:2131296323 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:banner:2131296311 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:label:2131296370 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:name:2131296377 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking attr:recyclerViewStyle:2130903061 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking dimen:fastscroll_default_thickness:2131099655 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking dimen:fastscroll_minimum_range:2131099657 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking dimen:fastscroll_margin:2131099656 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:is_pooling_container_tag:2131296363 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:pooling_container_listener_holder_tag:2131296387 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:latitude:2131755065 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:longitude:2131755080 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:prayer_test_azan_play:2131755115 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking layout:activity_screensaver_settings:2131427333 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:screenSaverEnabledChoice:2131296416 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:screenSaverTimeoutChoice:2131296420 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:screenSaverAppChoice:2131296415 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:screenSaverPreviewChoice:2131296417 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:screenSaverSystemChoice:2131296419 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:screensaver_enable:2131755139 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:screensaver_minute_singular:2131755140 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:screensaver_minutes_format:2131755141 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:screensaver_timeout:2131755149 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:screensaver_builtin_clock:2131755137 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:screensaver_app:2131755136 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking drawable:ic_apps:2131165187 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:library_on_home:2131755073 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:library_recent:2131755075 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:library_add_home:2131755068 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking drawable:library_check:2131165202 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:btnSettings:2131296321 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking layout:popup_cards:2131427349 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking layout:item_card_row:2131427339 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:app:2131296307 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:card_app_name:2131755018 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:pkg:2131296387 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:digest:2131296334 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking layout:dialog_card_prompt:2131427336 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:card_prompt_title:2131755027 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:body:2131296314 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:card_prompt_resigned:2131755026 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:card_prompt_relabelled:2131755025 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:card_prompt_body:2131755021 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:names:2131296379 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:card_prompt_names:2131755024 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:identity:2131296362 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:card_prompt_identity:2131755023 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:btnKeep:2131296317 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:btnShow:2131296322 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:tag_screen_reader_focusable:2131296436 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:tag_accessibility_heading:2131296431 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:tag_accessibility_pane_title:2131296432 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:tag_state_description:2131296437 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:tag_accessibility_actions:2131296429 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking layout:activity_weather_settings:2131427334 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:weatherLocationChoice:2131296454 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:weatherAutoDetectChoice:2131296453 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:weather_location:2131755191 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:app_name:2131755013 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:settings:2131755161 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:choose_input:2131755035 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:wifi:2131755199 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:home_settings:2131755060 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:dream_name:2131755044 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:launcher_settings:2131755067 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:module_cards:2131755082 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:dock_edit:2131755041 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:reorder:2131755137 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:weather_detected:2131755189 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:weather_detect_failed:2131755188 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:weather_refreshed:2131755194 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:screensaver_choose_from_apps:2131755145 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:screensaver_select_app:2131755151 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:screensaver_select_timeout:2131755153 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:tile_disabled:2131755169 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:tile_unpinned:2131755176 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:tile_pinned:2131755175 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:reorder_hint:2131755138 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking string:connected:2131755037 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:not_connected:2131755085 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:not_connected:2131755086 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking string:card_not_saved:2131755020 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking string:dock_edit_pick_app:2131755043 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:last_opened:2131755064 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:btnLibrary:2131296317 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:last_opened:2131755065 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking layout:activity_main:2131427329 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:root:2131296409 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:sky:2131296424 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:glass:2131296342 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:root:2131296410 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:sky:2131296425 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:glass:2131296343 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking id:ambient:2131296304 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:heroName:2131296350 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:hero:2131296346 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:heroMeta:2131296349 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:heroDots:2131296348 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:heroArt:2131296347 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking bool:rtl_menu_bar:2130968592 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:heroScrim:2131296351 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:greeting:2131296343 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:leftBlock:2131296371 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:btnWifi:2131296322 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:shamsiDate:2131296422 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:hijriDate:2131296352 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:weatherText:2131296457 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:stats:2131296426 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:racePanel:2131296403 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:raceKicker:2131296402 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:raceHeadline:2131296401 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:raceSessions:2131296404 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:date:2131296330 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:prayerScrollView:2131296397 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:prayerTimesBar:2131296400 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:prayerItemFajr:2131296391 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:prayerItemSunrise:2131296394 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:prayerItemDhuhr:2131296390 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:prayerItemAsr:2131296389 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:prayerItemMaghrib:2131296393 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:prayerItemIsha:2131296392 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:grid:2131296344 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:heroName:2131296351 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:hero:2131296347 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:heroMeta:2131296350 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:heroDots:2131296349 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:heroArt:2131296348 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:heroScrim:2131296352 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:greeting:2131296344 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:leftBlock:2131296372 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:btnWifi:2131296323 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:shamsiDate:2131296423 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:hijriDate:2131296353 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:weatherText:2131296458 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:stats:2131296427 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:racePanel:2131296404 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:raceKicker:2131296403 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:raceHeadline:2131296402 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:raceSessions:2131296405 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:date:2131296331 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:prayerScrollView:2131296398 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:prayerTimesBar:2131296401 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:prayerItemFajr:2131296392 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:prayerItemSunrise:2131296395 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:prayerItemDhuhr:2131296391 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:prayerItemAsr:2131296390 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:prayerItemMaghrib:2131296394 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:prayerItemIsha:2131296393 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:grid:2131296345 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:gridContainer:2131296346 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking anim:tile_enter_reduced:2130771971 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking anim:tile_enter:2130771970 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:btnInputs:2131296315 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:btnReorder:2131296319 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:btnLibraryTop:2131296318 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:home_settings:2131755059 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:btnReorder:2131296320 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:btnLibraryTop:2131296319 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking drawable:ic_home_settings:2131165192 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:reorder_not_saved:2131755133 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:reorder_hint:2131755132 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:state:2131296425 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:reorder_not_saved:2131755139 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:state:2131296426 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking string:card_state_new:2131755030 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking string:card_state_hidden:2131755029 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking string:card_state_shown:2131755034 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking string:card_state_over_limit:2131755033 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking string:card_state_new_label:2131755032 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking string:card_state_new_key:2131755031 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:good_night:2131755052 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:good_morning:2131755051 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:good_afternoon:2131755049 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:good_evening:2131755050 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:greeting_with_name:2131755054 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:prayerName:2131296395 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:prayerTime:2131296399 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:prayerCountdown:2131296388 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:prayerPill:2131296396 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:race_kicker_no_place:2131755126 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:race_kicker:2131755125 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:race_live:2131755128 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:race_lights_out:2131755127 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:race_next:2131755129 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:race_finished:2131755124 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:wifi:2131755191 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:offline:2131755087 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:greeting_islamic:2131755053 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:greeting_with_name:2131755055 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:prayerName:2131296396 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:prayerTime:2131296400 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:prayerCountdown:2131296389 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:prayerPill:2131296397 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:race_kicker_no_place:2131755132 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:race_kicker:2131755131 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:race_live:2131755134 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:race_lights_out:2131755133 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:race_next:2131755135 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:race_finished:2131755130 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:offline:2131755088 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking drawable:ic_wifi:2131165200 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking string:ethernet:2131755046 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking drawable:ic_ethernet:2131165191 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:vpn:2131755170 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:vpn_off:2131755172 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:vpn:2131755178 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:vpn_off:2131755180 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking drawable:ic_lock:2131165195 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking layout:activity_quick_settings:2131427332 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:scrim:2131296422 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking drawable:ic_settings:2131165198 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:tv_settings:2131755177 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking drawable:ic_picture:2131165196 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:quick_picture:2131755129 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:quick_network:2131755128 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:quick_apps:2131755126 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:quick_apps_hint:2131755127 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:dreamContent:2131296339 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:dreamAmbient:2131296337 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking string:dock_edit_hint:2131755042 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:no_module_cards:2131755083 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:tag_screen_reader_focusable:2131296435 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:tag_accessibility_heading:2131296430 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:tag_accessibility_pane_title:2131296431 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:tag_state_description:2131296436 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:tag_accessibility_actions:2131296428 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:weather_detected:2131755181 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:weather_detect_failed:2131755180 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:weather_refreshed:2131755186 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:app_name:2131755013 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:settings:2131755153 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:inputs:2131755063 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:choose_input:2131755035 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:live_tv:2131755077 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:dream_name:2131755044 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:screensaver_choose_from_apps:2131755138 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:screensaver_select_app:2131755143 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:screensaver_select_timeout:2131755145 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:no_module_cards:2131755084 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking layout:activity_launcher_settings:2131427328 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:columns4:2131296327 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:columns5:2131296328 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:columns6:2131296329 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:columns7:2131296330 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:rows0:2131296412 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:rows1:2131296413 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:rows2:2131296414 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:rows3:2131296415 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:wallpaperChoice:2131296452 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:animationsChoice:2131296306 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:advancedChoice:2131296300 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:followThemeChoice:2131296341 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:prayerSettingsChoice:2131296399 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:weatherSettingsChoice:2131296456 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:screenSaverSettingsChoice:2131296419 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:defaultHomeChoice:2131296332 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:tvSettingsChoice:2131296450 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:animations_state:2131755011 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:advanced_effects_state:2131755009 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:wallpaper_state:2131755184 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:prayer_settings_state:2131755117 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:weather_settings_state:2131755197 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:screensaver_settings_state:2131755155 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:tag_unhandled_key_listeners:2131296440 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:weather_detecting:2131755190 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:custom_location:2131755038 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:wallpaper_applied:2131755181 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking mipmap:ic_launcher:2131558400 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking raw:azan_2:2131689473 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking raw:azan_3:2131689474 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking raw:azan_1:2131689472 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:tag_window_insets_animation_callback:2131296441 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:tag_on_apply_window_listener:2131296433 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:latitude:2131755066 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:longitude:2131755081 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:banner:2131296312 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:label:2131296371 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking array:settings_key_scancodes:2130837512 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:stats_cpu:2131755165 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:stats_memory:2131755166 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:stats_storage:2131755167 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:prayer_refreshed:2131755114 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:weather_auto_detect:2131755186 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:select_location:2131755159 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking array:dock_apps:2130837507 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking bool:fill_dock:2130968585 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking array:hidden_apps:2130837508 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:live_tv_package:2131755079 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:live_tv_action:2131755078 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:live_tv_package:2131755080 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:live_tv_action:2131755079 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking array:launch_actions:2130837510 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking array:app_labels:2130837506 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking array:app_banners:2130837504 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:source_panel_service:2131755155 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:source_panel_action:2131755154 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:input_action:2131755061 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:source_panel_service:2131755163 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:source_panel_action:2131755162 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:input_action:2131755062 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking integer:columns:2131361792 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking integer:rows_below_dock:2131361794 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking bool:animations:2130968579 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking bool:advanced_effects:2130968576 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking bool:shamsi_date:2130968594 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:greeting_name:2131755053 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:greeting_name:2131755054 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking bool:module_cards:2130968588 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking bool:reduced_motion:2130968589 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking bool:dock_title:2130968584 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
@@ -236,7 +320,7 @@ Marking bool:library_button:2130968587 reachable: referenced from /home/husainpc
 Marking integer:wifi_label_width:2131361797 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking bool:always_show_names:2130968577 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking bool:wallpaper_true_color:2130968598 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:vpn_app:2131755171 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:vpn_app:2131755179 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking bool:show_home_settings_shortcut:2130968595 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking bool:show_stats:2130968597 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking bool:app_library:2130968580 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
@@ -248,111 +332,33 @@ Marking array:app_keys:2130837505 reachable: referenced from /home/husainpc/Docu
 Marking bool:cinematic_home:2130968581 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking bool:ambient_glow:2130968578 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking integer:home_idle_clock_minutes:2131361793 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking layout:popup_inputs:2131427350 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:launcher_settings:2131755066 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:module_cards:2131755081 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:dock_edit:2131755041 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:reorder:2131755131 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:advanced_effects:2131755008 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:advanced_effects_warning:2131755010 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:enable:2131755045 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:wallpaper_none:2131755175 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:wallpaper_label:2131755174 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:wallpaper_theme_default:2131755177 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking layout:row_app_library:2131427351 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking layout:item_app:2131427338 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:library_hint_open:2131755071 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking layout:dream_clock:2131427337 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:tile_disabled:2131755161 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:tile_unpinned:2131755168 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:tile_pinned:2131755167 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:library_open:2131755073 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:library_remove_shortcut:2131755075 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:library_app_info:2131755068 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking drawable:ic_swap_vert:2131165199 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:tile_menu_move:2131755164 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:tile_menu_unpin:2131755166 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:tile_menu_pin:2131755165 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking drawable:ic_pin:2131165197 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking drawable:ic_delete:2131165189 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:tile_menu_delete:2131755162 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking drawable:ic_disable:2131165190 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:tile_menu_disable:2131755163 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:weather_detecting:2131755182 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:custom_location:2131755038 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:wallpaper_applied:2131755173 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:permissions_dialog_title:2131755091 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking raw:azan_2:2131689473 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking raw:azan_3:2131689474 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking raw:azan_1:2131689472 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:prayer_test_azan_stop:2131755116 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:select_azan_sound:2131755150 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:permission_overlay_title:2131755090 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:permission_overlay_message:2131755089 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:select_method:2131755152 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:weather_auto_detect:2131755178 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:select_location:2131755151 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:reset_adjustments:2131755134 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking layout:activity_prayer_alert:2131427330 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:alertTitle:2131296303 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:alertTime:2131296302 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:btnDismissAlert:2131296314 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking layout:activity_launcher_settings:2131427328 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:columns4:2131296326 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:columns5:2131296327 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:columns6:2131296328 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:columns7:2131296329 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:rows0:2131296411 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:rows1:2131296412 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:rows2:2131296413 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:rows3:2131296414 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:wallpaperChoice:2131296451 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:animationsChoice:2131296306 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:advancedChoice:2131296300 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:followThemeChoice:2131296340 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:prayerSettingsChoice:2131296398 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:weatherSettingsChoice:2131296455 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:screenSaverSettingsChoice:2131296418 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:defaultHomeChoice:2131296331 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:tvSettingsChoice:2131296449 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:animations_state:2131755011 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:advanced_effects_state:2131755009 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:wallpaper_state:2131755176 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:weather_settings_state:2131755189 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:screensaver_settings_state:2131755147 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking drawable:ic_input:2131165193 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking drawable:ic_av:2131165188 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking drawable:ic_livetv:2131165194 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:no_inputs:2131755082 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:tag_unhandled_key_listeners:2131296439 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:tag_window_insets_animation_callback:2131296440 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:tag_on_apply_window_listener:2131296432 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:stats_cpu:2131755157 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:stats_memory:2131755158 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:stats_storage:2131755159 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:dreamContent:2131296338 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:dreamAmbient:2131296336 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:permissions_dialog_title:2131755094 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:permission_overlay_title:2131755093 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:permission_overlay_message:2131755092 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:select_azan_sound:2131755158 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:permission_battery_title:2131755091 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:permission_battery_message:2131755090 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:prayer_test_azan_play:2131755121 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:prayer_test_azan_stop:2131755122 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:select_method:2131755160 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:reset_adjustments:2131755140 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking anim:app_open_enter:2130771968 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking anim:app_open_exit:2130771969 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking mipmap:ic_launcher:2131558400 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking layout:activity_weather_settings:2131427334 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:weatherLocationChoice:2131296453 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:weatherAutoDetectChoice:2131296452 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:weather_location:2131755183 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking layout:activity_quick_settings:2131427332 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:scrim:2131296421 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking drawable:ic_settings:2131165198 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:tv_settings:2131755169 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking drawable:ic_picture:2131165196 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:quick_picture:2131755123 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:quick_network:2131755122 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:quick_apps:2131755120 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:quick_apps_hint:2131755121 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:screensaver_select_installed_app:2131755144 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking array:settings_key_scancodes:2130837512 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking string:prayer_refreshed:2131755109 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:library_hint_open:2131755072 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:library_open:2131755074 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:library_remove_shortcut:2131755076 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:library_app_info:2131755069 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking drawable:ic_swap_vert:2131165199 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:tile_menu_move:2131755172 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:tile_menu_unpin:2131755174 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:tile_menu_pin:2131755173 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking drawable:ic_pin:2131165197 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking drawable:ic_delete:2131165189 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:tile_menu_delete:2131755170 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking drawable:ic_disable:2131165190 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:tile_menu_disable:2131755171 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 Marking id:accessibility_action_clickable_span:2131296256 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-Marking id:tag_accessibility_clickable_spans:2131296429 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:tag_accessibility_clickable_spans:2131296430 reachable: referenced from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 android.content.res.Resources#getIdentifier present: true
 Web content present: false
 Referenced Strings:
@@ -367,9 +373,11 @@ androidx.view.accessibility.Accessibi...
 absent
 kotlin.reflect.jvm.internal.Reflectio...
 ACTION_UNKNOWN
+accessibility_enabled
 amman
 wallpaper_true_color
 festival
+asInterface
 AM
 traceCounter
 azan_3
@@ -396,6 +404,7 @@ karachi
 example
 S
 app_labels
+screen_off_timeout
 android.service.dreams.DreamService
 Khordad
 gregorian
@@ -407,39 +416,43 @@ completion
 androidx.view.accessibility.Accessibi...
 madinah
 ACTION_CLEAR_ACCESSIBILITY_FOCUS
+android.os.ServiceManager
 ACTION_IME_ENTER
 h
 android.settings.MANAGE_APPLICATIONS_...
 m
 mounted
 dubai
-background_color
 GridLayoutManager
 java.lang.Module
+background_color
 package:
 weather_text
 w
-REL
 x
+REL
 ACTION_NEXT_AT_MOVEMENT_GRANULARITY
+android.settings.IGNORE_BATTERY_OPTIM...
 input_action
 last_opened
 android.settings.DISPLAY_SETTINGS
-Tir
 $this$descendants
+Tir
 london
 PrayerAlarmService
 module_cards
 inputs
 MemAvailable:
-official
 dhuhr
+official
 muscat
 BanParcelableUsage
 isTagEnabled
 live_tv_package
 androidx.view.accessibility.Accessibi...
+screensaver_activate_on_dock
 ACTION_SET_PROGRESS
+screensaver_components
 ACTION_SCROLL_FORWARD
 jakarta
 add
@@ -449,7 +462,6 @@ FP3
 en
 FP2
 beirut
-com.gathin.tvhome.ACTION_DISMISS_ADHAN
 Dismiss
 success
 ACTION_ACCESSIBILITY_FOCUS
@@ -458,6 +470,7 @@ app_keys
 ACTION_LONG_CLICK
 ACTION_CLEAR_FOCUS
 ACTION_SET_SELECTION
+sleep_timeout
 settings_key_keycodes
 ACTION_SCROLL_BACKWARD
 riyadh
@@ -474,15 +487,17 @@ kuwait
 BITMAP_MASKABLE
 .jpg
 Mehr
-IconCompat
 screensaver_timeout_minutes
+IconCompat
 GP
+stay_on_while_plugged_in
 label
 home
 builtin:clock
 ACTION_MOVE_WINDOW
 android.view.View$AttachInfo
 screensaver_enabled
+TvHome:PrayerAlarmScreenWake
 android.support.allowGeneratedReplies
 .bad
 screensaver_app
@@ -490,6 +505,7 @@ wallpapers/
 .bak
 prayer_name
 caption
+android.settings.REQUEST_SCHEDULE_EXA...
 ACTION_CONTEXT_CLICK
 cards.json
 androidx.view.accessibility.Accessibi...
@@ -503,7 +519,6 @@ sydney
 17:15
 getResId
 Esfand
-status
 city
 ACTION_CLEAR_SELECTION
 TvHome.Config
@@ -513,8 +528,8 @@ androidx.view.accessibility.Accessibi...
 ACTION_PAGE_UP
 androidx.view.accessibility.Accessibi...
 banner_
-Shahrivar
 android.settings.APPLICATION_DETAILS_...
+Shahrivar
 ACTION_PAGE_RIGHT
 Qualifying
 reorder_button
@@ -522,8 +537,9 @@ invisible_actions
 hide
 PrayerAlarmScheduler
 ACTION_HIDE_TOOLTIP
-shuffle
 prayer_channel
+shuffle
+screensaver_activate_on_sleep
 RESUMED
 prayer_calendar
 android.intent.action.TIME_SET
@@ -537,7 +553,6 @@ UnknownNullness
 mVisibleInsets
 android.resource://
 14:55
-lat
 longitude
 settings
 baghdad
@@ -549,19 +564,24 @@ PrayerAlarmReceiver
 mStableInsets
 /time
 android.car.EXTENSIONS
+dream
 adjustment_
 wifi_label_width
 lahore
+https://ipapi.co/json/
 weather_code
 code
 ACTION_SCROLL_RIGHT
+dreams
 android.settings.WIFI_SETTINGS
 Farvardin
 asyncTraceEnd
 ACTION_SCROLL_LEFT
+country_name
 azan_sound_enabled
-wallpaper
 BITMAP
+wallpaper
+keyguard
 source_panel_service
 input_key_keycodes
 COROUTINE_SUSPENDED
@@ -571,6 +591,7 @@ UNKNOWN
 PM
 ACTION_PASTE
 com.xiaomi.mitv.settings.entry.MainAc...
+TvHome:AdhanServiceScreenWakeLock
 accessibility
 android.intent.category.LEANBACK_LAUN...
 wallpaper_order
@@ -582,8 +603,9 @@ TRACE_TAG_APP
 fill_dock
 maghrib
 LATER
-drawable
+TvHome:PrayerAlarmCpuWakeLock
 com.android.tv.action.VIEW_INPUTS
+drawable
 ACTION_NEXT_HTML_ELEMENT
 livetv
 reduced_motion
@@ -593,6 +615,7 @@ android.view.ViewRootImpl
 PrayerBootReceiver
 ACTION_COLLAPSE
 temperature_2m
+startDreamByUserRequest
 remoteInputs
 rm
 Sprint
@@ -604,8 +627,8 @@ sunrise
 icon_only_buttons
 toronto
 latitude
-scan
 0x
+scan
 io.example.a
 hidden_apps
 current
@@ -613,39 +636,45 @@ com.xiaomi.mitv.settings
 ACTION_PAGE_DOWN
 Azar
 ACTION_SCROLL_TO_POSITION
+audio
 android.intent.action.PACKAGE_CHANGED
 SQ
 RESOURCE
 ACTION_SELECT
-/cpuidle/state
 Netflix
+/cpuidle/state
 Asr
 QUALIFYING
+com.islam.tv.ACTION_PRAYER_ALARM
 ACTION_EXPAND
 TvHome.Library
 wallpapers
+getService
+com.islam.tv.ACTION_DISMISS_ADHAN
 hdmi2
 advanced_effects
 .webp
 https://ipwho.is/
 18:45
-Sunrise
 RecyclerView
 rows_below_dock
+Sunrise
+com.islam.tv.card
 country
 asr
 show_home_settings_shortcut
 hijri_adjustment
 android.settings.DREAM_SETTINGS
 prayer_times.db
-android.intent.action.PACKAGE_REMOVED
 makkah
+android.intent.action.PACKAGE_REMOVED
 theme_revision
 android.settings.HOME_SETTINGS
+azan_sleep_mode_enabled
 theme_signature
 androidx.recyclerview.widget.Recycler...
-dock_apps
 up
+dock_apps
 androidx.view.accessibility.Accessibi...
 source_panel_action
 results
@@ -654,10 +683,10 @@ curl/7.68.0
 istanbul
 collection
 05:45
-com.gathin.tvhome.action.LAUNCHER_SET...
 Ordibehesht
 Now
 name
+testDream
 semanticAction
 wallpaper_dim
 changed
@@ -671,8 +700,8 @@ prayer_prefs
 Retro
 ViewParentCompat
 weather_time
-Race
 NEXT
+Race
 android.intent.action.TIMEZONE_CHANGED
 cairo
 start
@@ -685,12 +714,12 @@ Bahman
 cinematic_home
 RACE
 android.intent.action.VIEW
+ClockDream
 ACTION_PREVIOUS_AT_MOVEMENT_GRANULARITY
-﻿
 Prayer
+﻿
 xx
 00:00
-com.gathin.tvhome.card
 library_button
 android.intent.action.DELETE
 cleanyourtv
@@ -709,6 +738,7 @@ Mordad
 wifi
 sessions
 method
+enabled_accessibility_services
 WeatherManager
 CONSUMED
 .jpeg
@@ -718,6 +748,7 @@ analog
 11:35
 showsUserInterface
 GET
+TvHome/1.0
 card
 ACTION_FOCUS
 Fajr
@@ -726,18 +757,15 @@ show_prayer_bar
 columns
 order.txt
 PrivateApi
-lon
-com.gathin.tvhome.category.DOCK_CARD
 TvHome.Wallpaper
 unknown
 android.permission.ACCESS_FINE_LOCATION
 accent_color
 greeting_name
-TvHome:PrayerAlarmWakeLock
 mContentInsets
 library_apps.txt
-place
 power
+place
 Kuwait
 /proc/stat
 defaulthome
@@ -747,6 +775,8 @@ weather_enabled
 TvHome.Order
 fajr
 diwali
+android.settings.REQUEST_IGNORE_BATTE...
+android.service.dreams.IDreamManager$...
 ACTION_SET_TEXT
 URI_MASKABLE
 date
@@ -756,14 +786,15 @@ spec
 asyncTraceBegin
 notification
 isha
-android.permission.ACCESS_COARSE_LOCA...
 wallpaper.jpg
+android.permission.ACCESS_COARSE_LOCA...
+android.permission.WRITE_SECURE_SETTINGS
 app_banners
 android.permission.POST_NOTIFICATIONS
 %02d:%02d
 DONE
-package
 wallpaper_choice
+package
 Yesterday
 hdmi
 ACTION_COPY
@@ -789,6 +820,7 @@ alarm
 android.intent.extra.REPLACING
 Isha
 ACTION_PREVIOUS_HTML_ELEMENT
+android.service.dreams.Sandman
 always_show_names
 0x%08x
 ACTION_SHOW_TOOLTIP
@@ -796,75 +828,79 @@ verified
 Parcelizer
 accent
 show_network_pill
-notif_prayer_
 WindowInsetsCompat
-com.gathin.tvhome.ACTION_PRAYER_ALARM
-Today
+notif_prayer_
 tv_input
+Today
 Maghrib
+com.islam.tv.category.DOCK_CARD
 round
-Dey
 mAttachInfo
-Marking id:greeting:2131296343 used because it matches string pool constant greeting
-Marking string:greeting_name:2131755053 used because it matches string pool constant greeting
-Marking string:greeting_with_name:2131755054 used because it matches string pool constant greeting
+Dey
+com.islam.tv.action.LAUNCHER_SETTINGS
+Marking id:greeting:2131296344 used because it matches string pool constant greeting
+Marking string:greeting_islamic:2131755053 used because it matches string pool constant greeting
+Marking string:greeting_name:2131755054 used because it matches string pool constant greeting
+Marking string:greeting_with_name:2131755055 used because it matches string pool constant greeting
 Marking bool:wallpaper_true_color:2130968598 used because it matches string pool constant wallpaper_true_color
 Marking raw:azan_3:2131689474 used because it matches string pool constant azan_3
 Marking raw:azan_2:2131689473 used because it matches string pool constant azan_2
 Marking raw:azan_1:2131689472 used because it matches string pool constant azan_1
 Marking bool:icon_only_buttons:2130968586 used because it matches string pool constant icon
-Marking id:icon:2131296359 used because it matches string pool constant icon
-Marking id:icon_group:2131296360 used because it matches string pool constant icon
+Marking id:icon:2131296360 used because it matches string pool constant icon
+Marking id:icon_group:2131296361 used because it matches string pool constant icon
 Marking menu:example_menu:2131492864 used because it matches string pool constant example
 Marking menu:example_menu2:2131492865 used because it matches string pool constant example
 Marking array:app_labels:2130837506 used because it matches string pool constant app_labels
-Marking string:input_action:2131755061 used because it matches string pool constant input_action
-Marking string:last_opened:2131755064 used because it matches string pool constant last_opened
+Marking string:input_action:2131755062 used because it matches string pool constant input_action
+Marking string:last_opened:2131755065 used because it matches string pool constant last_opened
 Marking bool:module_cards:2130968588 used because it matches string pool constant module_cards
-Marking string:module_cards:2131755081 used because it matches string pool constant module_cards
-Marking string:inputs:2131755063 used because it matches string pool constant inputs
-Marking string:live_tv_package:2131755079 used because it matches string pool constant live_tv_package
+Marking string:module_cards:2131755082 used because it matches string pool constant module_cards
+Marking string:inputs:2131755064 used because it matches string pool constant inputs
+Marking string:live_tv_package:2131755080 used because it matches string pool constant live_tv_package
 Marking string:enable:2131755045 used because it matches string pool constant en
 Marking array:app_keys:2130837505 used because it matches string pool constant app_keys
 Marking array:settings_key_keycodes:2130837511 used because it matches string pool constant settings_key_keycodes
-Marking id:title:2131296447 used because it matches string pool constant title
-Marking string:launcher_settings:2131755066 used because it matches string pool constant launcher_settings
+Marking id:title:2131296448 used because it matches string pool constant title
+Marking string:launcher_settings:2131755067 used because it matches string pool constant launcher_settings
 Marking bool:ambient_glow:2130968578 used because it matches string pool constant ambient_glow
-Marking id:label:2131296370 used because it matches string pool constant label
+Marking id:label:2131296371 used because it matches string pool constant label
 Marking integer:home_idle_clock_minutes:2131361793 used because it matches string pool constant home
-Marking string:home_key_description:2131755057 used because it matches string pool constant home
-Marking string:home_key_name:2131755058 used because it matches string pool constant home
-Marking string:home_settings:2131755059 used because it matches string pool constant home
-Marking string:home_settings_help:2131755060 used because it matches string pool constant home
+Marking string:home_key_description:2131755058 used because it matches string pool constant home
+Marking string:home_key_name:2131755059 used because it matches string pool constant home
+Marking string:home_settings:2131755060 used because it matches string pool constant home
+Marking string:home_settings_help:2131755061 used because it matches string pool constant home
 Marking xml:home_key_service:2131951616 used because it matches string pool constant home
-Marking string:screensaver_app:2131755136 used because it matches string pool constant screensaver_app
+Marking string:screensaver_app:2131755143 used because it matches string pool constant screensaver_app
 Marking style:SettingsColumnChoice:2131820544 used because it matches string pool constant Settings
 Marking style:SettingsRow:2131820545 used because it matches string pool constant Settings
 Marking integer:home_idle_clock_minutes:2131361793 used because it matches string pool constant home_idle_clock_minutes
-Marking drawable:status_dot:2131165225 used because it matches string pool constant status
-Marking id:status:2131296427 used because it matches string pool constant status
-Marking integer:status_bar_notification_info_maxnum:2131361796 used because it matches string pool constant status
-Marking string:status_bar_notification_info_overflow:2131755160 used because it matches string pool constant status
 Marking drawable:banner_tv:2131165185 used because it matches string pool constant banner_
 Marking bool:reorder_button:2130968590 used because it matches string pool constant reorder_button
 Marking bool:settings_key_panel:2130968593 used because it matches string pool constant settings_key_panel
-Marking string:latitude:2131755065 used because it matches string pool constant lat
-Marking string:longitude:2131755080 used because it matches string pool constant longitude
+Marking string:longitude:2131755081 used because it matches string pool constant longitude
 Marking array:settings_key_keycodes:2130837511 used because it matches string pool constant settings
 Marking array:settings_key_scancodes:2130837512 used because it matches string pool constant settings
 Marking bool:settings_key_panel:2130968593 used because it matches string pool constant settings
 Marking drawable:settings_choice_bg:2131165224 used because it matches string pool constant settings
-Marking string:settings:2131755153 used because it matches string pool constant settings
-Marking id:time:2131296445 used because it matches string pool constant /time
+Marking string:settings:2131755161 used because it matches string pool constant settings
+Marking id:time:2131296446 used because it matches string pool constant /time
+Marking id:dreamAmPm:2131296336 used because it matches string pool constant dream
+Marking id:dreamAmbient:2131296337 used because it matches string pool constant dream
+Marking id:dreamClock:2131296338 used because it matches string pool constant dream
+Marking id:dreamContent:2131296339 used because it matches string pool constant dream
+Marking id:dreamDate:2131296340 used because it matches string pool constant dream
+Marking layout:dream_clock:2131427337 used because it matches string pool constant dream
+Marking string:dream_name:2131755044 used because it matches string pool constant dream
 Marking integer:wifi_label_width:2131361797 used because it matches string pool constant wifi_label_width
 Marking bool:wallpaper_true_color:2130968598 used because it matches string pool constant wallpaper
-Marking id:wallpaperChoice:2131296451 used because it matches string pool constant wallpaper
-Marking string:wallpaper_applied:2131755173 used because it matches string pool constant wallpaper
-Marking string:wallpaper_label:2131755174 used because it matches string pool constant wallpaper
-Marking string:wallpaper_none:2131755175 used because it matches string pool constant wallpaper
-Marking string:wallpaper_state:2131755176 used because it matches string pool constant wallpaper
-Marking string:wallpaper_theme_default:2131755177 used because it matches string pool constant wallpaper
-Marking string:source_panel_service:2131755155 used because it matches string pool constant source_panel_service
+Marking id:wallpaperChoice:2131296452 used because it matches string pool constant wallpaper
+Marking string:wallpaper_applied:2131755181 used because it matches string pool constant wallpaper
+Marking string:wallpaper_label:2131755182 used because it matches string pool constant wallpaper
+Marking string:wallpaper_none:2131755183 used because it matches string pool constant wallpaper
+Marking string:wallpaper_state:2131755184 used because it matches string pool constant wallpaper
+Marking string:wallpaper_theme_default:2131755185 used because it matches string pool constant wallpaper
+Marking string:source_panel_service:2131755163 used because it matches string pool constant source_panel_service
 Marking array:input_key_keycodes:2130837509 used because it matches string pool constant input_key_keycodes
 Marking id:accessibility_action_clickable_span:2131296256 used because it matches string pool constant accessibility
 Marking id:accessibility_custom_action_0:2131296257 used because it matches string pool constant accessibility
@@ -899,46 +935,46 @@ Marking id:accessibility_custom_action_6:2131296285 used because it matches stri
 Marking id:accessibility_custom_action_7:2131296286 used because it matches string pool constant accessibility
 Marking id:accessibility_custom_action_8:2131296287 used because it matches string pool constant accessibility
 Marking id:accessibility_custom_action_9:2131296288 used because it matches string pool constant accessibility
-Marking id:stats:2131296426 used because it matches string pool constant stats
-Marking string:stats_cpu:2131755157 used because it matches string pool constant stats
-Marking string:stats_memory:2131755158 used because it matches string pool constant stats
-Marking string:stats_storage:2131755159 used because it matches string pool constant stats
+Marking id:stats:2131296427 used because it matches string pool constant stats
+Marking string:stats_cpu:2131755165 used because it matches string pool constant stats
+Marking string:stats_memory:2131755166 used because it matches string pool constant stats
+Marking string:stats_storage:2131755167 used because it matches string pool constant stats
 Marking bool:dock_title:2130968584 used because it matches string pool constant dock_title
 Marking bool:fill_dock:2130968585 used because it matches string pool constant fill_dock
 Marking bool:reduced_motion:2130968589 used because it matches string pool constant reduced_motion
 Marking bool:icon_only_buttons:2130968586 used because it matches string pool constant icon_only_buttons
-Marking string:latitude:2131755065 used because it matches string pool constant latitude
+Marking string:latitude:2131755066 used because it matches string pool constant latitude
 Marking array:hidden_apps:2130837508 used because it matches string pool constant hidden_apps
 Marking bool:advanced_effects:2130968576 used because it matches string pool constant advanced_effects
 Marking string:advanced_effects:2131755008 used because it matches string pool constant advanced_effects
 Marking string:advanced_effects_state:2131755009 used because it matches string pool constant advanced_effects
 Marking string:advanced_effects_warning:2131755010 used because it matches string pool constant advanced_effects
 Marking integer:rows_below_dock:2131361794 used because it matches string pool constant rows_below_dock
-Marking string:rows_below_dock_label:2131755135 used because it matches string pool constant rows_below_dock
+Marking string:rows_below_dock_label:2131755141 used because it matches string pool constant rows_below_dock
 Marking bool:show_home_settings_shortcut:2130968595 used because it matches string pool constant show_home_settings_shortcut
-Marking string:hijri_adjustment:2131755055 used because it matches string pool constant hijri_adjustment
-Marking string:hijri_adjustment_hint:2131755056 used because it matches string pool constant hijri_adjustment
+Marking string:hijri_adjustment:2131755056 used because it matches string pool constant hijri_adjustment
+Marking string:hijri_adjustment_hint:2131755057 used because it matches string pool constant hijri_adjustment
 Marking array:dock_apps:2130837507 used because it matches string pool constant dock_apps
-Marking string:source_panel_action:2131755154 used because it matches string pool constant source_panel_action
-Marking id:name:2131296377 used because it matches string pool constant name
-Marking id:names:2131296378 used because it matches string pool constant name
+Marking string:source_panel_action:2131755162 used because it matches string pool constant source_panel_action
+Marking id:name:2131296378 used because it matches string pool constant name
+Marking id:names:2131296379 used because it matches string pool constant name
 Marking bool:show_home_settings_shortcut:2130968595 used because it matches string pool constant show
 Marking bool:show_network_pill:2130968596 used because it matches string pool constant show
 Marking bool:show_stats:2130968597 used because it matches string pool constant show
-Marking id:showPrayerBarChoice:2131296423 used because it matches string pool constant show
+Marking id:showPrayerBarChoice:2131296424 used because it matches string pool constant show
 Marking drawable:prayer_time_selector:2131165222 used because it matches string pool constant prayer_time
-Marking string:prayer_time_format:2131755117 used because it matches string pool constant prayer_time
-Marking string:prayer_times:2131755118 used because it matches string pool constant prayer_time
+Marking string:prayer_time_format:2131755123 used because it matches string pool constant prayer_time
+Marking string:prayer_times:2131755124 used because it matches string pool constant prayer_time
 Marking bool:shamsi_date:2130968594 used because it matches string pool constant shamsi_date
 Marking bool:cinematic_home:2130968581 used because it matches string pool constant cinematic_home
 Marking bool:library_button:2130968587 used because it matches string pool constant library_button
 Marking bool:dock_row:2130968583 used because it matches string pool constant dock_row
-Marking string:live_tv_action:2131755078 used because it matches string pool constant live_tv_action
+Marking string:live_tv_action:2131755079 used because it matches string pool constant live_tv_action
 Marking integer:wifi_label_width:2131361797 used because it matches string pool constant wifi
-Marking string:wifi:2131755191 used because it matches string pool constant wifi
-Marking id:methodChoice:2131296376 used because it matches string pool constant method
-Marking string:vpn_app:2131755171 used because it matches string pool constant vpn_app
-Marking id:card:2131296323 used because it matches string pool constant card
+Marking string:wifi:2131755199 used because it matches string pool constant wifi
+Marking id:methodChoice:2131296377 used because it matches string pool constant method
+Marking string:vpn_app:2131755179 used because it matches string pool constant vpn_app
+Marking id:card:2131296324 used because it matches string pool constant card
 Marking string:card_app_name:2131755018 used because it matches string pool constant card
 Marking string:card_keep_hidden:2131755019 used because it matches string pool constant card
 Marking string:card_not_saved:2131755020 used because it matches string pool constant card
@@ -956,17 +992,16 @@ Marking string:card_state_new_key:2131755031 used because it matches string pool
 Marking string:card_state_new_label:2131755032 used because it matches string pool constant card
 Marking string:card_state_over_limit:2131755033 used because it matches string pool constant card
 Marking string:card_state_shown:2131755034 used because it matches string pool constant card
-Marking id:columns4:2131296326 used because it matches string pool constant columns
-Marking id:columns5:2131296327 used because it matches string pool constant columns
-Marking id:columns6:2131296328 used because it matches string pool constant columns
-Marking id:columns7:2131296329 used because it matches string pool constant columns
+Marking id:columns4:2131296327 used because it matches string pool constant columns
+Marking id:columns5:2131296328 used because it matches string pool constant columns
+Marking id:columns6:2131296329 used because it matches string pool constant columns
+Marking id:columns7:2131296330 used because it matches string pool constant columns
 Marking integer:columns:2131361792 used because it matches string pool constant columns
 Marking string:columns_label:2131755036 used because it matches string pool constant columns
-Marking string:longitude:2131755080 used because it matches string pool constant lon
-Marking string:greeting_name:2131755053 used because it matches string pool constant greeting_name
+Marking string:greeting_name:2131755054 used because it matches string pool constant greeting_name
 Marking array:launch_actions:2130837510 used because it matches string pool constant launch_actions
 Marking bool:date_single_line:2130968582 used because it matches string pool constant date
-Marking id:date:2131296330 used because it matches string pool constant date
+Marking id:date:2131296331 used because it matches string pool constant date
 Marking string:date_format:2131755039 used because it matches string pool constant date
 Marking string:date_format_home:2131755040 used because it matches string pool constant date
 Marking color:notification_action_color_filter:2131034114 used because it matches string pool constant notification
@@ -997,9 +1032,9 @@ Marking drawable:notification_icon_background:2131165210 used because it matches
 Marking drawable:notification_template_icon_bg:2131165211 used because it matches string pool constant notification
 Marking drawable:notification_template_icon_low_bg:2131165212 used because it matches string pool constant notification
 Marking drawable:notification_tile_bg:2131165213 used because it matches string pool constant notification
-Marking id:notification_background:2131296380 used because it matches string pool constant notification
-Marking id:notification_main_column:2131296381 used because it matches string pool constant notification
-Marking id:notification_main_column_container:2131296382 used because it matches string pool constant notification
+Marking id:notification_background:2131296381 used because it matches string pool constant notification
+Marking id:notification_main_column:2131296382 used because it matches string pool constant notification
+Marking id:notification_main_column_container:2131296383 used because it matches string pool constant notification
 Marking layout:notification_action:2131427343 used because it matches string pool constant notification
 Marking layout:notification_action_tombstone:2131427344 used because it matches string pool constant notification
 Marking layout:notification_template_custom_big:2131427345 used because it matches string pool constant notification
@@ -1166,7 +1201,7 @@ Marking bool:show_network_pill:2130968596 used because it matches string pool co
 @drawable/prayer_time_selector : reachable=true
 @drawable/race_bar : reachable=false
 @drawable/settings_choice_bg : reachable=true
-@drawable/status_dot : reachable=true
+@drawable/status_dot : reachable=false
 @drawable/tile_bg : reachable=false
 @font/outfit : reachable=false
 @font/outfit_extralight : reachable=false
@@ -1230,6 +1265,7 @@ Marking bool:show_network_pill:2130968596 used because it matches string pool co
 @id/animationsChoice : reachable=true
 @id/app : reachable=true
 @id/async : reachable=false
+@id/azanSleepModeChoice : reachable=true
 @id/azanSoundChoice : reachable=true
 @id/azanSoundEnabledChoice : reachable=true
 @id/banner : reachable=true
@@ -1256,17 +1292,17 @@ Marking bool:show_network_pill:2130968596 used because it matches string pool co
 @id/dialog_button : reachable=false
 @id/digest : reachable=true
 @id/dot : reachable=true
-@id/dreamAmPm : reachable=false
+@id/dreamAmPm : reachable=true
 @id/dreamAmbient : reachable=true
-@id/dreamClock : reachable=false
+@id/dreamClock : reachable=true
 @id/dreamContent : reachable=true
-@id/dreamDate : reachable=false
+@id/dreamDate : reachable=true
 @id/followThemeChoice : reachable=true
 @id/forever : reachable=false
 @id/glass : reachable=true
 @id/greeting : reachable=true
 @id/grid : reachable=true
-@id/gridContainer : reachable=false
+@id/gridContainer : reachable=true
 @id/hero : reachable=true
 @id/heroArt : reachable=true
 @id/heroDots : reachable=true
@@ -1383,7 +1419,7 @@ Marking bool:show_network_pill:2130968596 used because it matches string pool co
 @integer/home_idle_clock_minutes : reachable=true
 @integer/rows_below_dock : reachable=true
 @integer/sky_intensity : reachable=true
-@integer/status_bar_notification_info_maxnum : reachable=true
+@integer/status_bar_notification_info_maxnum : reachable=false
 @integer/wifi_label_width : reachable=true
 @layout/activity_launcher_settings : reachable=true
     @string/launcher_settings
@@ -1585,10 +1621,11 @@ Marking bool:show_network_pill:2130968596 used because it matches string pool co
 @string/ethernet : reachable=true
 @string/follow_theme : reachable=false
 @string/follow_theme_hint : reachable=false
-@string/good_afternoon : reachable=true
-@string/good_evening : reachable=true
-@string/good_morning : reachable=true
-@string/good_night : reachable=true
+@string/good_afternoon : reachable=false
+@string/good_evening : reachable=false
+@string/good_morning : reachable=false
+@string/good_night : reachable=false
+@string/greeting_islamic : reachable=true
 @string/greeting_name : reachable=true
 @string/greeting_with_name : reachable=true
 @string/hijri_adjustment : reachable=true
@@ -1625,6 +1662,8 @@ Marking bool:show_network_pill:2130968596 used because it matches string pool co
 @string/off : reachable=true
 @string/offline : reachable=true
 @string/on : reachable=true
+@string/permission_battery_message : reachable=true
+@string/permission_battery_title : reachable=true
 @string/permission_overlay_message : reachable=true
 @string/permission_overlay_title : reachable=true
 @string/permissions_dialog_title : reachable=true
@@ -1634,6 +1673,8 @@ Marking bool:show_network_pill:2130968596 used because it matches string pool co
 @string/prayer_asr : reachable=true
 @string/prayer_azan_section : reachable=false
 @string/prayer_azan_section_hint : reachable=false
+@string/prayer_azan_sleep_mode : reachable=true
+@string/prayer_azan_sleep_mode_hint : reachable=false
 @string/prayer_azan_sound_enabled : reachable=true
 @string/prayer_dhuhr : reachable=true
 @string/prayer_fajr : reachable=true
@@ -1648,6 +1689,7 @@ Marking bool:show_network_pill:2130968596 used because it matches string pool co
 @string/prayer_refreshed : reachable=true
 @string/prayer_select_azan : reachable=true
 @string/prayer_settings : reachable=false
+@string/prayer_settings_state : reachable=true
 @string/prayer_show_bar : reachable=true
 @string/prayer_sunrise : reachable=true
 @string/prayer_test_alert_now : reachable=false
@@ -1672,19 +1714,21 @@ Marking bool:show_network_pill:2130968596 used because it matches string pool co
 @string/reorder_not_saved : reachable=true
 @string/reset_adjustments : reachable=true
 @string/rows_below_dock_label : reachable=true
+@string/screensaver_adb_synced : reachable=true
 @string/screensaver_app : reachable=true
 @string/screensaver_builtin_clock : reachable=true
 @string/screensaver_choose_from_apps : reachable=true
 @string/screensaver_enable : reachable=true
 @string/screensaver_minute_singular : reachable=true
 @string/screensaver_minutes_format : reachable=true
+@string/screensaver_off_turn_off_screen : reachable=true
 @string/screensaver_preview : reachable=false
 @string/screensaver_select_app : reachable=true
 @string/screensaver_select_installed_app : reachable=true
 @string/screensaver_select_timeout : reachable=true
 @string/screensaver_settings : reachable=false
 @string/screensaver_settings_state : reachable=true
-@string/screensaver_system_settings : reachable=false
+@string/screensaver_system_settings : reachable=true
 @string/screensaver_timeout : reachable=true
 @string/select_azan_sound : reachable=true
 @string/select_location : reachable=true
@@ -1696,7 +1740,7 @@ Marking bool:show_network_pill:2130968596 used because it matches string pool co
 @string/stats_cpu : reachable=true
 @string/stats_memory : reachable=true
 @string/stats_storage : reachable=true
-@string/status_bar_notification_info_overflow : reachable=true
+@string/status_bar_notification_info_overflow : reachable=false
 @string/tile_disabled : reachable=true
 @string/tile_menu_delete : reachable=true
 @string/tile_menu_disable : reachable=true
@@ -1848,7 +1892,6 @@ The root reachable resources are:
  drawable:notification_tile_bg:2131165213
  drawable:prayer_time_selector:2131165222
  drawable:settings_choice_bg:2131165224
- drawable:status_dot:2131165225
  font:outfit_medium:2131230723
  id:accessibility_action_clickable_span:2131296256
  id:accessibility_custom_action_0:2131296257
@@ -1895,129 +1938,133 @@ The root reachable resources are:
  id:ambient:2131296304
  id:animationsChoice:2131296306
  id:app:2131296307
- id:azanSoundChoice:2131296309
- id:azanSoundEnabledChoice:2131296310
- id:banner:2131296311
- id:body:2131296313
- id:btnDismissAlert:2131296314
- id:btnInputs:2131296315
- id:btnKeep:2131296316
- id:btnLibrary:2131296317
- id:btnLibraryTop:2131296318
- id:btnReorder:2131296319
- id:btnSettings:2131296320
- id:btnShow:2131296321
- id:btnWifi:2131296322
- id:card:2131296323
- id:columns4:2131296326
- id:columns5:2131296327
- id:columns6:2131296328
- id:columns7:2131296329
- id:date:2131296330
- id:defaultHomeChoice:2131296331
- id:digest:2131296333
- id:dot:2131296334
- id:dreamAmbient:2131296336
- id:dreamContent:2131296338
- id:followThemeChoice:2131296340
- id:glass:2131296342
- id:greeting:2131296343
- id:grid:2131296344
- id:hero:2131296346
- id:heroArt:2131296347
- id:heroDots:2131296348
- id:heroMeta:2131296349
- id:heroName:2131296350
- id:heroScrim:2131296351
- id:hijriDate:2131296352
- id:hijriMinus1:2131296353
- id:hijriMinus2:2131296354
- id:hijriPlus1:2131296355
- id:hijriPlus2:2131296356
- id:hijriZero:2131296357
- id:icon:2131296359
- id:icon_group:2131296360
- id:identity:2131296361
- id:is_pooling_container_tag:2131296363
- id:label:2131296370
- id:leftBlock:2131296371
- id:locationChoice:2131296374
- id:lockPrayerBarChoice:2131296375
- id:methodChoice:2131296376
- id:name:2131296377
- id:names:2131296378
- id:notification_background:2131296380
- id:notification_main_column:2131296381
- id:notification_main_column_container:2131296382
- id:overlayNotifChoice:2131296383
- id:permissionsChoice:2131296385
- id:pkg:2131296386
- id:pooling_container_listener_holder_tag:2131296387
- id:prayerCountdown:2131296388
- id:prayerItemAsr:2131296389
- id:prayerItemDhuhr:2131296390
- id:prayerItemFajr:2131296391
- id:prayerItemIsha:2131296392
- id:prayerItemMaghrib:2131296393
- id:prayerItemSunrise:2131296394
- id:prayerName:2131296395
- id:prayerPill:2131296396
- id:prayerScrollView:2131296397
- id:prayerSettingsChoice:2131296398
- id:prayerTime:2131296399
- id:prayerTimesBar:2131296400
- id:raceHeadline:2131296401
- id:raceKicker:2131296402
- id:racePanel:2131296403
- id:raceSessions:2131296404
- id:refreshChoice:2131296405
- id:resetChoice:2131296406
- id:root:2131296409
- id:rows:2131296410
- id:rows0:2131296411
- id:rows1:2131296412
- id:rows2:2131296413
- id:rows3:2131296414
- id:screenSaverAppChoice:2131296415
- id:screenSaverEnabledChoice:2131296416
- id:screenSaverPreviewChoice:2131296417
- id:screenSaverSettingsChoice:2131296418
- id:screenSaverSystemChoice:2131296419
- id:screenSaverTimeoutChoice:2131296420
- id:scrim:2131296421
- id:shamsiDate:2131296422
- id:showPrayerBarChoice:2131296423
- id:sky:2131296424
- id:state:2131296425
- id:stats:2131296426
- id:status:2131296427
- id:tag_accessibility_actions:2131296428
- id:tag_accessibility_clickable_spans:2131296429
- id:tag_accessibility_heading:2131296430
- id:tag_accessibility_pane_title:2131296431
- id:tag_on_apply_window_listener:2131296432
- id:tag_screen_reader_focusable:2131296435
- id:tag_state_description:2131296436
- id:tag_unhandled_key_listeners:2131296439
- id:tag_window_insets_animation_callback:2131296440
- id:testAlertChoice:2131296441
- id:testAzanChoice:2131296442
- id:time:2131296445
- id:timeFormatChoice:2131296446
- id:title:2131296447
- id:tvSettingsChoice:2131296449
- id:wallpaperChoice:2131296451
- id:weatherAutoDetectChoice:2131296452
- id:weatherLocationChoice:2131296453
- id:weatherRefreshChoice:2131296454
- id:weatherSettingsChoice:2131296455
- id:weatherShowChoice:2131296456
- id:weatherText:2131296457
+ id:azanSleepModeChoice:2131296309
+ id:azanSoundChoice:2131296310
+ id:azanSoundEnabledChoice:2131296311
+ id:banner:2131296312
+ id:body:2131296314
+ id:btnDismissAlert:2131296315
+ id:btnInputs:2131296316
+ id:btnKeep:2131296317
+ id:btnLibrary:2131296318
+ id:btnLibraryTop:2131296319
+ id:btnReorder:2131296320
+ id:btnSettings:2131296321
+ id:btnShow:2131296322
+ id:btnWifi:2131296323
+ id:card:2131296324
+ id:columns4:2131296327
+ id:columns5:2131296328
+ id:columns6:2131296329
+ id:columns7:2131296330
+ id:date:2131296331
+ id:defaultHomeChoice:2131296332
+ id:digest:2131296334
+ id:dot:2131296335
+ id:dreamAmPm:2131296336
+ id:dreamAmbient:2131296337
+ id:dreamClock:2131296338
+ id:dreamContent:2131296339
+ id:dreamDate:2131296340
+ id:followThemeChoice:2131296341
+ id:glass:2131296343
+ id:greeting:2131296344
+ id:grid:2131296345
+ id:gridContainer:2131296346
+ id:hero:2131296347
+ id:heroArt:2131296348
+ id:heroDots:2131296349
+ id:heroMeta:2131296350
+ id:heroName:2131296351
+ id:heroScrim:2131296352
+ id:hijriDate:2131296353
+ id:hijriMinus1:2131296354
+ id:hijriMinus2:2131296355
+ id:hijriPlus1:2131296356
+ id:hijriPlus2:2131296357
+ id:hijriZero:2131296358
+ id:icon:2131296360
+ id:icon_group:2131296361
+ id:identity:2131296362
+ id:is_pooling_container_tag:2131296364
+ id:label:2131296371
+ id:leftBlock:2131296372
+ id:locationChoice:2131296375
+ id:lockPrayerBarChoice:2131296376
+ id:methodChoice:2131296377
+ id:name:2131296378
+ id:names:2131296379
+ id:notification_background:2131296381
+ id:notification_main_column:2131296382
+ id:notification_main_column_container:2131296383
+ id:overlayNotifChoice:2131296384
+ id:permissionsChoice:2131296386
+ id:pkg:2131296387
+ id:pooling_container_listener_holder_tag:2131296388
+ id:prayerCountdown:2131296389
+ id:prayerItemAsr:2131296390
+ id:prayerItemDhuhr:2131296391
+ id:prayerItemFajr:2131296392
+ id:prayerItemIsha:2131296393
+ id:prayerItemMaghrib:2131296394
+ id:prayerItemSunrise:2131296395
+ id:prayerName:2131296396
+ id:prayerPill:2131296397
+ id:prayerScrollView:2131296398
+ id:prayerSettingsChoice:2131296399
+ id:prayerTime:2131296400
+ id:prayerTimesBar:2131296401
+ id:raceHeadline:2131296402
+ id:raceKicker:2131296403
+ id:racePanel:2131296404
+ id:raceSessions:2131296405
+ id:refreshChoice:2131296406
+ id:resetChoice:2131296407
+ id:root:2131296410
+ id:rows:2131296411
+ id:rows0:2131296412
+ id:rows1:2131296413
+ id:rows2:2131296414
+ id:rows3:2131296415
+ id:screenSaverAppChoice:2131296416
+ id:screenSaverEnabledChoice:2131296417
+ id:screenSaverPreviewChoice:2131296418
+ id:screenSaverSettingsChoice:2131296419
+ id:screenSaverSystemChoice:2131296420
+ id:screenSaverTimeoutChoice:2131296421
+ id:scrim:2131296422
+ id:shamsiDate:2131296423
+ id:showPrayerBarChoice:2131296424
+ id:sky:2131296425
+ id:state:2131296426
+ id:stats:2131296427
+ id:status:2131296428
+ id:tag_accessibility_actions:2131296429
+ id:tag_accessibility_clickable_spans:2131296430
+ id:tag_accessibility_heading:2131296431
+ id:tag_accessibility_pane_title:2131296432
+ id:tag_on_apply_window_listener:2131296433
+ id:tag_screen_reader_focusable:2131296436
+ id:tag_state_description:2131296437
+ id:tag_unhandled_key_listeners:2131296440
+ id:tag_window_insets_animation_callback:2131296441
+ id:testAlertChoice:2131296442
+ id:testAzanChoice:2131296443
+ id:time:2131296446
+ id:timeFormatChoice:2131296447
+ id:title:2131296448
+ id:tvSettingsChoice:2131296450
+ id:wallpaperChoice:2131296452
+ id:weatherAutoDetectChoice:2131296453
+ id:weatherLocationChoice:2131296454
+ id:weatherRefreshChoice:2131296455
+ id:weatherSettingsChoice:2131296456
+ id:weatherShowChoice:2131296457
+ id:weatherText:2131296458
  integer:columns:2131361792
  integer:home_idle_clock_minutes:2131361793
  integer:rows_below_dock:2131361794
  integer:sky_intensity:2131361795
- integer:status_bar_notification_info_maxnum:2131361796
  integer:wifi_label_width:2131361797
  layout:activity_launcher_settings:2131427328
  layout:activity_main:2131427329
@@ -2083,130 +2130,133 @@ The root reachable resources are:
  string:dream_name:2131755044
  string:enable:2131755045
  string:ethernet:2131755046
- string:good_afternoon:2131755049
- string:good_evening:2131755050
- string:good_morning:2131755051
- string:good_night:2131755052
- string:greeting_name:2131755053
- string:greeting_with_name:2131755054
- string:hijri_adjustment:2131755055
- string:hijri_adjustment_hint:2131755056
- string:home_key_description:2131755057
- string:home_key_name:2131755058
- string:home_settings:2131755059
- string:home_settings_help:2131755060
- string:input_action:2131755061
- string:inputs:2131755063
- string:last_opened:2131755064
- string:latitude:2131755065
- string:launcher_settings:2131755066
- string:library_add_home:2131755067
- string:library_app_info:2131755068
- string:library_empty:2131755069
- string:library_hint_add:2131755070
- string:library_hint_open:2131755071
- string:library_on_home:2131755072
- string:library_open:2131755073
- string:library_recent:2131755074
- string:library_remove_shortcut:2131755075
- string:library_save_failed:2131755076
- string:live_tv:2131755077
- string:live_tv_action:2131755078
- string:live_tv_package:2131755079
- string:longitude:2131755080
- string:module_cards:2131755081
- string:no_inputs:2131755082
- string:no_module_cards:2131755083
- string:not_available:2131755084
- string:not_connected:2131755085
- string:off:2131755086
- string:offline:2131755087
- string:on:2131755088
- string:permission_overlay_message:2131755089
- string:permission_overlay_title:2131755090
- string:permissions_dialog_title:2131755091
- string:prayer_adj_item:2131755092
- string:prayer_asr:2131755095
- string:prayer_azan_sound_enabled:2131755098
- string:prayer_dhuhr:2131755099
- string:prayer_fajr:2131755100
- string:prayer_isha:2131755101
- string:prayer_location:2131755102
- string:prayer_lock_bar:2131755103
- string:prayer_maghrib:2131755104
- string:prayer_method:2131755105
- string:prayer_overlay_notif:2131755106
- string:prayer_permissions_check:2131755107
- string:prayer_refreshed:2131755109
- string:prayer_select_azan:2131755110
- string:prayer_show_bar:2131755112
- string:prayer_sunrise:2131755113
- string:prayer_test_azan_play:2131755115
- string:prayer_test_azan_stop:2131755116
- string:prayer_time_format:2131755117
- string:prayer_times:2131755118
- string:quick_apps:2131755120
- string:quick_apps_hint:2131755121
- string:quick_network:2131755122
- string:quick_picture:2131755123
- string:race_finished:2131755124
- string:race_kicker:2131755125
- string:race_kicker_no_place:2131755126
- string:race_lights_out:2131755127
- string:race_live:2131755128
- string:race_next:2131755129
- string:reorder:2131755131
- string:reorder_hint:2131755132
- string:reorder_not_saved:2131755133
- string:reset_adjustments:2131755134
- string:rows_below_dock_label:2131755135
- string:screensaver_app:2131755136
- string:screensaver_builtin_clock:2131755137
- string:screensaver_choose_from_apps:2131755138
- string:screensaver_enable:2131755139
- string:screensaver_minute_singular:2131755140
- string:screensaver_minutes_format:2131755141
- string:screensaver_select_app:2131755143
- string:screensaver_select_installed_app:2131755144
- string:screensaver_select_timeout:2131755145
- string:screensaver_settings_state:2131755147
- string:screensaver_timeout:2131755149
- string:select_azan_sound:2131755150
- string:select_location:2131755151
- string:select_method:2131755152
- string:settings:2131755153
- string:source_panel_action:2131755154
- string:source_panel_service:2131755155
- string:stats_cpu:2131755157
- string:stats_memory:2131755158
- string:stats_storage:2131755159
- string:status_bar_notification_info_overflow:2131755160
- string:tile_disabled:2131755161
- string:tile_menu_delete:2131755162
- string:tile_menu_disable:2131755163
- string:tile_menu_move:2131755164
- string:tile_menu_pin:2131755165
- string:tile_menu_unpin:2131755166
- string:tile_pinned:2131755167
- string:tile_unpinned:2131755168
- string:tv_settings:2131755169
- string:vpn:2131755170
- string:vpn_app:2131755171
- string:vpn_off:2131755172
- string:wallpaper_applied:2131755173
- string:wallpaper_label:2131755174
- string:wallpaper_none:2131755175
- string:wallpaper_state:2131755176
- string:wallpaper_theme_default:2131755177
- string:weather_auto_detect:2131755178
- string:weather_detect_failed:2131755180
- string:weather_detected:2131755181
- string:weather_detecting:2131755182
- string:weather_location:2131755183
- string:weather_refreshed:2131755186
- string:weather_settings_state:2131755189
- string:weather_show:2131755190
- string:wifi:2131755191
+ string:greeting_islamic:2131755053
+ string:greeting_name:2131755054
+ string:greeting_with_name:2131755055
+ string:hijri_adjustment:2131755056
+ string:hijri_adjustment_hint:2131755057
+ string:home_key_description:2131755058
+ string:home_key_name:2131755059
+ string:home_settings:2131755060
+ string:home_settings_help:2131755061
+ string:input_action:2131755062
+ string:inputs:2131755064
+ string:last_opened:2131755065
+ string:latitude:2131755066
+ string:launcher_settings:2131755067
+ string:library_add_home:2131755068
+ string:library_app_info:2131755069
+ string:library_empty:2131755070
+ string:library_hint_add:2131755071
+ string:library_hint_open:2131755072
+ string:library_on_home:2131755073
+ string:library_open:2131755074
+ string:library_recent:2131755075
+ string:library_remove_shortcut:2131755076
+ string:library_save_failed:2131755077
+ string:live_tv:2131755078
+ string:live_tv_action:2131755079
+ string:live_tv_package:2131755080
+ string:longitude:2131755081
+ string:module_cards:2131755082
+ string:no_inputs:2131755083
+ string:no_module_cards:2131755084
+ string:not_available:2131755085
+ string:not_connected:2131755086
+ string:off:2131755087
+ string:offline:2131755088
+ string:on:2131755089
+ string:permission_battery_message:2131755090
+ string:permission_battery_title:2131755091
+ string:permission_overlay_message:2131755092
+ string:permission_overlay_title:2131755093
+ string:permissions_dialog_title:2131755094
+ string:prayer_adj_item:2131755095
+ string:prayer_asr:2131755098
+ string:prayer_azan_sleep_mode:2131755101
+ string:prayer_azan_sound_enabled:2131755103
+ string:prayer_dhuhr:2131755104
+ string:prayer_fajr:2131755105
+ string:prayer_isha:2131755106
+ string:prayer_location:2131755107
+ string:prayer_lock_bar:2131755108
+ string:prayer_maghrib:2131755109
+ string:prayer_method:2131755110
+ string:prayer_overlay_notif:2131755111
+ string:prayer_permissions_check:2131755112
+ string:prayer_refreshed:2131755114
+ string:prayer_select_azan:2131755115
+ string:prayer_settings_state:2131755117
+ string:prayer_show_bar:2131755118
+ string:prayer_sunrise:2131755119
+ string:prayer_test_azan_play:2131755121
+ string:prayer_test_azan_stop:2131755122
+ string:prayer_time_format:2131755123
+ string:prayer_times:2131755124
+ string:quick_apps:2131755126
+ string:quick_apps_hint:2131755127
+ string:quick_network:2131755128
+ string:quick_picture:2131755129
+ string:race_finished:2131755130
+ string:race_kicker:2131755131
+ string:race_kicker_no_place:2131755132
+ string:race_lights_out:2131755133
+ string:race_live:2131755134
+ string:race_next:2131755135
+ string:reorder:2131755137
+ string:reorder_hint:2131755138
+ string:reorder_not_saved:2131755139
+ string:reset_adjustments:2131755140
+ string:rows_below_dock_label:2131755141
+ string:screensaver_adb_synced:2131755142
+ string:screensaver_app:2131755143
+ string:screensaver_builtin_clock:2131755144
+ string:screensaver_choose_from_apps:2131755145
+ string:screensaver_enable:2131755146
+ string:screensaver_minute_singular:2131755147
+ string:screensaver_minutes_format:2131755148
+ string:screensaver_off_turn_off_screen:2131755149
+ string:screensaver_select_app:2131755151
+ string:screensaver_select_installed_app:2131755152
+ string:screensaver_select_timeout:2131755153
+ string:screensaver_settings_state:2131755155
+ string:screensaver_system_settings:2131755156
+ string:screensaver_timeout:2131755157
+ string:select_azan_sound:2131755158
+ string:select_location:2131755159
+ string:select_method:2131755160
+ string:settings:2131755161
+ string:source_panel_action:2131755162
+ string:source_panel_service:2131755163
+ string:stats_cpu:2131755165
+ string:stats_memory:2131755166
+ string:stats_storage:2131755167
+ string:tile_disabled:2131755169
+ string:tile_menu_delete:2131755170
+ string:tile_menu_disable:2131755171
+ string:tile_menu_move:2131755172
+ string:tile_menu_pin:2131755173
+ string:tile_menu_unpin:2131755174
+ string:tile_pinned:2131755175
+ string:tile_unpinned:2131755176
+ string:tv_settings:2131755177
+ string:vpn:2131755178
+ string:vpn_app:2131755179
+ string:vpn_off:2131755180
+ string:wallpaper_applied:2131755181
+ string:wallpaper_label:2131755182
+ string:wallpaper_none:2131755183
+ string:wallpaper_state:2131755184
+ string:wallpaper_theme_default:2131755185
+ string:weather_auto_detect:2131755186
+ string:weather_detect_failed:2131755188
+ string:weather_detected:2131755189
+ string:weather_detecting:2131755190
+ string:weather_location:2131755191
+ string:weather_refreshed:2131755194
+ string:weather_settings_state:2131755197
+ string:weather_show:2131755198
+ string:wifi:2131755199
  style:SettingsColumnChoice:2131820544
  style:SettingsRow:2131820545
  style:Theme_TranslucentAlert:2131820551
@@ -2228,47 +2278,49 @@ Unused resources are:
  id:alertSubtitle:2131296301
  id:ampm:2131296305
  id:async:2131296308
- id:blocking:2131296312
- id:chronometer:2131296324
- id:clock:2131296325
- id:dialog_button:2131296332
- id:dreamAmPm:2131296335
- id:dreamClock:2131296337
- id:dreamDate:2131296339
- id:forever:2131296341
- id:gridContainer:2131296345
- id:hint:2131296358
- id:info:2131296362
- id:italic:2131296364
- id:item1:2131296365
- id:item2:2131296366
- id:item3:2131296367
- id:item4:2131296368
- id:item_touch_helper_previous_elevation:2131296369
- id:line1:2131296372
- id:line3:2131296373
- id:normal:2131296379
- id:panel:2131296384
- id:right_icon:2131296407
- id:right_side:2131296408
- id:tag_on_receive_content_listener:2131296433
- id:tag_on_receive_content_mime_types:2131296434
- id:tag_transition_group:2131296437
- id:tag_unhandled_key_event_manager:2131296438
- id:text:2131296443
- id:text2:2131296444
- id:topButtons:2131296448
- id:view_tree_lifecycle_owner:2131296450
+ id:blocking:2131296313
+ id:chronometer:2131296325
+ id:clock:2131296326
+ id:dialog_button:2131296333
+ id:forever:2131296342
+ id:hint:2131296359
+ id:info:2131296363
+ id:italic:2131296365
+ id:item1:2131296366
+ id:item2:2131296367
+ id:item3:2131296368
+ id:item4:2131296369
+ id:item_touch_helper_previous_elevation:2131296370
+ id:line1:2131296373
+ id:line3:2131296374
+ id:normal:2131296380
+ id:panel:2131296385
+ id:right_icon:2131296408
+ id:right_side:2131296409
+ id:tag_on_receive_content_listener:2131296434
+ id:tag_on_receive_content_mime_types:2131296435
+ id:tag_transition_group:2131296438
+ id:tag_unhandled_key_event_manager:2131296439
+ id:text:2131296444
+ id:text2:2131296445
+ id:topButtons:2131296449
+ id:view_tree_lifecycle_owner:2131296451
+ integer:status_bar_notification_info_maxnum:2131361796
  layout:custom_dialog:2131427335
  raw:keep:2131689475
  string:azan_alaqsa:2131755014
  string:azan_madinah:2131755015
  string:azan_makkah:2131755016
- string:prayer_refresh_failed:2131755108
- string:prayer_upcoming:2131755119
- string:standby:2131755156
- string:weather_refresh_failed:2131755185
+ string:good_afternoon:2131755049
+ string:good_evening:2131755050
+ string:good_morning:2131755051
+ string:good_night:2131755052
+ string:prayer_azan_sleep_mode_hint:2131755102
+ string:prayer_refresh_failed:2131755113
+ string:prayer_upcoming:2131755125
+ string:standby:2131755164
+ string:status_bar_notification_info_overflow:2131755168
+ string:weather_refresh_failed:2131755193
  style:TextAppearance_Compat_Notification:2131820546
  style:TextAppearance_Compat_Notification_Line2:2131820548
  style:TextAppearance_Compat_Notification_Title:2131820550
-Resource shrinking did not work (grew from 11285296 to 11285410); using original instead

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.gathin.tvhome.app-mergeReleaseResources-8:/values-iw/values-iw.xml",
+            "outputFile": "com.islam.tv.app-mergeReleaseResources-8:/values-iw/values-iw.xml",
             "map": [
                 {
                     "source": "/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/res/values-iw/bools.xml",
