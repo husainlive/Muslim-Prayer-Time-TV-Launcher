@@ -42,6 +42,7 @@ public class PrayerManager {
     public static final String KEY_ADJUSTMENT_PREFIX = "adjustment_";
     public static final String KEY_LOCK_BAR = "lock_prayer_bar";
     public static final String KEY_AZAN_ENABLED = "azan_sound_enabled";
+    public static final String KEY_AZAN_SLEEP_MODE = "azan_sleep_mode_enabled";
     public static final String KEY_NOTIF_OVERLAY = "notification_overlay_enabled";
     public static final String KEY_AZAN_SOUND = "selected_azan_sound";
     public static final String KEY_NOTIF_PREFIX = "notif_prayer_";
@@ -205,6 +206,14 @@ public class PrayerManager {
 
     public void setAzanSoundEnabled(boolean enabled) {
         prefs.edit().putBoolean(KEY_AZAN_ENABLED, enabled).apply();
+    }
+
+    public boolean isAzanSleepModeEnabled() {
+        return prefs.getBoolean(KEY_AZAN_SLEEP_MODE, true);
+    }
+
+    public void setAzanSleepModeEnabled(boolean enabled) {
+        prefs.edit().putBoolean(KEY_AZAN_SLEEP_MODE, enabled).apply();
     }
 
     public boolean isNotificationOverlayEnabled() {

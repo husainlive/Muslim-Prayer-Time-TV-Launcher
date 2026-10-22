@@ -10,6 +10,39 @@ import android.util.Log;
 public class PrayerAlarmReceiver extends BroadcastReceiver {
     private static final String TAG = "PrayerAlarmReceiver";
 
+    private static PowerManager.WakeLock sCpuWakeLock;
+    private static PowerManager.WakeLock sScreenWakeLock;
+
+    public static synchronized void acquireStaticWakeLock(Context context) {
+        try {
+            if (sCpuWakeLock == null) {
+                PowerManager pm = (PowerManager) context.getApplicationContext().getSystemService(Context.POWER_SERVICE);
+                if (pm != null) {
+                    sCpuWakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "TvHome:PrayerAlarmCpuWakeLock");
+                    sCpuWakeLock.setReferenceCounted(false);
+                }
+            }
+            if (sCpuWakeLock != null) {
+                sCpuWakeLock.acquire(6 * 60 * 1000L); // 6 min safety timeout
+            }
+        } catch (Exception e) {
+            Log.e(TAG, "Failed acquiring static wake lock", e);
+        }
+    }
+
+    public static synchronized void releaseStaticWakeLock() {
+        try {
+            if (sCpuWakeLock != null && sCpuWakeLock.isHeld()) {
+                sCpuWakeLock.release();
+            }
+        } catch (Exception ignored) {}
+        try {
+            if (sScreenWakeLock != null && sScreenWakeLock.isHeld()) {
+                sScreenWakeLock.release();
+            }
+        } catch (Exception ignored) {}
+    }
+
     @Override
     public void onReceive(Context context, Intent intent) {
         String prayerName = intent.getStringExtra(PrayerAlarmScheduler.EXTRA_PRAYER_NAME);
@@ -19,11 +52,29 @@ public class PrayerAlarmReceiver extends BroadcastReceiver {
 
         Log.d(TAG, "onReceive prayer alarm: " + prayerName + " at " + prayerTime);
 
-        PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
-        PowerManager.WakeLock wakeLock = null;
-        if (pm != null) {
-            wakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "TvHome:PrayerAlarmWakeLock");
-            wakeLock.acquire(2 * 60 * 1000L); // 2 minutes
+        PrayerManager pm = PrayerManager.getInstance(context);
+
+        // Hold static CPU wake lock so device stays awake until service finishes
+        acquireStaticWakeLock(context);
+
+        // If sleep mode is enabled, wake the TV screen
+        if (pm.isAzanSleepModeEnabled()) {
+            try {
+                PowerManager powerManager = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
+                if (powerManager != null) {
+                    @SuppressWarnings("deprecation")
+                    PowerManager.WakeLock screenWl = powerManager.newWakeLock(
+                            PowerManager.SCREEN_BRIGHT_WAKE_LOCK |
+                            PowerManager.ACQUIRE_CAUSES_WAKEUP |
+                            PowerManager.ON_AFTER_RELEASE,
+                            "TvHome:PrayerAlarmScreenWake");
+                    screenWl.setReferenceCounted(false);
+                    screenWl.acquire(60 * 1000L); // 60s
+                    sScreenWakeLock = screenWl;
+                }
+            } catch (Exception e) {
+                Log.w(TAG, "Screen wake lock on receive failed: " + e.getMessage());
+            }
         }
 
         try {
@@ -38,12 +89,7 @@ public class PrayerAlarmReceiver extends BroadcastReceiver {
             }
         } catch (Exception e) {
             Log.e(TAG, "Error starting PrayerAlarmService", e);
-        } finally {
-            if (wakeLock != null && wakeLock.isHeld()) {
-                try {
-                    wakeLock.release();
-                } catch (Exception ignored) {}
-            }
+            releaseStaticWakeLock();
         }
 
         // Keep future prayer alarms scheduled

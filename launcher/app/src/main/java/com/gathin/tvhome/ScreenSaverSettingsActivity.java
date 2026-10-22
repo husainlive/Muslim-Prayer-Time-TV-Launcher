@@ -37,8 +37,15 @@ public final class ScreenSaverSettingsActivity extends Activity {
         screenSaverSystemChoice = findViewById(R.id.screenSaverSystemChoice);
 
         setupClickListeners();
+        screenSaverManager.syncWithSystem();
         refreshUI();
         screenSaverEnabledChoice.requestFocus();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        refreshUI();
     }
 
     private void setupClickListeners() {
@@ -164,8 +171,8 @@ public final class ScreenSaverSettingsActivity extends Activity {
 
     private void refreshUI() {
         boolean enabled = screenSaverManager.isScreenSaverEnabled();
-        screenSaverEnabledChoice.setText(getString(R.string.screensaver_enable,
-                getString(enabled ? R.string.on : R.string.off)));
+        String stateStr = enabled ? getString(R.string.on) : getString(R.string.screensaver_off_turn_off_screen);
+        screenSaverEnabledChoice.setText(getString(R.string.screensaver_enable, stateStr));
 
         int timeout = screenSaverManager.getTimeoutMinutes();
         String timeoutStr = timeout == 1 ? getString(R.string.screensaver_minute_singular)
@@ -175,13 +182,23 @@ public final class ScreenSaverSettingsActivity extends Activity {
         screenSaverAppChoice.setText(getString(R.string.screensaver_app,
                 screenSaverManager.getScreenSaverAppLabel()));
 
-        screenSaverTimeoutChoice.setEnabled(enabled);
-        screenSaverTimeoutChoice.setAlpha(enabled ? 1.0f : 0.45f);
+        // Inactivity timeout applies both for screensaver and turning off the screen!
+        screenSaverTimeoutChoice.setEnabled(true);
+        screenSaverTimeoutChoice.setAlpha(1.0f);
 
         screenSaverAppChoice.setEnabled(enabled);
         screenSaverAppChoice.setAlpha(enabled ? 1.0f : 0.45f);
 
         screenSaverPreviewChoice.setEnabled(enabled);
         screenSaverPreviewChoice.setAlpha(enabled ? 1.0f : 0.45f);
+
+        if (screenSaverSystemChoice != null) {
+            boolean hasAdbSync = screenSaverManager.hasSecureSettingsPermission();
+            String sysLabel = getString(R.string.screensaver_system_settings);
+            if (hasAdbSync) {
+                sysLabel += " · " + getString(R.string.screensaver_adb_synced);
+            }
+            screenSaverSystemChoice.setText(sysLabel);
+        }
     }
 }

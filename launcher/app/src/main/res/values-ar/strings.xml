@@ -10,10 +10,11 @@
     <string name="not_connected">لا يوجد جهاز</string>
     <string name="live_tv">البث المباشر</string>
     <string name="no_inputs">لم يتم العثور على مدخلات</string>
-    <string name="good_morning">صباح الخير</string>
-    <string name="good_afternoon">مساء الخير</string>
-    <string name="good_evening">مساء الخير</string>
-    <string name="good_night">ليلة سعيدة</string>
+    <string name="greeting_islamic">السلام عليكم</string>
+    <string name="good_morning">السلام عليكم</string>
+    <string name="good_afternoon">السلام عليكم</string>
+    <string name="good_evening">السلام عليكم</string>
+    <string name="good_night">السلام عليكم</string>
     <string name="ethernet">إيثرنت</string>
     <string name="offline">غير متصل</string>
     <string name="not_available">غير متاح على هذا التلفاز</string>
@@ -113,4 +114,11 @@
     <string name="screensaver_select_installed_app">اختر تطبيقاً مثبتاً</string>
     <string name="screensaver_minute_singular">دقيقة واحدة</string>
     <string name="screensaver_minutes_format">%1$d دقائق</string>
+    <string name="prayer_azan_sleep_mode">الأذان في وضع سكون التلفاز: %1$s</string>
+    <string name="prayer_azan_sleep_mode_hint">إيقاظ الشاشة وتشغيل صوت الأذان حتى عندما يكون التلفاز في وضع الاستعداد أو السكون</string>
+    <string name="prayer_settings_state">إعدادات الصلاة والأذان: الأذان %1$s · وضع السكون %2$s</string>
+    <string name="permission_battery_title">إذن وضع سكون التلفاز (تحسين البطارية)</string>
+    <string name="permission_battery_message">لتشغيل الأذان بدقة أثناء وضع سكون التلفاز، يجب تعطيل تحسين البطارية للتطبيق. هل تريد فتح الإعدادات الآن؟</string>
+    <string name="screensaver_off_turn_off_screen">إيقاف (إطفاء الشاشة)</string>
+    <string name="screensaver_adb_synced">✅ متزامن مع النظام</string>
 </resources>

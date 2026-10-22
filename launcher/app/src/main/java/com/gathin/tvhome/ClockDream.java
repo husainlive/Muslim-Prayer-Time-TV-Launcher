@@ -13,6 +13,13 @@ public class ClockDream extends DreamService {
     @Override
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
+        ScreenSaverManager ssm = ScreenSaverManager.getInstance(this);
+        if (!ssm.isScreenSaverEnabled()) {
+            android.util.Log.d("ClockDream", "Screen saver is disabled in launcher, finishing dream so display can sleep");
+            finish();
+            ssm.turnScreenOff(this);
+            return;
+        }
         setInteractive(false);   // any key wakes the TV back to where it was
         setFullscreen(true);
         setScreenBright(false);
@@ -23,7 +30,14 @@ public class ClockDream extends DreamService {
     @Override
     public void onDreamingStarted() {
         super.onDreamingStarted();
-        scene.start();
+        ScreenSaverManager ssm = ScreenSaverManager.getInstance(this);
+        if (!ssm.isScreenSaverEnabled()) {
+            android.util.Log.d("ClockDream", "Screen saver disabled, finishing dreaming");
+            finish();
+            ssm.turnScreenOff(this);
+            return;
+        }
+        if (scene != null) scene.start();
     }
 
     @Override

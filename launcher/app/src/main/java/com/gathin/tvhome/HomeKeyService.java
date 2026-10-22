@@ -20,6 +20,15 @@ import java.util.Map;
  */
 public class HomeKeyService extends AccessibilityService {
 
+    private static HomeKeyService sInstance;
+
+    public static boolean turnScreenOff() {
+        if (sInstance != null && android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.P) {
+            return sInstance.performGlobalAction(GLOBAL_ACTION_LOCK_SCREEN);
+        }
+        return false;
+    }
+
     /** Remote buttons that should open Settings (config.xml, settings_key_scancodes and settings_key_keycodes). */
     private int[] settingsScancodes = new int[0];
     private int[] settingsKeycodes = new int[0];
@@ -31,6 +40,7 @@ public class HomeKeyService extends AccessibilityService {
     @Override
     protected void onServiceConnected() {
         super.onServiceConnected();
+        sInstance = this;
         settingsScancodes = getResources().getIntArray(R.array.settings_key_scancodes);
         // Keycodes and the panel choice can also come from a theme; theme.sh restarts this service.
         Config config = Config.load(this);
@@ -86,5 +96,11 @@ public class HomeKeyService extends AccessibilityService {
 
     @Override
     public void onInterrupt() {
+    }
+
+    @Override
+    public void onDestroy() {
+        if (sInstance == this) sInstance = null;
+        super.onDestroy();
     }
 }

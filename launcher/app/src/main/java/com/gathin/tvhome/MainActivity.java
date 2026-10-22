@@ -106,9 +106,9 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
      */
     private static final long TIME_VALID_AFTER_MS = 1_735_689_600_000L;
     private String liveTvPkg;
-    /** Idle time on Home before ClockActivity; 0 is off (config.xml, home_idle_clock_minutes). */
+    /** Idle time on Home before ClockActivity or screen off; 0 is off. */
     private long idleClockMs;
-    private final Runnable showIdleClock = () -> ScreenSaverManager.getInstance(this).startScreenSaver(this);
+    private final Runnable showIdleClock = () -> ScreenSaverManager.getInstance(this).onIdleTimeout(this);
     private String liveTvAction;
     private String inputAction;
     private String sourcePanelService;
@@ -722,7 +722,9 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
             recreate();
             return;
         }
-        idleClockMs = ScreenSaverManager.getInstance(this).getTimeoutMillis();
+        ScreenSaverManager ssm = ScreenSaverManager.getInstance(this);
+        idleClockMs = ssm.getTimeoutMillis();
+        ssm.syncWithSystem();
         restartIdleClock();
         promptsPaused = false;
         if (grid.getAdapter() == null) grid.setAdapter(adapter);   // dropped by onTrimMemory
@@ -2004,13 +2006,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
     }
 
     private void updateGreeting() {
-        int hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
-        int res;
-        if (hour < 5) res = R.string.good_night;
-        else if (hour < 12) res = R.string.good_morning;
-        else if (hour < 17) res = R.string.good_afternoon;
-        else if (hour < 22) res = R.string.good_evening;
-        else res = R.string.good_night;
+        int res = R.string.greeting_islamic;
         String festiveGreeting = festive ? festival.greetingText() : "";
         if (!festiveGreeting.isEmpty()) {
             greeting.setText(festiveGreeting);

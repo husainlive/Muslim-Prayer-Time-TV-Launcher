@@ -93,6 +93,11 @@
             style="@style/SettingsRow" />
 
         <TextView
+            android:id="@+id/azanSleepModeChoice"
+            style="@style/SettingsRow"
+            android:layout_marginTop="10dp" />
+
+        <TextView
             android:id="@+id/azanSoundChoice"
             style="@style/SettingsRow"
             android:layout_marginTop="10dp" />

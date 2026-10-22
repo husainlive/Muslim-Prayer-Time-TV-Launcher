@@ -37,6 +37,7 @@ public final class PrayerSettingsActivity extends Activity {
     private TextView weatherRefreshChoice;
 
     private TextView azanSoundEnabledChoice;
+    private TextView azanSleepModeChoice;
     private TextView azanSoundChoice;
     private TextView testAzanChoice;
     private TextView overlayNotifChoice;
@@ -111,6 +112,7 @@ public final class PrayerSettingsActivity extends Activity {
         weatherRefreshChoice = findViewById(R.id.weatherRefreshChoice);
 
         azanSoundEnabledChoice = findViewById(R.id.azanSoundEnabledChoice);
+        azanSleepModeChoice = findViewById(R.id.azanSleepModeChoice);
         azanSoundChoice = findViewById(R.id.azanSoundChoice);
         testAzanChoice = findViewById(R.id.testAzanChoice);
         overlayNotifChoice = findViewById(R.id.overlayNotifChoice);
@@ -183,6 +185,24 @@ public final class PrayerSettingsActivity extends Activity {
             PrayerAlarmScheduler.scheduleAlarms(this);
             setResult(RESULT_OK);
             refreshUI();
+        });
+
+        azanSleepModeChoice.setOnClickListener(v -> {
+            boolean current = prayerManager.isAzanSleepModeEnabled();
+            boolean newState = !current;
+            prayerManager.setAzanSleepModeEnabled(newState);
+            PrayerAlarmScheduler.scheduleAlarms(this);
+            setResult(RESULT_OK);
+            refreshUI();
+
+            if (newState) {
+                PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
+                boolean batteryIgnored = Build.VERSION.SDK_INT < Build.VERSION_CODES.M ||
+                        (pm != null && pm.isIgnoringBatteryOptimizations(getPackageName()));
+                if (!batteryIgnored) {
+                    showBatteryOptimizationDialog();
+                }
+            }
         });
 
         azanSoundChoice.setOnClickListener(v -> showAzanSoundPicker());
@@ -520,6 +540,9 @@ public final class PrayerSettingsActivity extends Activity {
         azanSoundEnabledChoice.setText(getString(R.string.prayer_azan_sound_enabled,
                 getString(prayerManager.isAzanSoundEnabled() ? R.string.on : R.string.off)));
 
+        azanSleepModeChoice.setText(getString(R.string.prayer_azan_sleep_mode,
+                getString(prayerManager.isAzanSleepModeEnabled() ? R.string.on : R.string.off)));
+
         azanSoundChoice.setText(getString(R.string.prayer_select_azan,
                 getSoundDisplayName(prayerManager.getSelectedAzanSound())));
 
@@ -542,10 +565,18 @@ public final class PrayerSettingsActivity extends Activity {
                 checkSelfPermission(android.Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED;
         boolean locationGranted = checkSelfPermission(android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED;
         boolean overlayGranted = Build.VERSION.SDK_INT < Build.VERSION_CODES.M || Settings.canDrawOverlays(this);
-        boolean allGranted = notifGranted && locationGranted && overlayGranted;
+        PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
+        boolean batteryIgnored = Build.VERSION.SDK_INT < Build.VERSION_CODES.M ||
+                (pm != null && pm.isIgnoringBatteryOptimizations(getPackageName()));
+        boolean exactAlarmGranted = true;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            AlarmManager am = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+            exactAlarmGranted = am == null || am.canScheduleExactAlarms();
+        }
+        boolean allGranted = notifGranted && locationGranted && overlayGranted && batteryIgnored && exactAlarmGranted;
 
         permissionsChoice.setText(getString(R.string.prayer_permissions_check) + " · " +
-                (allGranted ? "✅ All Granted" : "⚠️ Check Needed"));
+                (allGranted ? "✅ All Granted (Sleep Mode Ready)" : "⚠️ Permissions Check Needed"));
     }
 
     private void showPermissionsStatusDialog() {
@@ -560,14 +591,33 @@ public final class PrayerSettingsActivity extends Activity {
             AlarmManager am = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
             alarmGranted = am == null || am.canScheduleExactAlarms();
         }
+        PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
+        boolean batteryIgnored = Build.VERSION.SDK_INT < Build.VERSION_CODES.M ||
+                (pm != null && pm.isIgnoringBatteryOptimizations(getPackageName()));
+
+        boolean secureSettingsGranted = checkSelfPermission("android.permission.WRITE_SECURE_SETTINGS") == PackageManager.PERMISSION_GRANTED;
 
         StringBuilder sb = new StringBuilder();
-        sb.append(notifGranted ? "✅ Notifications (Adhan alerts): Allowed\n\n" : "❌ Notifications: Missing (Adhan banners blocked)\n\n");
-        sb.append(locationGranted ? "✅ Location (Wi-Fi SSID & Weather): Allowed\n\n" : "⚠️ Location: Missing (Wi-Fi SSID name unavailable)\n\n");
-        sb.append(overlayGranted ? "✅ Display Over Other Apps: Allowed\n\n" : "❌ Display Over Other Apps: Missing (needed over YouTube/TV)\n\n");
-        sb.append(alarmGranted ? "✅ Exact Alarms (Adhan): Allowed" : "⚠️ Exact Alarms: Restricted");
+        sb.append(batteryIgnored
+                ? "✅ TV Sleep Mode (Battery Optimization): Unrestricted\n\n"
+                : "⚠️ TV Sleep Mode: Restricted (Battery optimization may delay Azan when TV sleeps)\n\n");
+        sb.append(secureSettingsGranted
+                ? "✅ System Sleep & Wake Control (ADB): Granted (Ready for TV Sleep & Screen Off)\n\n"
+                : "ℹ️ System Sleep Control: Optional (Granted via ADB for deep sleep & screen off)\n\n");
+        sb.append(alarmGranted
+                ? "✅ Exact Alarms (Adhan timing): Allowed\n\n"
+                : "⚠️ Exact Alarms: Restricted\n\n");
+        sb.append(notifGranted
+                ? "✅ Notifications (Adhan alerts): Allowed\n\n"
+                : "❌ Notifications: Missing (Adhan banners blocked)\n\n");
+        sb.append(overlayGranted
+                ? "✅ Display Over Other Apps: Allowed\n\n"
+                : "❌ Display Over Other Apps: Missing (needed over YouTube/TV)\n\n");
+        sb.append(locationGranted
+                ? "✅ Location (Wi-Fi SSID & Weather): Allowed"
+                : "⚠️ Location: Optional (used for Wi-Fi SSID name)");
 
-        boolean needsAction = !notifGranted || !locationGranted || !overlayGranted;
+        boolean needsAction = !notifGranted || !overlayGranted || !batteryIgnored || !alarmGranted;
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this)
                 .setTitle(R.string.permissions_dialog_title)
@@ -599,16 +649,81 @@ public final class PrayerSettingsActivity extends Activity {
                 requestPermissions(runtimeList.toArray(new String[0]), 501);
                 return;
             }
+
+            PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
+            if (pm != null && !pm.isIgnoringBatteryOptimizations(getPackageName())) {
+                requestBatteryOptimizationExemption();
+                return;
+            }
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                AlarmManager am = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+                if (am != null && !am.canScheduleExactAlarms()) {
+                    requestExactAlarmPermission();
+                    return;
+                }
+            }
+
             if (!Settings.canDrawOverlays(this)) {
+                requestOverlayPermission();
+            }
+        }
+    }
+
+    private void showBatteryOptimizationDialog() {
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.permission_battery_title)
+                .setMessage(R.string.permission_battery_message)
+                .setPositiveButton(R.string.enable, (dialog, which) -> requestBatteryOptimizationExemption())
+                .setNegativeButton(android.R.string.cancel, null)
+                .show();
+    }
+
+    private void requestBatteryOptimizationExemption() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            try {
+                Intent intent = new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
+                intent.setData(Uri.parse("package:" + getPackageName()));
+                startActivity(intent);
+            } catch (Exception e) {
                 try {
-                    Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
-                            Uri.parse("package:" + getPackageName()));
+                    Intent intent = new Intent(Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS);
                     startActivity(intent);
-                } catch (Exception e) {
-                    Toast.makeText(this, "Please allow overlay in system settings", Toast.LENGTH_SHORT).show();
+                } catch (Exception ignored) {
+                    Toast.makeText(this, "Please disable battery optimization in TV Settings", Toast.LENGTH_LONG).show();
                 }
             }
         }
+    }
+
+    private void requestExactAlarmPermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            try {
+                Intent intent = new Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM);
+                intent.setData(Uri.parse("package:" + getPackageName()));
+                startActivity(intent);
+            } catch (Exception ignored) {
+                Toast.makeText(this, "Please enable exact alarms in TV Settings", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    private void requestOverlayPermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            try {
+                Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                        Uri.parse("package:" + getPackageName()));
+                startActivity(intent);
+            } catch (Exception e) {
+                Toast.makeText(this, "Please allow overlay in TV Settings", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        refreshUI();
     }
 
     @Override

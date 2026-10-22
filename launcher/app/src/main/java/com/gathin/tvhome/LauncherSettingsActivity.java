@@ -23,6 +23,7 @@ public final class LauncherSettingsActivity extends Activity {
     private TextView animationsChoice;
     private TextView advancedChoice;
     private TextView followThemeChoice;
+    private TextView prayerSettingsChoice;
     private TextView weatherSettingsChoice;
     private TextView screenSaverSettingsChoice;
     private WeatherManager weatherManager;
@@ -114,7 +115,8 @@ public final class LauncherSettingsActivity extends Activity {
         weatherManager = WeatherManager.getInstance(this);
         prayerManager = PrayerManager.getInstance(this);
         screenSaverManager = ScreenSaverManager.getInstance(this);
-        findViewById(R.id.prayerSettingsChoice).setOnClickListener(v ->
+        prayerSettingsChoice = findViewById(R.id.prayerSettingsChoice);
+        prayerSettingsChoice.setOnClickListener(v ->
                 startActivityForResult(new Intent(this, PrayerSettingsActivity.class), 43));
         weatherSettingsChoice = findViewById(R.id.weatherSettingsChoice);
         weatherSettingsChoice.setOnClickListener(v ->
@@ -223,6 +225,11 @@ public final class LauncherSettingsActivity extends Activity {
                         : wallpaperCurrent != null ? wallpaperCurrent
                         : getString(R.string.wallpaper_theme_default)));
         followThemeChoice.setSelected(!hasOnTvChoices());
+        if (prayerSettingsChoice != null && prayerManager != null) {
+            String azanStatus = getString(prayerManager.isAzanSoundEnabled() ? R.string.on : R.string.off);
+            String sleepStatus = getString(prayerManager.isAzanSleepModeEnabled() ? R.string.on : R.string.off);
+            prayerSettingsChoice.setText(getString(R.string.prayer_settings_state, azanStatus, sleepStatus));
+        }
         if (weatherSettingsChoice != null && weatherManager != null && prayerManager != null) {
             weatherSettingsChoice.setText(getString(R.string.weather_settings_state,
                     getString(weatherManager.isWeatherEnabled() ? R.string.on : R.string.off),

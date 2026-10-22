@@ -10,10 +10,11 @@
     <string name="not_connected">No device</string>
     <string name="live_tv">Live TV</string>
     <string name="no_inputs">No inputs found</string>
-    <string name="good_morning">Good morning</string>
-    <string name="good_afternoon">Good afternoon</string>
-    <string name="good_evening">Good evening</string>
-    <string name="good_night">Good night</string>
+    <string name="greeting_islamic">Assalamu Alaikum</string>
+    <string name="good_morning">Assalamu Alaikum</string>
+    <string name="good_afternoon">Assalamu Alaikum</string>
+    <string name="good_evening">Assalamu Alaikum</string>
+    <string name="good_night">Assalamu Alaikum</string>
     <string name="ethernet">Ethernet</string>
     <string name="offline">Offline</string>
     <string name="not_available">Not available on this TV</string>
@@ -188,4 +189,11 @@
     <string name="screensaver_select_installed_app">Select Installed App</string>
     <string name="screensaver_minute_singular">1 minute</string>
     <string name="screensaver_minutes_format">%1$d minutes</string>
+    <string name="prayer_azan_sleep_mode">Azan in TV sleep mode: %1$s</string>
+    <string name="prayer_azan_sleep_mode_hint">Wakes screen and plays Azan audio even when the TV is in standby or sleep mode</string>
+    <string name="prayer_settings_state">Prayer &amp; Azan Settings: Azan %1$s · Sleep mode %2$s</string>
+    <string name="permission_battery_title">TV Sleep Mode (Battery Optimization)</string>
+    <string name="permission_battery_message">To play Azan reliably while the TV is in standby or sleep mode, battery optimization must be disabled (Unrestricted) for this launcher. Would you like to open settings to enable this now?</string>
+    <string name="screensaver_off_turn_off_screen">Off (Turn off screen)</string>
+    <string name="screensaver_adb_synced">✅ Synced with system</string>
 </resources>

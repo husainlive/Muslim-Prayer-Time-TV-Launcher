@@ -71,6 +71,7 @@ public class ScreenSaverManager {
 
     public void setScreenSaverEnabled(boolean enabled) {
         prefs.edit().putBoolean(KEY_SCREENSAVER_ENABLED, enabled).apply();
+        syncWithSystem(enabled);
     }
 
     public int getTimeoutMinutes() {
@@ -79,10 +80,10 @@ public class ScreenSaverManager {
 
     public void setTimeoutMinutes(int minutes) {
         prefs.edit().putInt(KEY_SCREENSAVER_TIMEOUT_MINUTES, minutes).apply();
+        syncWithSystem(isScreenSaverEnabled());
     }
 
     public long getTimeoutMillis() {
-        if (!isScreenSaverEnabled()) return 0;
         int mins = getTimeoutMinutes();
         if (mins <= 0) return 0;
         return mins * 60 * 1000L;
@@ -101,6 +102,7 @@ public class ScreenSaverManager {
                 .putString(KEY_SCREENSAVER_APP, id)
                 .putString(KEY_SCREENSAVER_APP_LABEL, label)
                 .apply();
+        syncWithSystem(isScreenSaverEnabled());
     }
 
     public List<ScreenSaverOption> getAvailableScreenSavers() {
@@ -207,5 +209,104 @@ public class ScreenSaverManager {
         Intent fallback = new Intent(ctx, ClockActivity.class);
         fallback.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         ctx.startActivity(fallback);
+    }
+
+    public void onIdleTimeout(Context ctx) {
+        if (isScreenSaverEnabled()) {
+            startScreenSaver(ctx);
+        } else {
+            turnScreenOff(ctx);
+        }
+    }
+
+    public void turnScreenOff(Context ctx) {
+        Log.d(TAG, "Inactivity timeout reached with screensaver disabled: turning screen off / entering sleep");
+        ensureAccessibilityServiceEnabled();
+        // 1. If AccessibilityService is running, lock screen / turn off display
+        if (HomeKeyService.turnScreenOff()) {
+            Log.d(TAG, "Screen turned off via HomeKeyService");
+            return;
+        }
+
+        // 2. Ensure system screensaver is disabled so display power controller enters sleep
+        syncWithSystem(false);
+    }
+
+    public void ensureAccessibilityServiceEnabled() {
+        if (!hasSecureSettingsPermission()) return;
+        try {
+            String service = context.getPackageName() + "/" + HomeKeyService.class.getName();
+            String enabledServices = android.provider.Settings.Secure.getString(
+                    context.getContentResolver(),
+                    android.provider.Settings.Secure.ENABLED_ACCESSIBILITY_SERVICES);
+            if (enabledServices == null || !enabledServices.contains(service)) {
+                String newServices = (enabledServices == null || enabledServices.trim().isEmpty())
+                        ? service
+                        : enabledServices + ":" + service;
+                android.provider.Settings.Secure.putString(
+                        context.getContentResolver(),
+                        android.provider.Settings.Secure.ENABLED_ACCESSIBILITY_SERVICES,
+                        newServices);
+            }
+            android.provider.Settings.Secure.putInt(
+                    context.getContentResolver(),
+                    android.provider.Settings.Secure.ACCESSIBILITY_ENABLED,
+                    1);
+            Log.d(TAG, "Enabled HomeKeyService accessibility via WRITE_SECURE_SETTINGS");
+        } catch (Exception e) {
+            Log.w(TAG, "Failed enabling accessibility service: " + e.getMessage());
+        }
+    }
+
+    public void syncWithSystem() {
+        syncWithSystem(isScreenSaverEnabled());
+    }
+
+    public void syncWithSystem(boolean enabled) {
+        int mins = getTimeoutMinutes();
+        int timeoutMs = mins > 0 ? mins * 60 * 1000 : 300_000;
+
+        // Try writing to Settings.Secure / Settings.Global (requires WRITE_SECURE_SETTINGS, granted via ADB)
+        try {
+            android.provider.Settings.Secure.putInt(context.getContentResolver(), "screensaver_enabled", enabled ? 1 : 0);
+            android.provider.Settings.Secure.putInt(context.getContentResolver(), "screensaver_activate_on_sleep", enabled ? 1 : 0);
+            android.provider.Settings.Secure.putInt(context.getContentResolver(), "screensaver_activate_on_dock", enabled ? 1 : 0);
+            android.provider.Settings.Secure.putInt(context.getContentResolver(), "sleep_timeout", timeoutMs);
+
+            if (enabled) {
+                String currentApp = getScreenSaverApp();
+                if (ID_BUILTIN_CLOCK.equals(currentApp)) {
+                    android.provider.Settings.Secure.putString(context.getContentResolver(), "screensaver_components",
+                            context.getPackageName() + "/" + ClockDream.class.getName());
+                } else if (currentApp != null && currentApp.startsWith("dream:")) {
+                    android.provider.Settings.Secure.putString(context.getContentResolver(), "screensaver_components",
+                            currentApp.substring("dream:".length()));
+                }
+            } else {
+                // TV is plugged into AC power; by default Android TVs stay on when plugged in!
+                // Setting stay_on_while_plugged_in to 0 allows the panel/display to turn off and sleep.
+                android.provider.Settings.Global.putInt(context.getContentResolver(),
+                        android.provider.Settings.Global.STAY_ON_WHILE_PLUGGED_IN, 0);
+            }
+
+            ensureAccessibilityServiceEnabled();
+            Log.d(TAG, "Synced screensaver settings with Settings.Secure: enabled=" + enabled);
+        } catch (Exception e) {
+            Log.w(TAG, "Settings.Secure write skipped: " + e.getMessage());
+        }
+
+        // Try writing to Settings.System for display timeout
+        try {
+            android.provider.Settings.System.putInt(context.getContentResolver(),
+                    android.provider.Settings.System.SCREEN_OFF_TIMEOUT, timeoutMs);
+            Log.d(TAG, "Synced SCREEN_OFF_TIMEOUT=" + timeoutMs);
+        } catch (Exception e) {
+            Log.w(TAG, "Settings.System write skipped: " + e.getMessage());
+        }
+    }
+
+    public boolean hasSecureSettingsPermission() {
+        return context.checkSelfPermission("android.permission.WRITE_SECURE_SETTINGS") ==
+                android.content.pm.PackageManager.PERMISSION_GRANTED;
     }
 }

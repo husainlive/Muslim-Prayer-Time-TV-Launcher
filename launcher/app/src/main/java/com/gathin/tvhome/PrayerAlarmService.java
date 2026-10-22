@@ -5,8 +5,10 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
 import android.media.AudioAttributes;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
@@ -24,6 +26,7 @@ public class PrayerAlarmService extends Service {
 
     private MediaPlayer mediaPlayer;
     private PowerManager.WakeLock wakeLock;
+    private PowerManager.WakeLock screenWakeLock;
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
@@ -75,8 +78,8 @@ public class PrayerAlarmService extends Service {
 
         startForeground(NOTIFICATION_ID, notification);
 
-        // Display overlay over other apps if enabled
-        if (pm.isNotificationOverlayEnabled()) {
+        // Display overlay or wake screen if enabled or in sleep mode
+        if (pm.isNotificationOverlayEnabled() || pm.isAzanSleepModeEnabled()) {
             try {
                 startActivity(alertIntent);
             } catch (Exception e) {
@@ -87,6 +90,9 @@ public class PrayerAlarmService extends Service {
         // Play Azan sound if enabled
         if (pm.isAzanSoundEnabled()) {
             playAzanSound(pm.getSelectedAzanSound());
+        } else {
+            // If sound is disabled and overlay auto-dismisses, stop service when alert finishes
+            Log.d(TAG, "Azan sound disabled, service running for alert");
         }
 
         return START_NOT_STICKY;
@@ -102,6 +108,19 @@ public class PrayerAlarmService extends Service {
             }
 
             Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + rawRes);
+
+            // Ensure alarm audio stream is audible if TV was muted
+            try {
+                AudioManager am = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+                if (am != null) {
+                    int vol = am.getStreamVolume(AudioManager.STREAM_ALARM);
+                    int max = am.getStreamMaxVolume(AudioManager.STREAM_ALARM);
+                    if (vol == 0 && max > 0) {
+                        am.setStreamVolume(AudioManager.STREAM_ALARM, (int) (max * 0.7f), 0);
+                    }
+                }
+            } catch (Exception ignored) {}
+
             mediaPlayer = new MediaPlayer();
             mediaPlayer.setAudioAttributes(new AudioAttributes.Builder()
                     .setUsage(AudioAttributes.USAGE_ALARM)
@@ -134,6 +153,18 @@ public class PrayerAlarmService extends Service {
             if (powerManager != null) {
                 wakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "TvHome:AdhanServiceWakeLock");
                 wakeLock.acquire(5 * 60 * 1000L); // 5 min max
+
+                PrayerManager pm = PrayerManager.getInstance(this);
+                if (pm.isAzanSleepModeEnabled()) {
+                    @SuppressWarnings("deprecation")
+                    PowerManager.WakeLock sLock = powerManager.newWakeLock(
+                            PowerManager.SCREEN_BRIGHT_WAKE_LOCK |
+                            PowerManager.ACQUIRE_CAUSES_WAKEUP |
+                            PowerManager.ON_AFTER_RELEASE,
+                            "TvHome:AdhanServiceScreenWakeLock");
+                    sLock.acquire(3 * 60 * 1000L);
+                    screenWakeLock = sLock;
+                }
             }
         } catch (Exception e) {
             Log.e(TAG, "Failed acquiring wake lock", e);
@@ -184,5 +215,15 @@ public class PrayerAlarmService extends Service {
             } catch (Exception ignored) {}
             wakeLock = null;
         }
+
+        if (screenWakeLock != null && screenWakeLock.isHeld()) {
+            try {
+                screenWakeLock.release();
+            } catch (Exception ignored) {}
+            screenWakeLock = null;
+        }
+
+        // Release static CPU wake lock held since receiver triggered
+        PrayerAlarmReceiver.releaseStaticWakeLock();
     }
 }

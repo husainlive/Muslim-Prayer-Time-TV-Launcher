@@ -66,18 +66,33 @@ public class PrayerAlarmScheduler {
                 PendingIntent pi = PendingIntent.getBroadcast(context, reqCode++, intent, flags);
 
                 long triggerMillis = target.getTimeInMillis();
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-                    if (am.canScheduleExactAlarms()) {
+                boolean scheduled = false;
+                if (pm.isAzanSleepModeEnabled() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    try {
+                        Intent showIntent = new Intent(context, PrayerSettingsActivity.class);
+                        PendingIntent showPi = PendingIntent.getActivity(context, reqCode + 1000, showIntent, flags);
+                        AlarmManager.AlarmClockInfo clockInfo = new AlarmManager.AlarmClockInfo(triggerMillis, showPi);
+                        am.setAlarmClock(clockInfo, pi);
+                        scheduled = true;
+                        Log.d(TAG, "Scheduled AlarmClock for " + item.name + " at " + target.getTime());
+                    } catch (Exception e) {
+                        Log.w(TAG, "setAlarmClock failed, falling back", e);
+                    }
+                }
+                if (!scheduled) {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                        if (am.canScheduleExactAlarms()) {
+                            am.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, triggerMillis, pi);
+                        } else {
+                            am.setAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, triggerMillis, pi);
+                        }
+                    } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                         am.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, triggerMillis, pi);
                     } else {
-                        am.setAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, triggerMillis, pi);
+                        am.setExact(AlarmManager.RTC_WAKEUP, triggerMillis, pi);
                     }
-                } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                    am.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, triggerMillis, pi);
-                } else {
-                    am.setExact(AlarmManager.RTC_WAKEUP, triggerMillis, pi);
+                    Log.d(TAG, "Scheduled exact alarm for " + item.name + " at " + target.getTime());
                 }
-                Log.d(TAG, "Scheduled alarm for " + item.name + " at " + target.getTime());
             } catch (Exception e) {
                 Log.e(TAG, "Failed scheduling alarm for " + item.name, e);
             }
