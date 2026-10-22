@@ -6,8 +6,15 @@
 -keep class com.gathin.tvhome.InputKeyService { <init>(); }
 -keep class com.gathin.tvhome.LauncherSettingsActivity { <init>(); }
 -keep class com.gathin.tvhome.MainActivity { <init>(); }
+-keep class com.gathin.tvhome.PrayerAlarmReceiver { <init>(); }
+-keep class com.gathin.tvhome.PrayerAlarmService { <init>(); }
+-keep class com.gathin.tvhome.PrayerAlertActivity { <init>(); }
+-keep class com.gathin.tvhome.PrayerBootReceiver { <init>(); }
+-keep class com.gathin.tvhome.PrayerSettingsActivity { <init>(); }
 -keep class com.gathin.tvhome.QuickSettingsActivity { <init>(); }
+-keep class com.gathin.tvhome.ScreenSaverSettingsActivity { <init>(); }
 -keep class com.gathin.tvhome.ThemeProvider { <init>(); }
+-keep class com.gathin.tvhome.WeatherSettingsActivity { <init>(); }
 -keep class androidx.recyclerview.widget.RecyclerView { <init>(android.content.Context, android.util.AttributeSet); }
 
 -keep class com.gathin.tvhome.GlassView { <init>(android.content.Context, android.util.AttributeSet); }

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF101419"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="72dp"
+        android:paddingEnd="72dp"
+        android:paddingTop="38dp"
+        android:paddingBottom="48dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/prayer_settings"
+            android:textColor="#FFFFFFFF"
+            android:textSize="34sp"
+            android:fontFamily="@font/outfit_light" />
+
+        <TextView
+            android:id="@+id/showPrayerBarChoice"
+            style="@style/SettingsRow"
+            android:layout_marginTop="28dp" />
+
+        <TextView
+            android:id="@+id/lockPrayerBarChoice"
+            style="@style/SettingsRow"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/locationChoice"
+            style="@style/SettingsRow"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/timeFormatChoice"
+            style="@style/SettingsRow"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/methodChoice"
+            style="@style/SettingsRow"
+            android:layout_marginTop="10dp" />
+
+        <!-- Weather Settings -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/weather_section"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp"
+            android:fontFamily="@font/outfit_medium" />
+
+        <TextView
+            android:id="@+id/weatherShowChoice"
+            style="@style/SettingsRow"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/weatherRefreshChoice"
+            style="@style/SettingsRow"
+            android:layout_marginTop="10dp"
+            android:text="@string/weather_refresh" />
+
+        <!-- Adhan & Alerts Settings -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/prayer_azan_section"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp"
+            android:fontFamily="@font/outfit_medium" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/prayer_azan_section_hint"
+            android:textColor="#FFACB8C1"
+            android:textSize="14sp"
+            android:fontFamily="@font/outfit_regular" />
+
+        <TextView
+            android:id="@+id/azanSoundEnabledChoice"
+            style="@style/SettingsRow" />
+
+        <TextView
+            android:id="@+id/azanSoundChoice"
+            style="@style/SettingsRow"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/testAzanChoice"
+            style="@style/SettingsRow"
+            android:layout_marginTop="10dp"
+            android:text="@string/prayer_test_azan_play" />
+
+        <TextView
+            android:id="@+id/overlayNotifChoice"
+            style="@style/SettingsRow"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/testAlertChoice"
+            style="@style/SettingsRow"
+            android:layout_marginTop="10dp"
+            android:text="@string/prayer_test_alert_now" />
+
+        <TextView
+            android:id="@+id/permissionsChoice"
+            style="@style/SettingsRow"
+            android:layout_marginTop="10dp"
+            android:text="@string/prayer_permissions_check" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/prayer_adjustments"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp"
+            android:fontFamily="@font/outfit_medium" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/prayer_adjustments_hint"
+            android:textColor="#FFACB8C1"
+            android:textSize="14sp"
+            android:fontFamily="@font/outfit_regular" />
+
+        <TextView android:id="@+id/adjFajr" style="@style/SettingsRow" />
+        <TextView android:id="@+id/adjSunrise" style="@style/SettingsRow" android:layout_marginTop="8dp" />
+        <TextView android:id="@+id/adjDhuhr" style="@style/SettingsRow" android:layout_marginTop="8dp" />
+        <TextView android:id="@+id/adjAsr" style="@style/SettingsRow" android:layout_marginTop="8dp" />
+        <TextView android:id="@+id/adjMaghrib" style="@style/SettingsRow" android:layout_marginTop="8dp" />
+        <TextView android:id="@+id/adjIsha" style="@style/SettingsRow" android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/hijri_adjustment"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp"
+            android:fontFamily="@font/outfit_medium" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/hijri_adjustment_hint"
+            android:textColor="#FFACB8C1"
+            android:textSize="14sp"
+            android:fontFamily="@font/outfit_regular" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView android:id="@+id/hijriMinus2" style="@style/SettingsColumnChoice" android:text="-2 d" />
+            <TextView android:id="@+id/hijriMinus1" style="@style/SettingsColumnChoice" android:text="-1 d" />
+            <TextView android:id="@+id/hijriZero" style="@style/SettingsColumnChoice" android:text="0 d" />
+            <TextView android:id="@+id/hijriPlus1" style="@style/SettingsColumnChoice" android:text="+1 d" />
+            <TextView android:id="@+id/hijriPlus2" style="@style/SettingsColumnChoice" android:text="+2 d" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/refreshChoice"
+            style="@style/SettingsRow"
+            android:layout_marginTop="28dp"
+            android:text="@string/refresh_prayers" />
+
+        <TextView
+            android:id="@+id/resetChoice"
+            style="@style/SettingsRow"
+            android:layout_marginTop="10dp"
+            android:text="@string/reset_adjustments" />
+
+    </LinearLayout>
+</ScrollView>

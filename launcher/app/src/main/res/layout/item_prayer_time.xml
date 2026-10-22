@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/prayerPill"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="96dp"
+    android:layout_marginEnd="8dp"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:focusable="false"
+    android:clickable="false"
+    android:background="@drawable/prayer_pill_selector">
+
+    <TextView
+        android:id="@+id/prayerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/outfit_medium"
+        android:textSize="11sp"
+        android:letterSpacing="0.14"
+        android:textAllCaps="true"
+        android:textColor="@drawable/prayer_label_selector"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/prayerTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/outfit_medium"
+        android:textSize="14sp"
+        android:letterSpacing="0.02"
+        android:textColor="@drawable/prayer_time_selector"
+        android:includeFontPadding="false"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/prayerCountdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:fontFamily="@font/outfit_regular"
+        android:textSize="10sp"
+        android:letterSpacing="0.03"
+        android:textColor="@drawable/prayer_countdown_selector"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:visibility="gone" />
+</LinearLayout>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">الرئيسية</string>
+    <string name="app_name">مشغل التلفزيون لمواقيت الصلاة للمسلمين</string>
     <string name="inputs">المدخلات</string>
     <string name="wifi">واي فاي</string>
     <string name="settings">الإعدادات</string>
@@ -87,4 +87,30 @@
         <item quantity="other">%1$d تطبيق</item>
     </plurals>
     <string name="greeting_with_name">%1$s، %2$s</string>
+    <string name="weather_settings">إعدادات الطقس</string>
+    <string name="weather_settings_state">إعدادات الطقس: %1$s (%2$s)</string>
+    <string name="weather_auto_detect">⚡ تحديد الموقع تلقائياً (عبر الشبكة)</string>
+    <string name="weather_auto_detect_action">⚡ تحديد الموقع تلقائياً الآن</string>
+    <string name="weather_detecting">جارٍ تحديد الموقع…</string>
+    <string name="weather_detected">تم تحديد الموقع: %1$s، %2$s</string>
+    <string name="weather_detect_failed">تعذر تحديد الموقع. يرجى التحقق من الاتصال بالإنترنت.</string>
+    <string name="weather_location">موقع الطقس: %1$s</string>
+    <string name="prayer_permissions_check">فحص ومنح أذونات النظام</string>
+    <string name="permission_overlay_title">الظهور فوق التطبيقات الأخرى</string>
+    <string name="permission_overlay_message">لعرض شريط تنبيه وقت الصلاة أثناء استخدام يوتيوب أو تطبيقات التلفزيون الأخرى، يرجى تفعيل إذن \"الظهور فوق التطبيقات الأخرى\".</string>
+    <string name="permissions_dialog_title">حالة أذونات التطبيق</string>
+    <string name="screensaver_settings">إعدادات شاشة التوقف</string>
+    <string name="screensaver_settings_state">شاشة التوقف: %1$s • %2$s (%3$s)</string>
+    <string name="screensaver_enable">شاشة التوقف: %1$s</string>
+    <string name="screensaver_timeout">مهلة عدم النشاط: %1$s</string>
+    <string name="screensaver_app">تطبيق شاشة التوقف: %1$s</string>
+    <string name="screensaver_preview">معاينة شاشة التوقف الآن ▶</string>
+    <string name="screensaver_system_settings">إعدادات شاشة توقف النظام</string>
+    <string name="screensaver_builtin_clock">ساعة الشاشة المدمجة</string>
+    <string name="screensaver_select_timeout">اختر مهلة عدم النشاط</string>
+    <string name="screensaver_select_app">اختر تطبيق شاشة التوقف</string>
+    <string name="screensaver_choose_from_apps">اختر من التطبيقات المثبتة…</string>
+    <string name="screensaver_select_installed_app">اختر تطبيقاً مثبتاً</string>
+    <string name="screensaver_minute_singular">دقيقة واحدة</string>
+    <string name="screensaver_minutes_format">%1$d دقائق</string>
 </resources>

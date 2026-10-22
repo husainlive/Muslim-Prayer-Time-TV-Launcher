@@ -254,6 +254,22 @@
                             android:includeFontPadding="false"
                             android:visibility="gone" />
 
+                        <!-- Hijri date, shown alongside current date -->
+                        <TextView
+                            android:id="@+id/hijriDate"
+                            android:gravity="left"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:textColor="#D9FFFFFF"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/outfit_medium"
+                            android:letterSpacing="0.08"
+                            android:includeFontPadding="false"
+                            android:layout_marginBottom="2dp"
+                            android:visibility="visible" />
+
                         <TextClock
                             android:id="@+id/date"
                             android:gravity="left"
@@ -270,6 +286,22 @@
                             android:fontFamily="@font/outfit_regular"
                             android:letterSpacing="0.14"
                             android:textAllCaps="true" />
+
+                        <!-- Weather information in Celsius -->
+                        <TextView
+                            android:id="@+id/weatherText"
+                            android:gravity="left"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:textColor="#BF8EE0FF"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/outfit_medium"
+                            android:letterSpacing="0.04"
+                            android:includeFontPadding="false"
+                            android:layout_marginTop="2dp"
+                            android:visibility="visible" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -346,12 +378,19 @@
             </LinearLayout>
         </RelativeLayout>
 
+        <!-- Prayer Times Bar: positioned between top header and app tiles -->
+        <include
+            layout="@layout/layout_prayer_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
         <!-- The wrapper clips at the grid's edge; the grid itself must not clip so scaled tiles can overflow their cells. -->
         <FrameLayout
+            android:id="@+id/gridContainer"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="6dp">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/grid"

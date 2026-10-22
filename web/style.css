@@ -1,0 +1,1172 @@
+/* ==========================================================================
+   Smart TV Launcher - 10-Foot UI & 4K High-Density Stylesheet
+   Modern Glassmorphic TV Design System (blur(16px), rgba(20, 25, 40, 0.45))
+   ========================================================================== */
+
+:root {
+    --bg-primary: #0a0d14;
+    --glass-bg: rgba(20, 25, 40, 0.45);
+    --glass-bg-hover: rgba(30, 38, 60, 0.65);
+    --glass-bg-active: rgba(40, 52, 85, 0.75);
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --glass-border-focus: rgba(56, 189, 248, 0.85);
+    --glass-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+    --glass-inner-light: inset 0 1px 1px rgba(255, 255, 255, 0.15);
+
+    --accent-cyan: #38bdf8;
+    --accent-emerald: #10b981;
+    --accent-amber: #f59e0b;
+    --accent-rose: #f43f5e;
+    --accent-glow: rgba(56, 189, 248, 0.45);
+
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.75);
+    --text-muted: rgba(255, 255, 255, 0.48);
+
+    --font-heading: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    --ease-out-tv: cubic-bezier(0.16, 1, 0.3, 1);
+    --safe-area-padding: 3rem 4rem;
+}
+
+/* Base Reset & 10-Foot TV Display Lock */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #04060e;
+    background-image: url('assets/aurora_4k.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 4K / 2K High-Density Earlier TV Aurora Canvas Background */
+.ambient-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    display: block;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: high-quality;
+}
+
+.ambient-vignette {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    pointer-events: none;
+    background: radial-gradient(ellipse 110% 85% at 50% 20%, transparent 45%, rgba(4, 7, 16, 0.4) 75%, rgba(2, 4, 10, 0.85) 100%),
+                linear-gradient(180deg, rgba(3, 6, 14, 0.1) 0%, transparent 22%, rgba(3, 5, 12, 0.35) 60%, rgba(2, 4, 10, 0.88) 100%);
+}
+
+/* Main TV Viewport Safe Container */
+.tv-container {
+    position: relative;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    padding: var(--safe-area-padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ==========================================================================
+   Glassmorphism Utility & Core Design Tokens
+   ========================================================================== */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow), var(--glass-inner-light);
+    border-radius: 1.15rem;
+    transition: transform 0.22s var(--ease-out-tv),
+                box-shadow 0.22s var(--ease-out-tv),
+                border-color 0.22s var(--ease-out-tv),
+                background-color 0.22s var(--ease-out-tv);
+}
+
+.glass-panel {
+    background: rgba(16, 21, 35, 0.75);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65), var(--glass-inner-light);
+}
+
+.glass-dropdown {
+    background: rgba(10, 14, 25, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+/* D-Pad Hardware Focus Indicator (10-Foot TV Standards) */
+.focusable {
+    outline: none;
+    cursor: pointer;
+}
+
+.focusable:focus,
+.focusable.focused {
+    outline: none;
+    transform: scale(1.035) translateZ(0);
+    border-color: var(--glass-border-focus);
+    background-color: var(--glass-bg-hover);
+    box-shadow: 0 0 0 2px var(--glass-border-focus),
+                0 14px 35px var(--accent-glow),
+                var(--glass-inner-light);
+    z-index: 10;
+}
+
+/* ==========================================================================
+   Header Layout & Weather Display
+   ========================================================================== */
+.tv-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.greeting-row {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.greeting-text {
+    font-family: var(--font-heading);
+    font-size: 2.75rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+    line-height: 1.1;
+}
+
+/* Weather Display - Direct sibling next to greeting */
+.weather-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.55rem 1.15rem;
+    border-radius: 9999px;
+    background: rgba(25, 34, 55, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.weather-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    color: var(--accent-amber);
+}
+
+.weather-vector-icon {
+    width: 24px;
+    height: 24px;
+    filter: drop-shadow(0 2px 6px rgba(245, 158, 11, 0.4));
+}
+
+.weather-city {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+}
+
+.weather-separator {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0 0.1rem;
+}
+
+.weather-temp {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+}
+
+.weather-condition {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    padding-left: 0.25rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Meta Row (Location & Hijri Date) */
+.meta-row {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.location-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent-cyan);
+}
+
+.meta-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.meta-separator {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.hijri-date {
+    color: #cbd5e1;
+    font-weight: 600;
+}
+
+.greg-date {
+    color: var(--text-muted);
+}
+
+/* Header Right: Clock + Unified Prayer & Iqama Countdown Widget */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.clock-display {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.clock-time {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1;
+}
+
+.clock-ampm {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--accent-cyan);
+    letter-spacing: 0.05em;
+}
+
+/* Dynamic Prayer & Iqama Countdown Widget */
+.countdown-widget {
+    min-width: 240px;
+    padding: 0.85rem 1.35rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.35s var(--ease-out-tv);
+}
+
+.countdown-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pulse-indicator {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: var(--accent-cyan);
+    box-shadow: 0 0 10px var(--accent-cyan);
+    animation: normal-pulse 2s infinite ease-in-out;
+}
+
+@keyframes normal-pulse {
+    0%, 100% { opacity: 0.4; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.15); }
+}
+
+.countdown-badge-label {
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.countdown-target-name {
+    margin-left: auto;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    color: var(--accent-cyan);
+}
+
+.countdown-timer-value {
+    font-family: var(--font-heading);
+    font-size: 2.15rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+}
+
+.countdown-subtext {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* Active Iqama Countdown State - Seamless In-Place Transformation */
+.countdown-widget.iqama-active {
+    background: rgba(45, 26, 10, 0.65);
+    border-color: rgba(245, 158, 11, 0.7);
+    box-shadow: 0 12px 35px rgba(245, 158, 11, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+.countdown-widget.iqama-active .pulse-indicator {
+    background-color: var(--accent-amber);
+    box-shadow: 0 0 14px var(--accent-amber);
+    animation: iqama-pulse 0.85s infinite alternate ease-in-out;
+}
+
+@keyframes iqama-pulse {
+    0% { transform: scale(0.9); opacity: 0.6; }
+    100% { transform: scale(1.35); opacity: 1; }
+}
+
+.countdown-widget.iqama-active .countdown-badge-label {
+    color: var(--accent-amber);
+}
+
+.countdown-widget.iqama-active .countdown-target-name {
+    color: #fbbf24;
+}
+
+.countdown-widget.iqama-active .countdown-timer-value {
+    color: #fef3c7;
+    text-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+}
+
+.countdown-widget.iqama-active .countdown-subtext {
+    color: #fde68a;
+}
+
+/* ==========================================================================
+   Top Prayer Times Strip
+   ========================================================================== */
+.prayer-bar-section {
+    margin-bottom: 2rem;
+}
+
+.prayer-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.15rem;
+}
+
+.prayer-card {
+    padding: 1.15rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.prayer-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prayer-name {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
+}
+
+.prayer-status-chip {
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.2rem 0.55rem;
+    border-radius: 9999px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
+}
+
+.prayer-status-chip.upcoming {
+    background: rgba(56, 189, 248, 0.2);
+    color: var(--accent-cyan);
+    border: 1px solid rgba(56, 189, 248, 0.4);
+}
+
+.prayer-status-chip.current {
+    background: rgba(16, 185, 129, 0.25);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.5);
+    animation: chip-glow 1.5s infinite alternate;
+}
+
+@keyframes chip-glow {
+    0% { box-shadow: 0 0 5px rgba(16, 185, 129, 0.3); }
+    100% { box-shadow: 0 0 15px rgba(16, 185, 129, 0.6); }
+}
+
+.prayer-status-chip.passed {
+    opacity: 0.5;
+}
+
+.prayer-time {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+}
+
+.prayer-iqama-badge {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+/* Prayer card highlight states */
+.prayer-card.is-next {
+    border-color: rgba(56, 189, 248, 0.45);
+    background: rgba(25, 38, 62, 0.55);
+}
+
+.prayer-card.is-current {
+    border-color: rgba(16, 185, 129, 0.5);
+    background: rgba(16, 42, 32, 0.6);
+}
+
+.prayer-card.is-passed {
+    opacity: 0.72;
+}
+
+/* ==========================================================================
+   Apps Grid & Launcher Favorites
+   ========================================================================== */
+.launcher-main-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.85rem;
+}
+
+.section-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.25rem;
+}
+
+.section-heading {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--text-primary);
+}
+
+.remote-hint-badge {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.35rem;
+}
+
+.app-card {
+    padding: 1.35rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.85rem;
+    position: relative;
+    border-radius: 1.35rem;
+}
+
+.app-icon-box {
+    width: 72px;
+    height: 72px;
+    border-radius: 1.15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    transition: transform 0.25s var(--ease-out-tv);
+}
+
+.app-card:focus .app-icon-box {
+    transform: scale(1.08);
+}
+
+.app-svg-icon {
+    width: 38px;
+    height: 38px;
+    color: #ffffff;
+}
+
+.youtube-bg {
+    background: linear-gradient(135deg, #ff0000, #b91c1c);
+}
+
+.netflix-bg {
+    background: linear-gradient(135deg, #141414, #000000);
+    border: 1px solid rgba(229, 9, 20, 0.4);
+}
+
+.brand-letter {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #e50914;
+    text-shadow: 0 2px 10px rgba(229, 9, 20, 0.6);
+}
+
+.iptv-bg {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+.jellyfin-bg {
+    background: linear-gradient(135deg, #00a4dc, #aa5cc3);
+}
+
+.prime-bg {
+    background: linear-gradient(135deg, #00a8e1, #0073bb);
+}
+
+.brand-sub {
+    font-family: var(--font-heading);
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.spotify-bg {
+    background: linear-gradient(135deg, #1ed760, #169b43);
+}
+
+.app-title {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.app-shortcut-tag {
+    position: absolute;
+    top: 0.65rem;
+    right: 0.65rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    background: rgba(255, 0, 0, 0.25);
+    color: #fca5a5;
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    padding: 0.15rem 0.4rem;
+    border-radius: 0.35rem;
+}
+
+/* ==========================================================================
+   Bottom Remote Action Shortcuts Bar
+   ========================================================================== */
+.tv-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.footer-pill-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.7rem 1.4rem;
+    border-radius: 9999px;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.remote-key-tag {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.4rem;
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--accent-cyan);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.text-red {
+    color: #ef4444;
+}
+
+.footer-status {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--accent-emerald);
+    box-shadow: 0 0 10px var(--accent-emerald);
+}
+
+/* ==========================================================================
+   Modals & Overlays (Inputs, YouTube, Settings Drawer)
+   ========================================================================== */
+.tv-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.28s var(--ease-out-tv);
+}
+
+.tv-modal-backdrop.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.tv-modal-dialog {
+    width: 90%;
+    max-width: 680px;
+    border-radius: 1.5rem;
+    padding: 2.25rem;
+    transform: scale(0.94);
+    transition: transform 0.28s var(--ease-out-tv);
+}
+
+.tv-modal-backdrop.open .tv-modal-dialog {
+    transform: scale(1);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.75rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.modal-title {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.modal-close-hint {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.modal-close-btn {
+    padding: 0.45rem 0.9rem;
+    border-radius: 0.65rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--text-secondary);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* Inputs Modal List */
+.inputs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.input-row-item {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.1rem 1.35rem;
+    background: rgba(25, 32, 50, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    transition: all 0.2s var(--ease-out-tv);
+}
+
+.input-port-badge {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 800;
+    padding: 0.35rem 0.75rem;
+    border-radius: 0.5rem;
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-cyan);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+.input-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.input-name {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.input-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.input-status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.input-status-dot.active {
+    background-color: var(--accent-emerald);
+    box-shadow: 0 0 10px var(--accent-emerald);
+}
+
+.input-status-dot.standby {
+    background-color: var(--accent-amber);
+}
+
+.input-status-dot.off {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* YouTube Modal */
+.yt-dialog {
+    max-width: 820px;
+}
+
+.yt-badge {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #ef4444;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.yt-content-preview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 1.75rem;
+}
+
+.yt-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    padding: 0.75rem;
+    background: rgba(20, 26, 42, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    transition: all 0.2s var(--ease-out-tv);
+}
+
+.yt-thumb {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 0.65rem;
+    background-size: cover;
+    background-position: center;
+}
+
+.yt-thumb-1 {
+    background: linear-gradient(135deg, #1e1b4b, #312e81),
+                radial-gradient(circle at center, #4338ca, #1e1b4b);
+}
+
+.yt-thumb-2 {
+    background: linear-gradient(135deg, #064e3b, #047857),
+                radial-gradient(circle at center, #059669, #064e3b);
+}
+
+.yt-thumb-3 {
+    background: linear-gradient(135deg, #701a75, #86198f),
+                radial-gradient(circle at center, #a21caf, #701a75);
+}
+
+.yt-video-title {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+.yt-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.primary-tv-btn {
+    padding: 0.85rem 1.85rem;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    border: none;
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 700;
+    box-shadow: 0 8px 24px rgba(239, 68, 68, 0.35);
+}
+
+/* ==========================================================================
+   Reorganized Launcher Settings Drawer (Strict 4-Part Structure)
+   1. Prayer Time Settings (top)
+   2. Weather Settings
+   3. Screen Saver Settings
+   4. General Launcher Settings
+   ========================================================================== */
+.tv-settings-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 620px;
+    height: 100vh;
+    padding: 2.75rem 2.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+    transform: translateX(100%);
+    transition: transform 0.35s var(--ease-out-tv);
+    box-shadow: -20px 0 60px rgba(0, 0, 0, 0.7);
+}
+
+.tv-modal-backdrop.open .tv-settings-sidebar {
+    transform: translateX(0);
+}
+
+.settings-sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.settings-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.settings-scroll-body {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-right: 0.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.settings-scroll-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.settings-scroll-body::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 9999px;
+}
+
+.settings-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.settings-section-badge {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    color: var(--accent-cyan);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.settings-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: rgba(22, 28, 46, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 0.95rem;
+    transition: all 0.2s var(--ease-out-tv);
+}
+
+.settings-row-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.settings-label {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.settings-sub {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.settings-value {
+    font-family: var(--font-heading);
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: var(--accent-cyan);
+    padding: 0.35rem 0.75rem;
+    background: rgba(56, 189, 248, 0.12);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    white-space: nowrap;
+}
+
+.settings-value.toggle-on {
+    color: #34d399;
+    background: rgba(16, 185, 129, 0.15);
+    border-color: rgba(16, 185, 129, 0.35);
+}
+
+.settings-value.toggle-off {
+    color: #f87171;
+    background: rgba(239, 68, 68, 0.15);
+    border-color: rgba(239, 68, 68, 0.35);
+}
+
+.settings-pill-action {
+    font-family: var(--font-heading);
+    font-size: 0.88rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    padding: 0.4rem 0.85rem;
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    white-space: nowrap;
+}
+
+/* ==========================================================================
+   Fullscreen 4K Screensaver
+   ========================================================================== */
+.screensaver-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 200;
+    background-color: #020408;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s var(--ease-out-tv);
+}
+
+.screensaver-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.screensaver-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.screensaver-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.screensaver-clock {
+    font-family: var(--font-heading);
+    font-size: 7.5rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    color: #ffffff;
+    text-shadow: 0 0 50px rgba(56, 189, 248, 0.45);
+    line-height: 1;
+}
+
+.screensaver-meta {
+    font-size: 1.65rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.screensaver-hint {
+    margin-top: 2rem;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    animation: hint-fade 2s infinite ease-in-out;
+}
+
+@keyframes hint-fade {
+    0%, 100% { opacity: 0.35; }
+    50% { opacity: 0.85; }
+}
+
+/* ==========================================================================
+   TV Toast Notification Overlay
+   ========================================================================== */
+.tv-toast-container {
+    position: fixed;
+    bottom: 3.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 150;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    pointer-events: none;
+}
+
+.tv-toast {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.85rem 1.65rem;
+    border-radius: 9999px;
+    background: rgba(15, 23, 42, 0.88);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    animation: toast-in 0.3s var(--ease-out-tv);
+}
+
+@keyframes toast-in {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}

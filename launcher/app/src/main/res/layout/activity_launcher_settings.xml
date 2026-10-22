@@ -22,9 +22,27 @@
             android:textSize="34sp" />
 
         <TextView
+            android:id="@+id/prayerSettingsChoice"
+            style="@style/SettingsRow"
+            android:layout_marginTop="22dp"
+            android:text="@string/prayer_settings" />
+
+        <TextView
+            android:id="@+id/weatherSettingsChoice"
+            style="@style/SettingsRow"
+            android:layout_marginTop="16dp"
+            android:text="@string/weather_settings" />
+
+        <TextView
+            android:id="@+id/screenSaverSettingsChoice"
+            style="@style/SettingsRow"
+            android:layout_marginTop="16dp"
+            android:text="@string/screensaver_settings" />
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="24dp"
             android:text="@string/columns_label"
             android:textColor="#FFFFFFFF"
             android:textSize="20sp" />
@@ -101,7 +119,7 @@
         <TextView
             android:id="@+id/defaultHomeChoice"
             style="@style/SettingsRow"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="18dp"
             android:text="@string/home_settings" />
 
         <TextView

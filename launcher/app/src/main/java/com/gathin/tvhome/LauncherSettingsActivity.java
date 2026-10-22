@@ -23,6 +23,11 @@ public final class LauncherSettingsActivity extends Activity {
     private TextView animationsChoice;
     private TextView advancedChoice;
     private TextView followThemeChoice;
+    private TextView weatherSettingsChoice;
+    private TextView screenSaverSettingsChoice;
+    private WeatherManager weatherManager;
+    private PrayerManager prayerManager;
+    private ScreenSaverManager screenSaverManager;
     private int columns;
     private int rowsBelowDock;
     private boolean animations;
@@ -106,6 +111,17 @@ public final class LauncherSettingsActivity extends Activity {
             setResult(RESULT_OK);
             refresh();
         });
+        weatherManager = WeatherManager.getInstance(this);
+        prayerManager = PrayerManager.getInstance(this);
+        screenSaverManager = ScreenSaverManager.getInstance(this);
+        findViewById(R.id.prayerSettingsChoice).setOnClickListener(v ->
+                startActivityForResult(new Intent(this, PrayerSettingsActivity.class), 43));
+        weatherSettingsChoice = findViewById(R.id.weatherSettingsChoice);
+        weatherSettingsChoice.setOnClickListener(v ->
+                startActivityForResult(new Intent(this, WeatherSettingsActivity.class), 44));
+        screenSaverSettingsChoice = findViewById(R.id.screenSaverSettingsChoice);
+        screenSaverSettingsChoice.setOnClickListener(v ->
+                startActivityForResult(new Intent(this, ScreenSaverSettingsActivity.class), 45));
         findViewById(R.id.defaultHomeChoice).setOnClickListener(v -> {
             Toast.makeText(this, R.string.home_settings_help, Toast.LENGTH_LONG).show();
             open(new Intent(Settings.ACTION_HOME_SETTINGS));
@@ -114,6 +130,21 @@ public final class LauncherSettingsActivity extends Activity {
                 open(new Intent(Settings.ACTION_SETTINGS)));
         refresh();
         columnChoices[Math.max(0, Math.min(columns - 4, 3))].requestFocus();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        refresh();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if ((requestCode == 43 || requestCode == 44 || requestCode == 45) && resultCode == RESULT_OK) {
+            setResult(RESULT_OK);
+            refresh();
+        }
     }
 
     private void reverseRow(TextView[] views) {
@@ -192,6 +223,21 @@ public final class LauncherSettingsActivity extends Activity {
                         : wallpaperCurrent != null ? wallpaperCurrent
                         : getString(R.string.wallpaper_theme_default)));
         followThemeChoice.setSelected(!hasOnTvChoices());
+        if (weatherSettingsChoice != null && weatherManager != null && prayerManager != null) {
+            weatherSettingsChoice.setText(getString(R.string.weather_settings_state,
+                    getString(weatherManager.isWeatherEnabled() ? R.string.on : R.string.off),
+                    prayerManager.getCity()));
+        }
+        if (screenSaverSettingsChoice != null && screenSaverManager != null) {
+            boolean ssEnabled = screenSaverManager.isScreenSaverEnabled();
+            int timeout = screenSaverManager.getTimeoutMinutes();
+            String timeoutStr = timeout == 1 ? getString(R.string.screensaver_minute_singular)
+                    : getString(R.string.screensaver_minutes_format, timeout);
+            screenSaverSettingsChoice.setText(getString(R.string.screensaver_settings_state,
+                    getString(ssEnabled ? R.string.on : R.string.off),
+                    timeoutStr,
+                    screenSaverManager.getScreenSaverAppLabel()));
+        }
     }
 
     private boolean hasOnTvChoices() {

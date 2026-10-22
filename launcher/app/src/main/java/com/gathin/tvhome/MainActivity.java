@@ -1,5 +1,6 @@
 package com.gathin.tvhome;
 
+import android.Manifest;
 import android.animation.ArgbEvaluator;
 import android.animation.ValueAnimator;
 import android.app.Activity;
@@ -11,6 +12,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -106,7 +108,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
     private String liveTvPkg;
     /** Idle time on Home before ClockActivity; 0 is off (config.xml, home_idle_clock_minutes). */
     private long idleClockMs;
-    private final Runnable showIdleClock = () -> startActivity(new Intent(this, ClockActivity.class));
+    private final Runnable showIdleClock = () -> ScreenSaverManager.getInstance(this).startScreenSaver(this);
     private String liveTvAction;
     private String inputAction;
     private String sourcePanelService;
@@ -150,6 +152,12 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
     /** The pills have been filled in once; later resumes refresh them after the first frame. */
     private boolean pillsShown;
     private TextView shamsiDate;
+    private TextView hijriDate;
+    private TextView weatherText;
+    private View prayerScrollView;
+    private View prayerTimesBar;
+    private final View[] prayerViews = new View[6];
+    private static final int PRAYER_SETTINGS_REQUEST = 44;
     private TextView stats;
     private List<RaceWeekend.Race> raceCalendar;
     private View racePanel;
@@ -294,6 +302,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
             updateWifiLabel();
             sky.update();
             wallpaperPlayer.update();
+            updatePrayerDisplay();
             handler.postDelayed(this, MINUTE_MS);
         }
     };
@@ -315,7 +324,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         festival = cfg.festival;
         festive = festival.active(LocalDate.now());
         liveTvPkg = cfg.liveTvPackage;
-        idleClockMs = cfg.homeIdleClockMinutes * MINUTE_MS;
+        idleClockMs = ScreenSaverManager.getInstance(this).getTimeoutMillis();
         liveTvAction = cfg.liveTvAction;
         inputAction = cfg.inputAction;
         sourcePanelService = cfg.sourcePanelService;
@@ -356,6 +365,8 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         greetingColor = greeting.getCurrentTextColor();
         btnWifi = findViewById(R.id.btnWifi);
         shamsiDate = findViewById(R.id.shamsiDate);
+        hijriDate = findViewById(R.id.hijriDate);
+        weatherText = findViewById(R.id.weatherText);
         stats = findViewById(R.id.stats);
         raceCalendar = cfg.raceCalendar;
         racePanel = findViewById(R.id.racePanel);
@@ -371,6 +382,17 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
             date.setTextSize(11f);
             date.setPadding(0, (int) (4 * density), 0, 0);
         }
+        prayerScrollView = findViewById(R.id.prayerScrollView);
+        prayerTimesBar = findViewById(R.id.prayerTimesBar);
+        if (prayerTimesBar != null) {
+            prayerViews[0] = findViewById(R.id.prayerItemFajr);
+            prayerViews[1] = findViewById(R.id.prayerItemSunrise);
+            prayerViews[2] = findViewById(R.id.prayerItemDhuhr);
+            prayerViews[3] = findViewById(R.id.prayerItemAsr);
+            prayerViews[4] = findViewById(R.id.prayerItemMaghrib);
+            prayerViews[5] = findViewById(R.id.prayerItemIsha);
+        }
+        updatePrayerDisplay();
         vpnApp = cfg.vpnApp;
         moduleCards = cfg.moduleCards;
         hiddenApps = new HashSet<>(cfg.hiddenApps);
@@ -472,14 +494,16 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
             grid.post(this::refitGlass);
         });
 
-        // Keep the glass glued to its tile while the grid scrolls.
+        // Keep the glass glued to its tile while the grid scrolls, and scroll prayer bar.
         grid.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrolled(@NonNull RecyclerView rv, int dx, int dy) {
-                if (!glassShown) return;
-                glassTargetY -= dy;
-                glassScrollShift -= dy;
-                glass.setTranslationY(glass.getTranslationY() - dy);
+                if (glassShown) {
+                    glassTargetY -= dy;
+                    glassScrollShift -= dy;
+                    glass.setTranslationY(glass.getTranslationY() - dy);
+                }
+                updatePrayerBarScroll(rv.computeVerticalScrollOffset());
             }
         });
 
@@ -546,7 +570,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
             if (event.getAction() != KeyEvent.ACTION_DOWN) return false;
             if (keyCode == KeyEvent.KEYCODE_DPAD_UP) return true;
             if (keyCode == KeyEvent.KEYCODE_DPAD_DOWN) {
-                // Back to the dock tile Up came from, not wherever the focus finder lands.
+                // Back to the dock tile Up came from (prayer times are non-selectable)
                 focusTile(lastFocused % COLUMNS);
                 return true;
             }
@@ -593,7 +617,57 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
                     .build(), vpnCallback);
         }
         // Not after recreate(): the launch intent survives it and would open the settings again.
-        if (savedInstanceState == null) openLauncherSettingsIfAsked(getIntent());
+        if (savedInstanceState == null) {
+            openLauncherSettingsIfAsked(getIntent());
+            checkAndRequestRequiredPermissions();
+        }
+    }
+
+    private static final int PERMISSIONS_REQUEST_CODE = 442;
+
+    private void checkAndRequestRequiredPermissions() {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) return;
+
+        java.util.List<String> needed = new java.util.ArrayList<>();
+
+        // 1. Android 13+ (API 33+) Notification permission for Adhan alarms and prayer alert overlay
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+                needed.add(Manifest.permission.POST_NOTIFICATIONS);
+            }
+        }
+
+        // 2. Location permissions for Wi-Fi SSID identification and accurate weather telemetry
+        if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            needed.add(Manifest.permission.ACCESS_FINE_LOCATION);
+        }
+        if (checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            needed.add(Manifest.permission.ACCESS_COARSE_LOCATION);
+        }
+
+        if (!needed.isEmpty()) {
+            requestPermissions(needed.toArray(new String[0]), PERMISSIONS_REQUEST_CODE);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == PERMISSIONS_REQUEST_CODE) {
+            // Update network Wi-Fi pill with real SSID if permission was granted
+            updateWifiLabel();
+            // Refresh weather and schedule alarms
+            WeatherManager wm = WeatherManager.getInstance(this);
+            if (wm.isWeatherEnabled()) {
+                wm.loadWeather(false, text -> {
+                    if (weatherText != null && text != null && !text.isEmpty()) {
+                        weatherText.setText(text);
+                        weatherText.setVisibility(View.VISIBLE);
+                    }
+                });
+            }
+            PrayerAlarmScheduler.scheduleAlarms(this);
+        }
     }
 
     private boolean openLauncherSettingsIfAsked(Intent intent) {
@@ -648,6 +722,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
             recreate();
             return;
         }
+        idleClockMs = ScreenSaverManager.getInstance(this).getTimeoutMillis();
         restartIdleClock();
         promptsPaused = false;
         if (grid.getAdapter() == null) grid.setAdapter(adapter);   // dropped by onTrimMemory
@@ -672,6 +747,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         if (showStats) startStats();
         sky.update();
         wallpaperPlayer.start();
+        updatePrayerDisplay();
         handler.postDelayed(minuteTick, MINUTE_MS);
         if (festive && diya != null) {
             diya.start();
@@ -686,7 +762,10 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == LAUNCHER_SETTINGS_REQUEST && resultCode == RESULT_OK) recreate();
+        if ((requestCode == LAUNCHER_SETTINGS_REQUEST || requestCode == PRAYER_SETTINGS_REQUEST)
+                && resultCode == RESULT_OK) {
+            recreate();
+        }
     }
 
     /** Rebuilds the tiles (and the module cards), then puts focus back where it was. */
@@ -1782,7 +1861,9 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
                     rtlAppGrid, keyCode == KeyEvent.KEYCODE_DPAD_LEFT);
         }
         if (keyCode == KeyEvent.KEYCODE_DPAD_UP) {
-            if (position < COLUMNS) return false;          // dock row: let focus move to the top bar
+            if (position < COLUMNS) {
+                return false;          // dock row: let focus move straight to the top bar
+            }
             target = position - COLUMNS;
         } else {
             int lastRowStart = ((count - 1) / COLUMNS) * COLUMNS;
@@ -1940,6 +2021,108 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
             greeting.setTextColor(greetingColor);
         }
         if (shamsi) shamsiDate.setText(Shamsi.today());
+    }
+
+    private void updatePrayerDisplay() {
+        PrayerManager pm = PrayerManager.getInstance(this);
+        if (hijriDate != null) {
+            String hijriStr = pm.getHijriDateString();
+            if (!hijriStr.isEmpty()) {
+                hijriDate.setText(hijriStr);
+                hijriDate.setVisibility(View.VISIBLE);
+            } else {
+                hijriDate.setVisibility(View.GONE);
+            }
+        }
+
+        // Weather update in Celsius
+        if (weatherText != null) {
+            WeatherManager wm = WeatherManager.getInstance(this);
+            if (wm.isWeatherEnabled()) {
+                weatherText.setVisibility(View.VISIBLE);
+                String cached = wm.getCachedWeather();
+                if (!cached.isEmpty()) weatherText.setText(cached);
+                wm.loadWeather(false, text -> {
+                    if (weatherText != null && text != null && !text.isEmpty()) {
+                        weatherText.setText(text);
+                        weatherText.setVisibility(View.VISIBLE);
+                    }
+                });
+            } else {
+                weatherText.setVisibility(View.GONE);
+            }
+        }
+
+        if (prayerScrollView == null) return;
+
+        if (!pm.isShowPrayerBar()) {
+            prayerScrollView.setVisibility(View.GONE);
+            return;
+        }
+
+        prayerScrollView.setVisibility(View.VISIBLE);
+        PrayerManager.PrayerSchedule schedule = pm.getTodaySchedule(this::updatePrayerDisplay);
+        if (schedule == null || schedule.items == null) return;
+
+        int[] nameResIds = {
+                R.string.prayer_fajr,
+                R.string.prayer_sunrise,
+                R.string.prayer_dhuhr,
+                R.string.prayer_asr,
+                R.string.prayer_maghrib,
+                R.string.prayer_isha
+        };
+
+        for (int i = 0; i < prayerViews.length && i < schedule.items.size(); i++) {
+            View view = prayerViews[i];
+            if (view == null) continue;
+            PrayerManager.PrayerItem item = schedule.items.get(i);
+            TextView nameTv = view.findViewById(R.id.prayerName);
+            TextView timeTv = view.findViewById(R.id.prayerTime);
+            TextView countdownTv = view.findViewById(R.id.prayerCountdown);
+
+            if (nameTv != null) {
+                nameTv.setText(getString(nameResIds[i]));
+            }
+            if (timeTv != null) {
+                timeTv.setText(item.formattedTime);
+            }
+            if (countdownTv != null) {
+                if (item.isNext && item.countdownText != null && !item.countdownText.isEmpty()) {
+                    countdownTv.setText(item.countdownText);
+                    countdownTv.setVisibility(View.VISIBLE);
+                } else {
+                    countdownTv.setVisibility(View.GONE);
+                }
+            }
+
+            view.setSelected(item.isNext);
+            View pill = view.findViewById(R.id.prayerPill);
+            View target = pill != null ? pill : view;
+            target.setSelected(item.isNext);
+            target.setFocusable(false);
+            target.setClickable(false);
+        }
+
+        // Schedule next alarms
+        PrayerAlarmScheduler.scheduleAlarms(this);
+    }
+
+    private void updatePrayerBarScroll(int scrollY) {
+        if (prayerScrollView == null || prayerScrollView.getVisibility() != View.VISIBLE) return;
+        PrayerManager pm = PrayerManager.getInstance(this);
+        if (pm.isLockBarEnabled()) {
+            prayerScrollView.setTranslationY(0f);
+            prayerScrollView.setAlpha(1f);
+            return;
+        }
+        int h = prayerScrollView.getHeight();
+        if (h <= 0) return;
+        float maxShift = h + (10 * density);
+        float shift = Math.min(maxShift, scrollY);
+        prayerScrollView.setTranslationY(-shift);
+        float alpha = Math.max(0f, 1f - (shift / (float) h));
+        prayerScrollView.setAlpha(alpha);
     }
 
     // ---- race-weekend panel (a theme's race_calendar) -----------------------------------------------

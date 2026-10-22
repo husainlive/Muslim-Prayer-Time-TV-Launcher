@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66000000"
+    android:clipChildren="false">
+
+    <LinearLayout
+        android:layout_width="480dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="48dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:paddingTop="28dp"
+        android:paddingBottom="28dp"
+        android:background="@drawable/glass_panel">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🕌"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/alertTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Time for Isha Prayer"
+            android:textColor="#FFFFFFFF"
+            android:textSize="24sp"
+            android:fontFamily="@font/outfit_medium"
+            android:letterSpacing="0.02" />
+
+        <TextView
+            android:id="@+id/alertTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="6:32 PM"
+            android:textColor="#FF8EE0FF"
+            android:textSize="20sp"
+            android:fontFamily="@font/outfit_medium" />
+
+        <TextView
+            android:id="@+id/alertSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Adhan is playing"
+            android:textColor="#B3FFFFFF"
+            android:textSize="14sp"
+            android:fontFamily="@font/outfit_regular" />
+
+        <Button
+            android:id="@+id/btnDismissAlert"
+            style="@style/TopButton"
+            android:layout_width="160dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="22dp"
+            android:text="Dismiss"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:focusable="true"
+            android:clickable="true" />
+    </LinearLayout>
+</FrameLayout>

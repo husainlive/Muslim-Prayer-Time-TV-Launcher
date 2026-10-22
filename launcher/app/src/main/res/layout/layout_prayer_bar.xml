@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/prayerScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none"
+    android:overScrollMode="never"
+    android:fillViewport="false"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="2dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:focusable="false">
+
+    <LinearLayout
+        android:id="@+id/prayerTimesBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:focusable="false">
+
+        <include
+            android:id="@+id/prayerItemFajr"
+            layout="@layout/item_prayer_time" />
+
+        <include
+            android:id="@+id/prayerItemSunrise"
+            layout="@layout/item_prayer_time" />
+
+        <include
+            android:id="@+id/prayerItemDhuhr"
+            layout="@layout/item_prayer_time" />
+
+        <include
+            android:id="@+id/prayerItemAsr"
+            layout="@layout/item_prayer_time" />
+
+        <include
+            android:id="@+id/prayerItemMaghrib"
+            layout="@layout/item_prayer_time" />
+
+        <include
+            android:id="@+id/prayerItemIsha"
+            layout="@layout/item_prayer_time" />
+    </LinearLayout>
+</HorizontalScrollView>
