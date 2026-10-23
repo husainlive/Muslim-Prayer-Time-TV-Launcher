@@ -96,6 +96,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
     private static final int LAUNCHER_SETTINGS_REQUEST = 42;
     /** Sent by QuickSettingsActivity: open Launcher settings from here so Home rebuilds when they close. */
     static final String ACTION_LAUNCHER_SETTINGS = "com.islam.tv.action.LAUNCHER_SETTINGS";
+    public static final String ACTION_WALLPAPER_CHANGED = "com.islam.tv.ACTION_WALLPAPER_CHANGED";
     /** Tiles per row and dock slots (res/values/config.xml, columns). Set in onCreate. */
     static int COLUMNS = 4;
     private boolean rtlAppGrid;
@@ -300,6 +301,12 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
             updateClockVisibility();
         }
     };
+    private final BroadcastReceiver wallpaperReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            setupDynamicWallpaper(Config.load(context));
+        }
+    };
     private final Runnable minuteTick = new Runnable() {
         @Override
         public void run() {
@@ -345,6 +352,11 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         wallpaperPlayer = new WallpaperPlayer(this, root, cfg);
         auroraBackground = findViewById(R.id.auroraBackground);
         setupDynamicWallpaper(cfg);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            registerReceiver(wallpaperReceiver, new IntentFilter(ACTION_WALLPAPER_CHANGED), Context.RECEIVER_NOT_EXPORTED);
+        } else {
+            registerReceiver(wallpaperReceiver, new IntentFilter(ACTION_WALLPAPER_CHANGED));
+        }
         sky = findViewById(R.id.sky);
         sky.setIntensity(cfg.skyIntensity);
         glass = findViewById(R.id.glass);
@@ -553,6 +565,17 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
 
         // Keep the glass glued to its tile while the grid scrolls, and animate tile transitions
         grid.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView rv, int newState) {
+                if (auroraBackground != null) {
+                    if (newState != RecyclerView.SCROLL_STATE_IDLE) {
+                        auroraBackground.pauseForScroll();
+                    } else {
+                        auroraBackground.resumeAfterScroll();
+                    }
+                }
+            }
+
             @Override
             public void onScrolled(@NonNull RecyclerView rv, int dx, int dy) {
                 if (glassShown) {
@@ -826,9 +849,12 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if ((requestCode == LAUNCHER_SETTINGS_REQUEST || requestCode == PRAYER_SETTINGS_REQUEST)
-                && resultCode == RESULT_OK) {
-            recreate();
+        if (requestCode == LAUNCHER_SETTINGS_REQUEST || requestCode == PRAYER_SETTINGS_REQUEST) {
+            Config newCfg = Config.load(this);
+            setupDynamicWallpaper(newCfg);
+            if (resultCode == RESULT_OK && (newCfg.columns != COLUMNS || newCfg.rowsBelowDock != rowsBelowDock)) {
+                recreate();
+            }
         }
     }
 
@@ -991,6 +1017,9 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        try {
+            unregisterReceiver(wallpaperReceiver);
+        } catch (Exception ignored) {}
         wallpaperPlayer.close();
         ConnectivityManager cm = getSystemService(ConnectivityManager.class);
         TvInputManager tim = (TvInputManager) getSystemService(TV_INPUT_SERVICE);
@@ -1033,6 +1062,16 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
      */
     @Override
     public boolean dispatchKeyEvent(KeyEvent event) {
+        if (event.getAction() == KeyEvent.ACTION_DOWN) {
+            int code = event.getKeyCode();
+            if (code == KeyEvent.KEYCODE_DPAD_UP || code == KeyEvent.KEYCODE_DPAD_DOWN
+                    || code == KeyEvent.KEYCODE_DPAD_LEFT || code == KeyEvent.KEYCODE_DPAD_RIGHT) {
+                if (auroraBackground != null) {
+                    auroraBackground.pauseForScroll();
+                    auroraBackground.resumeAfterScroll();
+                }
+            }
+        }
         if (handleSettingsKey(event)) return true;
         if (!reordering) return super.dispatchKeyEvent(event);
         if (dockEditing) return dispatchDockEdit(event);
@@ -1553,21 +1592,36 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         updateHeroDots(position);
     }
 
-    private void setupDynamicWallpaper(Config cfg) {
-        if (auroraBackground == null) return;
+    public void setupDynamicWallpaper(Config cfg) {
         SharedPreferences choices = getSharedPreferences(Config.SETTINGS_NAME, MODE_PRIVATE);
         String choice = choices.getString(Config.WALLPAPER_CHOICE_KEY, null);
 
         if ("none".equals(choice)) {
-            auroraBackground.setVisibility(View.GONE);
-            auroraBackground.stopAnimation();
+            if (auroraBackground != null) {
+                auroraBackground.setVisibility(View.GONE);
+                auroraBackground.stopAnimation();
+            }
+            if (wallpaperPlayer != null) {
+                wallpaperPlayer.setEnabled(false, Collections.emptyList());
+            }
         } else if (Config.isDynamicTheme(choice) || choice == null) {
-            auroraBackground.setVisibility(View.VISIBLE);
-            auroraBackground.setTheme(choice != null ? choice : AuroraView.THEME_AURORA);
-            auroraBackground.startAnimation();
+            if (wallpaperPlayer != null) {
+                wallpaperPlayer.setEnabled(false, Collections.emptyList());
+            }
+            if (auroraBackground != null) {
+                auroraBackground.setVisibility(View.VISIBLE);
+                auroraBackground.setTheme(choice != null ? choice : AuroraView.THEME_AURORA);
+                auroraBackground.startAnimation();
+            }
         } else {
-            auroraBackground.setVisibility(View.GONE);
-            auroraBackground.stopAnimation();
+            // A static picture was chosen
+            if (auroraBackground != null) {
+                auroraBackground.setVisibility(View.GONE);
+                auroraBackground.stopAnimation();
+            }
+            if (wallpaperPlayer != null) {
+                wallpaperPlayer.setEnabled(true, cfg.wallpapers);
+            }
         }
     }
 

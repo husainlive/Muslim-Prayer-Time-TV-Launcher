@@ -331,8 +331,10 @@ final class Config {
         } else if (dir != null) {
             File picked = WallpaperRotation.find(
                     WallpaperRotation.images(new File(dir, "wallpapers")), wallpaperChoice);
-            if (picked == null && wallpaperChoice.equals(
-                    wallpaper != null ? wallpaper.getName() : "")) picked = wallpaper;
+            if (picked == null) {
+                File direct = new File(dir, wallpaperChoice);
+                if (direct.isFile() && direct.length() > 0) picked = direct;
+            }
             if (picked != null) {
                 wallpapers.clear();
                 wallpapers.add(picked);

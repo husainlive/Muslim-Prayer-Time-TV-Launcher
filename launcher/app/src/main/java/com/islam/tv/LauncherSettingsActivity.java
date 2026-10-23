@@ -208,12 +208,14 @@ public final class LauncherSettingsActivity extends Activity {
                     dialog.dismiss();
                     String selected = values.get(which);
                     choices.edit().putString(Config.WALLPAPER_CHOICE_KEY, selected).apply();
+                    sendBroadcast(new Intent(MainActivity.ACTION_WALLPAPER_CHANGED).setPackage(getPackageName()));
                     setResult(RESULT_OK);
                     Toast.makeText(this, R.string.wallpaper_applied, Toast.LENGTH_SHORT).show();
                     refresh();
                 })
                 .setNeutralButton(R.string.wallpaper_theme_default, (dialog, which) -> {
                     choices.edit().remove(Config.WALLPAPER_CHOICE_KEY).apply();
+                    sendBroadcast(new Intent(MainActivity.ACTION_WALLPAPER_CHANGED).setPackage(getPackageName()));
                     setResult(RESULT_OK);
                     refresh();
                 })

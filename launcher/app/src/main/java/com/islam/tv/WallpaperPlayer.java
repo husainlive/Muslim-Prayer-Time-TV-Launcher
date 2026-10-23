@@ -37,12 +37,16 @@ final class WallpaperPlayer {
     private boolean loading;
     private String displayed = "";
 
+    private View shade;
+    private final int wallpaperDim;
+
     WallpaperPlayer(Context context, FrameLayout root, Config config) {
         this.root = root;
         files = new ArrayList<>(config.wallpapers);
         interval = config.wallpaperRotationMinutes * 60_000L;
         bitmapConfig = config.wallpaperTrueColor ? Bitmap.Config.ARGB_8888 : Bitmap.Config.RGB_565;
         order = config.wallpaperOrder;
+        wallpaperDim = config.wallpaperDim;
         preferences = context.getSharedPreferences("wallpaper_rotation", Context.MODE_PRIVATE);
         // Playback state belongs to one collection. Changing the collection starts from its first
         // picture instead of resuming a filename that belonged to the previous one.
@@ -61,9 +65,9 @@ final class WallpaperPlayer {
             root.addView(image, 0, new FrameLayout.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
             // No shade layer at all when the theme doesn't dim: a full-screen view is overdraw on 1 GB TVs.
-            if (config.wallpaperDim > 0) {
-                View shade = new View(context);
-                shade.setBackgroundColor((config.wallpaperDim * 255 / 100) << 24);
+            if (wallpaperDim > 0) {
+                shade = new View(context);
+                shade.setBackgroundColor((wallpaperDim * 255 / 100) << 24);
                 shade.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
                 root.addView(shade, 1, new FrameLayout.LayoutParams(
                         ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
@@ -94,6 +98,35 @@ final class WallpaperPlayer {
             }
             files.remove(first);   // unreadable or over 4K: try another, or keep the plain colour
             first = WallpaperRotation.pick(files, previous, order, random);
+        }
+    }
+
+    void setEnabled(boolean enabled, List<File> newFiles) {
+        if (!enabled || newFiles == null || newFiles.isEmpty()) {
+            if (image.getParent() != null) root.removeView(image);
+            if (shade != null && shade.getParent() != null) root.removeView(shade);
+            image.setImageDrawable(null);
+            displayed = "";
+            files.clear();
+        } else {
+            files.clear();
+            files.addAll(newFiles);
+            if (image.getParent() == null) {
+                root.addView(image, 0, new FrameLayout.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+            }
+            if (wallpaperDim > 0) {
+                if (shade == null) {
+                    shade = new View(root.getContext());
+                    shade.setBackgroundColor((wallpaperDim * 255 / 100) << 24);
+                    shade.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
+                }
+                if (shade.getParent() == null) {
+                    root.addView(shade, 1, new FrameLayout.LayoutParams(
+                            ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+                }
+            }
+            showFirst();
         }
     }
 
