@@ -156,28 +156,58 @@ public final class LauncherSettingsActivity extends Activity {
     }
 
     private void showWallpaperPicker() {
+        List<String> values = new java.util.ArrayList<>();
+        List<String> labels = new java.util.ArrayList<>();
+
+        // 1. Dynamic Aurora and React-Bits Themes
+        values.add(AuroraView.THEME_AURORA);
+        labels.add("Aurora (Animated)");
+
+        values.add(AuroraView.THEME_GHOST_FIBERS);
+        labels.add("GhostFibers");
+
+        values.add(AuroraView.THEME_GRADIENT_ASCII);
+        labels.add("GradientASCII");
+
+        values.add(AuroraView.THEME_GRAINIENT);
+        labels.add("Grainient");
+
+        values.add(AuroraView.THEME_IRIDESCENCE);
+        labels.add("Iridescence");
+
+        // 2. Static image files (if any in theme directory)
         File dir = Config.dir(this);
         List<File> images = new java.util.ArrayList<>(WallpaperRotation.images(
                 dir == null ? null : new File(dir, "wallpapers")));
-        // A theme with a single wallpaper.jpg offers that picture too (Config maps the choice back to it).
         File single = dir == null ? null : new File(dir, Config.WALLPAPER_NAME);
         if (single != null && single.isFile()) images.add(0, single);
-        String[] labels = new String[images.size() + 1];
-        for (int i = 0; i < images.size(); i++) labels[i] = images.get(i).getName();
-        labels[images.size()] = getString(R.string.wallpaper_none);
+        for (File img : images) {
+            values.add(img.getName());
+            labels.add(img.getName() + " (Static)");
+        }
+
+        // 3. None option
+        values.add("none");
+        labels.add(getString(R.string.wallpaper_none));
+
+        // Determine currently checked item
         String current = choices.getString(Config.WALLPAPER_CHOICE_KEY, null);
-        int checked = "none".equals(current) ? images.size()
-                : indexOf(images, current);
+        int checked = 0; // Default is Aurora (Animated)
+        if (current != null) {
+            for (int i = 0; i < values.size(); i++) {
+                if (values.get(i).equals(current)) {
+                    checked = i;
+                    break;
+                }
+            }
+        }
+
         new AlertDialog.Builder(this)
                 .setTitle(R.string.wallpaper_label)
-                .setSingleChoiceItems(labels, checked, (dialog, which) -> {
+                .setSingleChoiceItems(labels.toArray(new String[0]), checked, (dialog, which) -> {
                     dialog.dismiss();
-                    if (which == images.size()) {
-                        choices.edit().putString(Config.WALLPAPER_CHOICE_KEY, "none").apply();
-                    } else {
-                        choices.edit().putString(Config.WALLPAPER_CHOICE_KEY,
-                                images.get(which).getName()).apply();
-                    }
+                    String selected = values.get(which);
+                    choices.edit().putString(Config.WALLPAPER_CHOICE_KEY, selected).apply();
                     setResult(RESULT_OK);
                     Toast.makeText(this, R.string.wallpaper_applied, Toast.LENGTH_SHORT).show();
                     refresh();
@@ -189,14 +219,6 @@ public final class LauncherSettingsActivity extends Activity {
                 })
                 .setNegativeButton(android.R.string.cancel, null)
                 .show();
-    }
-
-    private static int indexOf(List<File> images, String name) {
-        if (name == null) return -1;
-        for (int i = 0; i < images.size(); i++) {
-            if (images.get(i).getName().equals(name)) return i;
-        }
-        return -1;
     }
 
     private void setAdvanced(boolean enabled) {
@@ -220,10 +242,15 @@ public final class LauncherSettingsActivity extends Activity {
         advancedChoice.setEnabled(animations);
         advancedChoice.setAlpha(animations ? 1f : 0.5f);
         String wallpaperCurrent = choices.getString(Config.WALLPAPER_CHOICE_KEY, null);
-        wallpaperChoice.setText(getString(R.string.wallpaper_state,
-                "none".equals(wallpaperCurrent) ? getString(R.string.wallpaper_none)
-                        : wallpaperCurrent != null ? wallpaperCurrent
-                        : getString(R.string.wallpaper_theme_default)));
+        String displayLabel;
+        if ("none".equals(wallpaperCurrent)) {
+            displayLabel = getString(R.string.wallpaper_none);
+        } else if (wallpaperCurrent != null) {
+            displayLabel = wallpaperCurrent;
+        } else {
+            displayLabel = getString(R.string.wallpaper_theme_default) + " (Aurora)";
+        }
+        wallpaperChoice.setText(getString(R.string.wallpaper_state, displayLabel));
         followThemeChoice.setSelected(!hasOnTvChoices());
         if (prayerSettingsChoice != null && prayerManager != null) {
             String azanStatus = getString(prayerManager.isAzanSoundEnabled() ? R.string.on : R.string.off);

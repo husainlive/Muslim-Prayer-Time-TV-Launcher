@@ -171,7 +171,7 @@
         }
 
         animate() {
-            this.time += 0.003;
+            this.time += 0.008;
             const intensity = STATE.auroraIntensities[STATE.currentAuroraIntensityIndex].mult;
 
             const w = this.width;
@@ -278,7 +278,7 @@
                     this.ctx.restore();
                 }
             } else {
-                // Default: Signature Earlier TV 4K Aurora Ribbons
+                // Default: Signature Earlier TV 4K Aurora with small moving animation
                 this.ctx.fillStyle = '#04060e';
                 this.ctx.fillRect(0, 0, w, h);
 
@@ -290,15 +290,12 @@
                 this.ctx.fillStyle = skyGrad;
                 this.ctx.fillRect(0, 0, w, h);
 
-                const breathOffset = Math.sin(this.time * 1.5) * 6;
-                const breathScale = 1.0 + Math.sin(this.time * 2.0) * 0.03;
-
-                // Cyan/Teal Ribbon
+                // Cyan/Teal Ribbon - gentle organic horizontal sway & vertical float
                 this.ctx.save();
-                const cyanCenterX = w * 0.38 + Math.cos(this.time * 0.8) * 8;
-                const cyanCenterY = h * 0.15 + breathOffset;
-                const cyanRadiusX = w * 0.52 * breathScale;
-                const cyanRadiusY = h * 0.17 * breathScale;
+                const cyanCenterX = w * (0.36 + Math.sin(this.time * 0.7) * 0.045);
+                const cyanCenterY = h * (0.16 + Math.cos(this.time * 0.5) * 0.035);
+                const cyanRadiusX = w * (0.52 + Math.sin(this.time * 0.4) * 0.035);
+                const cyanRadiusY = h * (0.18 + Math.cos(this.time * 0.6) * 0.025);
 
                 this.ctx.translate(cyanCenterX, cyanCenterY);
                 this.ctx.scale(1, cyanRadiusY / cyanRadiusX);
@@ -316,12 +313,12 @@
                 this.ctx.fill();
                 this.ctx.restore();
 
-                // Violet/Purple Ribbon
+                // Violet/Purple Ribbon - undulating out-of-phase on the right
                 this.ctx.save();
-                const violetCenterX = w * 0.74 + Math.sin(this.time * 0.9) * 10;
-                const violetCenterY = h * 0.27 - (breathOffset * 0.7);
-                const violetRadiusX = w * 0.44 * breathScale;
-                const violetRadiusY = h * 0.19 * breathScale;
+                const violetCenterX = w * (0.72 + Math.cos(this.time * 0.6) * 0.040);
+                const violetCenterY = h * (0.24 + Math.sin(this.time * 0.5) * 0.030);
+                const violetRadiusX = w * (0.46 + Math.cos(this.time * 0.3) * 0.030);
+                const violetRadiusY = h * (0.20 + Math.sin(this.time * 0.4) * 0.020);
 
                 this.ctx.translate(violetCenterX, violetCenterY);
                 this.ctx.scale(1, violetRadiusY / violetRadiusX);
@@ -339,7 +336,29 @@
                 this.ctx.fill();
                 this.ctx.restore();
 
-                // Mid-Left Oceanic Deep Blue
+                // Subtle Emerald/Green Central Harmonic Ribbon connecting both sides
+                this.ctx.save();
+                const emeraldCenterX = w * (0.52 + Math.sin(this.time * 0.8 + 1.0) * 0.030);
+                const emeraldCenterY = h * (0.13 + Math.cos(this.time * 0.6 + 0.5) * 0.025);
+                const emeraldRadiusX = w * 0.36;
+                const emeraldRadiusY = h * 0.15;
+
+                this.ctx.translate(emeraldCenterX, emeraldCenterY);
+                this.ctx.scale(1, emeraldRadiusY / emeraldRadiusX);
+
+                const emeraldGrad = this.ctx.createRadialGradient(0, 0, 0, 0, 0, emeraldRadiusX);
+                emeraldGrad.addColorStop(0, `rgba(60, 242, 180, ${0.45 * intensity})`);
+                emeraldGrad.addColorStop(0.40, `rgba(31, 172, 166, ${0.20 * intensity})`);
+                emeraldGrad.addColorStop(0.80, `rgba(12, 85, 115, ${0.06 * intensity})`);
+                emeraldGrad.addColorStop(1, 'transparent');
+
+                this.ctx.fillStyle = emeraldGrad;
+                this.ctx.beginPath();
+                this.ctx.arc(0, 0, emeraldRadiusX, 0, Math.PI * 2);
+                this.ctx.fill();
+                this.ctx.restore();
+
+                // Mid-Left Oceanic Deep Blue Underglow
                 this.ctx.save();
                 const blueGrad = this.ctx.createRadialGradient(w * 0.22, h * 0.33, 0, w * 0.22, h * 0.33, w * 0.35);
                 blueGrad.addColorStop(0, `rgba(14, 46, 78, ${0.48 * intensity})`);

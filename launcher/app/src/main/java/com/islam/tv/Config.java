@@ -323,7 +323,12 @@ final class Config {
             wallpapers.clear();
             wallpaper = null;
             wallpaperEnabled = false;
-        } else if (wallpaperChoice != null && dir != null) {
+        } else if (isDynamicTheme(wallpaperChoice) || wallpaperChoice == null) {
+            // Dynamic animated theme is active (or Theme Default); disable static WallpaperPlayer image
+            wallpapers.clear();
+            wallpaper = null;
+            wallpaperEnabled = false;
+        } else if (dir != null) {
             File picked = WallpaperRotation.find(
                     WallpaperRotation.images(new File(dir, "wallpapers")), wallpaperChoice);
             if (picked == null && wallpaperChoice.equals(
@@ -520,5 +525,16 @@ final class Config {
             if (item instanceof String && !((String) item).trim().isEmpty()) out.add(((String) item).trim());
         }
         return out;
+    }
+
+    public static boolean isDynamicTheme(String choice) {
+        if (choice == null) return false;
+        return choice.equals(AuroraView.THEME_AURORA)
+                || choice.equals(AuroraView.THEME_GHOST_FIBERS)
+                || choice.equals(AuroraView.THEME_GRADIENT_ASCII)
+                || choice.equals(AuroraView.THEME_GRAINIENT)
+                || choice.equals(AuroraView.THEME_IRIDESCENCE)
+                || choice.equalsIgnoreCase("Aurora")
+                || choice.equalsIgnoreCase("theme_aurora");
     }
 }

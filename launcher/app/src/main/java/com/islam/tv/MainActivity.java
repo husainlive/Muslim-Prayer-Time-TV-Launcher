@@ -11,6 +11,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -170,6 +171,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
     private String greetingName = "";
     /** Optional time-of-day backdrop (config.xml, sky_intensity); 0 keeps it hidden. */
     private SkyView sky;
+    private AuroraView auroraBackground;
     private String vpnApp;
     private SpringAnimation springX, springY;
     private float glassTargetX, glassTargetY;
@@ -240,6 +242,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
     private RecyclerView.OnScrollListener pendingFocusScroll;
     private int singleRowHeightPx = 0;
     private int rowsBelowDock = 1;
+    private int currentTopRow = 0;
 
     private final Handler handler = new Handler(Looper.getMainLooper());
     /** Refreshes the network pill when the connection changes: at boot Wi-Fi often connects after Home is shown. */
@@ -340,6 +343,8 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         // the theme's background, so launch looks the same.
         getWindow().setBackgroundDrawable(null);
         wallpaperPlayer = new WallpaperPlayer(this, root, cfg);
+        auroraBackground = findViewById(R.id.auroraBackground);
+        setupDynamicWallpaper(cfg);
         sky = findViewById(R.id.sky);
         sky.setIntensity(cfg.skyIntensity);
         glass = findViewById(R.id.glass);
@@ -412,6 +417,50 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
             }
 
             @Override
+            protected void calculateExtraLayoutSpace(@NonNull RecyclerView.State state, @NonNull int[] extraLayoutSpace) {
+                extraLayoutSpace[0] = 600;
+                extraLayoutSpace[1] = 1200;
+            }
+
+            @Override
+            public View onInterceptFocusSearch(@NonNull View focused, int direction) {
+                if (direction == View.FOCUS_DOWN) {
+                    View item = focused;
+                    while (item != null && item.getParent() != grid) {
+                        item = (View) item.getParent();
+                    }
+                    int pos = item != null ? grid.getChildAdapterPosition(item) : RecyclerView.NO_POSITION;
+                    if (pos != RecyclerView.NO_POSITION) {
+                        int nextPos = pos + COLUMNS;
+                        if (nextPos < adapter.getItemCount()) {
+                            RecyclerView.ViewHolder vh = grid.findViewHolderForAdapterPosition(nextPos);
+                            if (vh != null) {
+                                View nextCard = vh.itemView.findViewById(R.id.card);
+                                if (nextCard != null) return nextCard;
+                            }
+                        }
+                    }
+                } else if (direction == View.FOCUS_UP) {
+                    View item = focused;
+                    while (item != null && item.getParent() != grid) {
+                        item = (View) item.getParent();
+                    }
+                    int pos = item != null ? grid.getChildAdapterPosition(item) : RecyclerView.NO_POSITION;
+                    if (pos != RecyclerView.NO_POSITION) {
+                        int nextPos = pos - COLUMNS;
+                        if (nextPos >= 0) {
+                            RecyclerView.ViewHolder vh = grid.findViewHolderForAdapterPosition(nextPos);
+                            if (vh != null) {
+                                View nextCard = vh.itemView.findViewById(R.id.card);
+                                if (nextCard != null) return nextCard;
+                            }
+                        }
+                    }
+                }
+                return super.onInterceptFocusSearch(focused, direction);
+            }
+
+            @Override
             public boolean requestChildRectangleOnScreen(@NonNull RecyclerView parent, @NonNull View child,
                                                          @NonNull Rect rect, boolean immediate,
                                                          boolean focusedChildVisible) {
@@ -457,36 +506,42 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
             int tileW = AppAdapter.tileWidthPx(inner, h, COLUMNS, rowsBelowDock, cfg.dockTitle, cfg.dockRow, density);
             int itemH = AppAdapter.itemHeightPx(AppAdapter.tileHeightPx(tileW), density);
             int rowHeight = itemH + (int) ((AppAdapter.DOCK_EXTRA_DP + 6) * density);
+            if (grid.getChildCount() > 0 && grid.getChildAt(0).getHeight() > 0) {
+                rowHeight = grid.getChildAt(0).getHeight() + (int) (20 * density);
+            }
             singleRowHeightPx = rowHeight;
 
-            // Set grid padding top to align the main row neatly inside the pinned bar
-            int want = (int) (10 * density);
-            if (grid.getPaddingTop() != want) {
-                grid.setPadding(grid.getPaddingLeft(), want, grid.getPaddingRight(), (int) (24 * density));
+            // Set grid padding top to align the main row neatly inside the pinned bar,
+            // and generous bottom padding so any row can scroll fully into the dock slot without hitting a wall.
+            int wantTop = (int) (10 * density);
+            int wantBottom = (int) (240 * density);
+            if (grid.getPaddingTop() != wantTop || grid.getPaddingBottom() != wantBottom) {
+                grid.setPadding(grid.getPaddingLeft(), wantTop, grid.getPaddingRight(), wantBottom);
             }
 
             // Sizing gridContainer based on rowsBelowDock (0 = 1 row at bottom; >0 = dock + N rows below)
-            int visibleRows = Math.max(1, rowsBelowDock + 1);
-            int containerH = (rowsBelowDock == 0)
-                    ? (rowHeight + (int) (16 * density))
-                    : (rowHeight * visibleRows + (int) (18 * density));
-
             if (gridContainer != null) {
                 android.view.ViewGroup.LayoutParams lp = gridContainer.getLayoutParams();
-                if (lp.height != containerH) {
-                    lp.height = containerH;
-                    if (lp instanceof android.widget.LinearLayout.LayoutParams) {
-                        android.widget.LinearLayout.LayoutParams llp = (android.widget.LinearLayout.LayoutParams) lp;
-                        llp.weight = 0;
-                        if (rowsBelowDock == 0) {
+                if (lp instanceof android.widget.LinearLayout.LayoutParams) {
+                    android.widget.LinearLayout.LayoutParams llp = (android.widget.LinearLayout.LayoutParams) lp;
+                    if (rowsBelowDock == 0) {
+                        int containerH = rowHeight + (int) (32 * density);
+                        if (llp.height != containerH || llp.weight != 0 || llp.gravity != Gravity.BOTTOM) {
+                            llp.weight = 0;
+                            llp.height = containerH;
                             llp.gravity = Gravity.BOTTOM;
                             llp.topMargin = (int) (100 * density);
-                        } else {
+                            gridContainer.setLayoutParams(llp);
+                        }
+                    } else {
+                        if (llp.height != 0 || llp.weight != 1f || llp.gravity != Gravity.NO_GRAVITY) {
+                            llp.weight = 1f;
+                            llp.height = 0;
                             llp.gravity = Gravity.NO_GRAVITY;
                             llp.topMargin = (int) (56 * density);
+                            gridContainer.setLayoutParams(llp);
                         }
                     }
-                    gridContainer.setLayoutParams(lp);
                 }
             }
 
@@ -691,6 +746,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         if (openLauncherSettingsIfAsked(intent)) return;
         if (intent == null || !intent.hasCategory(Intent.CATEGORY_HOME)) return;
         grid.scrollToPosition(0);
+        currentTopRow = 0;
         lastFocused = 0;
         lastFocusedKey = adapter.getItemCount() > 0 ? adapter.keyAt(0) : null;
         if (stopped) {
@@ -752,6 +808,9 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         if (showStats) startStats();
         sky.update();
         wallpaperPlayer.start();
+        if (auroraBackground != null && auroraBackground.getVisibility() == View.VISIBLE) {
+            auroraBackground.startAnimation();
+        }
         updatePrayerDisplay();
         handler.postDelayed(minuteTick, MINUTE_MS);
         if (festive && diya != null) {
@@ -871,6 +930,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         root.removeCallbacks(showIdleClock);
         endReorder();   // Home or another app while reordering keeps the order so far
         wallpaperPlayer.stop();
+        if (auroraBackground != null) auroraBackground.stopAnimation();
         stopAmbientAnimation();
         hero.animate().cancel();
         ambient.animate().cancel();
@@ -1319,12 +1379,42 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
             springY.animateToFinalPosition(y - glassScrollShift);
         }
         View item = (View) card.getParent();
-        int decoratedTop = item.getTop() - (int) (6 * density);
-        int dy = decoratedTop - grid.getPaddingTop();
-        boolean scroll = Math.abs(dy) > (int) (4 * density);
-        if (scroll) {
-            if (!animations || reducedMotion) grid.scrollBy(0, dy);
-            else grid.smoothScrollBy(0, dy, new android.view.animation.DecelerateInterpolator(1.6f), 240);
+        if (item != null && item.getHeight() > 0) {
+            singleRowHeightPx = item.getHeight() + (int) (20 * density);
+        }
+        int rowHeight = singleRowHeightPx > 0 ? singleRowHeightPx : (int) (116 * density);
+
+        int targetRow = position / COLUMNS;
+        int visibleRows = Math.max(1, rowsBelowDock + 1);
+
+        int newTopRow = currentTopRow;
+        if (rowsBelowDock == 0) {
+            newTopRow = targetRow;
+        } else {
+            if (targetRow >= currentTopRow + visibleRows) {
+                newTopRow = targetRow - visibleRows + 1;
+            } else if (targetRow < currentTopRow) {
+                newTopRow = targetRow;
+            }
+        }
+
+        if (newTopRow != currentTopRow) {
+            int rowsDelta = newTopRow - currentTopRow;
+            int dy = rowsDelta * rowHeight;
+            currentTopRow = newTopRow;
+            if (!animations || reducedMotion) {
+                grid.scrollBy(0, dy);
+            } else {
+                grid.smoothScrollBy(0, dy, new android.view.animation.DecelerateInterpolator(1.6f), 240);
+            }
+        } else if (item != null) {
+            // Ensure precise row alignment if item has drifted
+            int slotIndex = targetRow - currentTopRow;
+            int expectedTop = grid.getPaddingTop() + (int) (6 * density) + (slotIndex * rowHeight);
+            int error = item.getTop() - expectedTop;
+            if (Math.abs(error) > (int) (6 * density)) {
+                grid.scrollBy(0, error);
+            }
         }
         showHero(position, gridContainer != null ? gridContainer.getTop() : 0);
     }
@@ -1353,9 +1443,14 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         float rowH = singleRowHeightPx > 0 ? singleRowHeightPx : (135f * density);
 
         int visibleRows = Math.max(1, rowsBelowDock + 1);
+        float childH = (grid.getChildCount() > 0 && grid.getChildAt(0).getHeight() > 0)
+                ? grid.getChildAt(0).getHeight()
+                : (96f * density);
+        float slot0Center = padTop + (6f * density) + (childH * 0.5f);
+
         float[] slotCenters = new float[visibleRows];
         for (int s = 0; s < visibleRows; s++) {
-            slotCenters[s] = padTop + (56f * density) + (s * rowH);
+            slotCenters[s] = slot0Center + (s * rowH);
         }
 
         for (int i = 0; i < grid.getChildCount(); i++) {
@@ -1456,6 +1551,24 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         if (!cinematic) return;
         updateHeroMeta(position);
         updateHeroDots(position);
+    }
+
+    private void setupDynamicWallpaper(Config cfg) {
+        if (auroraBackground == null) return;
+        SharedPreferences choices = getSharedPreferences(Config.SETTINGS_NAME, MODE_PRIVATE);
+        String choice = choices.getString(Config.WALLPAPER_CHOICE_KEY, null);
+
+        if ("none".equals(choice)) {
+            auroraBackground.setVisibility(View.GONE);
+            auroraBackground.stopAnimation();
+        } else if (Config.isDynamicTheme(choice) || choice == null) {
+            auroraBackground.setVisibility(View.VISIBLE);
+            auroraBackground.setTheme(choice != null ? choice : AuroraView.THEME_AURORA);
+            auroraBackground.startAnimation();
+        } else {
+            auroraBackground.setVisibility(View.GONE);
+            auroraBackground.stopAnimation();
+        }
     }
 
     // ---- cinematic shelf -------------------------------------------------------------------------
