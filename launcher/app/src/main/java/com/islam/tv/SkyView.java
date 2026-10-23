@@ -36,8 +36,8 @@ public class SkyView extends View {
         return false;
     }
 
-    private static final int TEX_W = 480;
-    private static final int TEX_H = 270;
+    private static final int TEX_W = 1920;
+    private static final int TEX_H = 1080;
 
     /** Opacity of the whole backdrop, 0 to 255, from sky_intensity. */
     private int intensity;
@@ -95,7 +95,9 @@ public class SkyView extends View {
         Canvas canvas = new Canvas(texture);
         canvas.drawColor(0, android.graphics.PorterDuff.Mode.CLEAR);
 
-        Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG | Paint.DITHER_FLAG | Paint.FILTER_BITMAP_FLAG);
+        paint.setDither(true);
+        paint.setFilterBitmap(true);
         paint.setShader(new LinearGradient(0f, 0f, 0f, TEX_H,
                 new int[]{sky.top, sky.mid, sky.bottom},
                 new float[]{0f, 0.55f, 1f}, Shader.TileMode.CLAMP));
@@ -113,6 +115,8 @@ public class SkyView extends View {
 
         if (drawable == null) {
             drawable = new BitmapDrawable(getResources(), texture);
+            drawable.setDither(true);
+            drawable.setFilterBitmap(true);
             drawable.setGravity(Gravity.FILL);
             setBackground(drawable);
         }

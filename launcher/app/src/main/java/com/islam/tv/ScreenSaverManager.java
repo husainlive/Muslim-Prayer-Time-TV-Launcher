@@ -189,25 +189,51 @@ public class ScreenSaverManager {
                     cn = new android.content.ComponentName(parts[0], parts[1]);
                 }
 
-                // 1. Try launching dream service via IDreamManager system service
-                if (launchDreamService(ctx, cn)) return;
+                // 1. Ensure system settings have this dream component set
+                try {
+                    android.provider.Settings.Secure.putString(ctx.getContentResolver(), "screensaver_components", comp);
+                    android.provider.Settings.Secure.putInt(ctx.getContentResolver(), "screensaver_enabled", 1);
+                    android.provider.Settings.Secure.putInt(ctx.getContentResolver(), "screensaver_activate_on_sleep", 1);
+                } catch (Throwable ignored) {
+                }
 
-                // 2. Try launching via Sandman
-                if (launchSandman(ctx)) return;
-
-                // 3. Try leanback or standard launch intent for the package
-                if (parts.length >= 1) {
-                    PackageManager pm = ctx.getPackageManager();
-                    Intent launchIntent = pm.getLeanbackLaunchIntentForPackage(parts[0]);
-                    if (launchIntent == null) {
-                        launchIntent = pm.getLaunchIntentForPackage(parts[0]);
-                    }
-                    if (launchIntent != null) {
-                        launchIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        ctx.startActivity(launchIntent);
+                // 2. Android TV Daydream intent (com.google.android.pano.action.SLEEP)
+                try {
+                    Intent sleepIntent = new Intent("com.google.android.pano.action.SLEEP");
+                    sleepIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    if (sleepIntent.resolveActivity(ctx.getPackageManager()) != null) {
+                        ctx.startActivity(sleepIntent);
+                        Log.d(TAG, "Launched dream via com.google.android.pano.action.SLEEP");
                         return;
                     }
+                } catch (Throwable t) {
+                    Log.w(TAG, "pano.action.SLEEP failed: " + t.getMessage());
                 }
+
+                // 3. For Aerial Views: try its dedicated TestActivity screensaver launcher
+                if ("com.neilturner.aerialviews".equals(parts[0])) {
+                    try {
+                        Intent testIntent = new Intent();
+                        testIntent.setComponent(new android.content.ComponentName("com.neilturner.aerialviews",
+                                "com.neilturner.aerialviews.ui.screensaver.TestActivity"));
+                        testIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        if (testIntent.resolveActivity(ctx.getPackageManager()) != null) {
+                            ctx.startActivity(testIntent);
+                            Log.d(TAG, "Started Aerial Views via TestActivity");
+                            return;
+                        }
+                    } catch (Throwable t) {
+                        Log.w(TAG, "Aerial Views TestActivity failed: " + t.getMessage());
+                    }
+                }
+
+                // 4. Try launching dream service via IDreamManager system service
+                if (launchDreamService(ctx, cn)) return;
+
+                // 5. Try launching via Sandman
+                if (launchSandman(ctx)) return;
+
+                // Note: Do NOT open the app's configuration/settings Activity when a dream is selected!
             } else if (id.startsWith("app:")) {
                 String pkg = id.substring("app:".length());
                 PackageManager pm = ctx.getPackageManager();
@@ -242,12 +268,22 @@ public class ScreenSaverManager {
                 Object dm = asInterface.invoke(null, binder);
                 if (dm != null) {
                     if (cn != null) {
-                        try {
-                            java.lang.reflect.Method testDream = dm.getClass().getMethod("testDream", android.content.ComponentName.class);
-                            testDream.invoke(dm, cn);
-                            Log.d(TAG, "Started dream via IDreamManager.testDream: " + cn);
-                            return true;
-                        } catch (NoSuchMethodException ignored) {
+                        for (java.lang.reflect.Method m : dm.getClass().getMethods()) {
+                            if ("testDream".equals(m.getName())) {
+                                Class<?>[] pTypes = m.getParameterTypes();
+                                try {
+                                    if (pTypes.length == 2 && pTypes[0] == android.content.ComponentName.class && (pTypes[1] == int.class || pTypes[1] == Integer.class)) {
+                                        m.invoke(dm, cn, 0);
+                                        Log.d(TAG, "Started dream via IDreamManager.testDream(cn, 0)");
+                                        return true;
+                                    } else if (pTypes.length == 1 && pTypes[0] == android.content.ComponentName.class) {
+                                        m.invoke(dm, cn);
+                                        Log.d(TAG, "Started dream via IDreamManager.testDream(cn)");
+                                        return true;
+                                    }
+                                } catch (Throwable ignored) {
+                                }
+                            }
                         }
                     }
                     try {
@@ -268,10 +304,19 @@ public class ScreenSaverManager {
     private boolean launchSandman(Context ctx) {
         try {
             Class<?> sandmanClass = Class.forName("android.service.dreams.Sandman");
-            java.lang.reflect.Method startDream = sandmanClass.getMethod("startDreamByUserRequest", Context.class);
-            startDream.invoke(null, ctx);
-            Log.d(TAG, "Started dream via Sandman.startDreamByUserRequest");
-            return true;
+            for (java.lang.reflect.Method m : sandmanClass.getMethods()) {
+                if (m.getName().startsWith("startDream")) {
+                    Class<?>[] pTypes = m.getParameterTypes();
+                    try {
+                        if (pTypes.length == 1 && pTypes[0] == Context.class) {
+                            m.invoke(null, ctx);
+                            Log.d(TAG, "Started dream via Sandman." + m.getName() + "(Context)");
+                            return true;
+                        }
+                    } catch (Throwable ignored) {
+                    }
+                }
+            }
         } catch (Throwable t) {
             Log.w(TAG, "Sandman failed: " + t.getMessage());
         }

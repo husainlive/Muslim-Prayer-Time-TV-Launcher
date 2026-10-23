@@ -227,6 +227,14 @@ id dreamAmbient
 id dreamClock
 id dreamContent
 id dreamDate
+id dreamDateDivider
+id dreamHijriDate
+id dreamInfoRow
+id dreamNextPrayerCountdown
+id dreamNextPrayerName
+id dreamNextPrayerTime
+id dreamPrayerContainer
+id dreamWeather
 id followThemeChoice
 id forever
 id glass

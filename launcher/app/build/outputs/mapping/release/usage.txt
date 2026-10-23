@@ -3042,6 +3042,7 @@ com.islam.tv.Cards:
     private void <init>()
 com.islam.tv.ClockScene:
     private static final long MOVE_MS
+    private static final java.lang.String TAG
 com.islam.tv.Config:
     static final java.lang.String FILE_NAME
     static final java.lang.String ROWS_BELOW_DOCK_KEY
@@ -3210,6 +3211,7 @@ com.islam.tv.R$id:
     public static int alertSubtitle
     public static int ampm
     public static int clock
+    public static int dreamInfoRow
     public static int hint
     public static int panel
     public static int topButtons
@@ -6326,14 +6328,15 @@ com.islam.tv.Cards:
     public static boolean isDigest(java.lang.String)
     public static java.io.File storeFile(android.content.Context)
 com.islam.tv.ClockScene:
-    public static synthetic void lambda$moveClock$2()
+    public static synthetic void lambda$moveClock$4()
     public static synthetic void lambda$new$0()
-    public static synthetic void lambda$shiftGlow$3()
+    public static synthetic void lambda$shiftGlow$5()
     public static synthetic void lambda$start$1()
+    public static synthetic void lambda$updateInfo$2()
+    public static synthetic void lambda$updateInfo$3()
     public static void moveClock()
     public final void setGlow(int)
     public static void shiftGlow()
-    public final void start()
     public final void stop()
 com.islam.tv.Config:
     public final int homeIdleClockMinutes
@@ -6686,7 +6689,6 @@ com.islam.tv.WeatherManager:
     public final void autoDetectLocation(com.islam.tv.WeatherManager$LocationDetectCallback)
     public static java.lang.String fetchFromOpenMeteo()
     public static java.lang.String fetchFromWttrIn()
-    public static java.lang.String getCachedWeather()
     public static java.lang.String getCity()
     public static synthetic void lambda$autoDetectLocation$1()
     public static void lambda$loadWeather$3()

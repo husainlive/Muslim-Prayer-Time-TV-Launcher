@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Screensaver (ClockDream): clock and date that drift around a black screen over an ambient glow. -->
+<!-- Screensaver (ClockDream): clock, Hijri date, next prayer time, and weather drifting around a black screen over an ambient glow. -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,6 +16,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <!-- Time row -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -28,7 +29,7 @@
                 android:format12Hour="h:mm"
                 android:format24Hour="HH:mm"
                 android:textColor="#E6FFFFFF"
-                android:textSize="120sp"
+                android:textSize="108sp"
                 android:fontFamily="@font/outfit_extralight"
                 android:letterSpacing="-0.04"
                 android:includeFontPadding="false" />
@@ -46,17 +47,116 @@
                 android:textAllCaps="true" />
         </LinearLayout>
 
-        <TextClock
+        <!-- Date & Hijri row -->
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:layout_marginStart="6dp"
-            android:layout_marginTop="4dp"
-            android:format12Hour="@string/date_format"
-            android:format24Hour="@string/date_format"
-            android:textColor="#8CFFFFFF"
-            android:textSize="18sp"
-            android:fontFamily="@font/outfit_regular"
-            android:letterSpacing="0.14"
-            android:textAllCaps="true" />
+            android:layout_marginTop="2dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/dreamHijriDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF6EC1FF"
+                android:textSize="16sp"
+                android:fontFamily="@font/outfit_medium"
+                android:letterSpacing="0.06"
+                android:textAllCaps="true"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/dreamDateDivider"
+                android:layout_width="1dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="#40FFFFFF"
+                android:visibility="gone" />
+
+            <TextClock
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:format12Hour="@string/date_format"
+                android:format24Hour="@string/date_format"
+                android:textColor="#8CFFFFFF"
+                android:textSize="16sp"
+                android:fontFamily="@font/outfit_regular"
+                android:letterSpacing="0.10"
+                android:textAllCaps="true" />
+        </LinearLayout>
+
+        <!-- Next Prayer and Weather row -->
+        <LinearLayout
+            android:id="@+id/dreamInfoRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="14dp"
+            android:gravity="center_vertical">
+
+            <!-- Next Prayer pill -->
+            <LinearLayout
+                android:id="@+id/dreamPrayerContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@drawable/prayer_pill_selector"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/dreamNextPrayerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF6EC1FF"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/outfit_medium"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:letterSpacing="0.08" />
+
+                <TextView
+                    android:id="@+id/dreamNextPrayerTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/outfit_medium" />
+
+                <TextView
+                    android:id="@+id/dreamNextPrayerCountdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:textColor="#B3FFFFFF"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/outfit_regular" />
+            </LinearLayout>
+
+            <!-- Weather pill -->
+            <TextView
+                android:id="@+id/dreamWeather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@drawable/pill_bg"
+                android:textColor="#E6FFFFFF"
+                android:textSize="13sp"
+                android:fontFamily="@font/outfit_medium"
+                android:visibility="gone" />
+        </LinearLayout>
     </LinearLayout>
 </FrameLayout>

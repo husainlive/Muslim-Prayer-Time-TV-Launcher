@@ -293,7 +293,7 @@ ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/a
 	android:noHistory
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:121:13-37
 	android:exported
-		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:119:13-37
+		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:119:13-36
 	android:theme
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:122:13-77
 	android:name
