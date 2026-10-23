@@ -11,10 +11,10 @@ INJECTED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launche
 	android:name
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:140:13-42
 manifest
-ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:2:1-214:12
-INJECTED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:2:1-214:12
-INJECTED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:2:1-214:12
-INJECTED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:2:1-214:12
+ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:2:1-215:12
+INJECTED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:2:1-215:12
+INJECTED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:2:1-215:12
+INJECTED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:2:1-215:12
 MERGED from [androidx.recyclerview:recyclerview:1.3.2] /home/husainpc/.gradle/caches/8.9/transforms/62454a3cca38d4b1256266a06e5b4e28/transformed/recyclerview-1.3.2/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/husainpc/.gradle/caches/8.9/transforms/f4be888dc301859ee5f0f579bb6b38e7/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.customview:customview:1.0.0] /home/husainpc/.gradle/caches/8.9/transforms/665b1e76a46b4d117d595669e0cc4c46/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -172,8 +172,8 @@ ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/a
 	android:name
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:48:18-57
 application
-ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:51:5-213:19
-INJECTED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:51:5-213:19
+ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:51:5-214:19
+INJECTED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:51:5-214:19
 MERGED from [androidx.core:core:1.7.0] /home/husainpc/.gradle/caches/8.9/transforms/3afe7fa58a47c7b182ae0caccac05374/transformed/core-1.7.0/AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.7.0] /home/husainpc/.gradle/caches/8.9/transforms/3afe7fa58a47c7b182ae0caccac05374/transformed/core-1.7.0/AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/husainpc/.gradle/caches/8.9/transforms/d76f7faec08758676fd25dae129ae9e7/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
@@ -381,13 +381,13 @@ ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/a
 	android:name
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:188:13-47
 receiver#com.islam.tv.PrayerAlarmReceiver
-ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:192:9-201:20
+ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:192:9-202:20
 	android:exported
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:194:13-36
 	android:name
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:193:13-48
-intent-filter#action:name:com.islam.tv.ACTION_PRAYER_ALARM+action:name:com.islam.tv.ACTION_TEST_PRAYER_ALARM+action:name:com.islam.tv.ACTION_TEST_SLEEP+action:name:com.islam.tv.ACTION_TEST_SLEEP_AND_ALARM
-ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:195:13-200:29
+intent-filter#action:name:com.islam.tv.ACTION_PRAYER_ALARM+action:name:com.islam.tv.ACTION_SET_ROWS_BELOW_DOCK+action:name:com.islam.tv.ACTION_TEST_PRAYER_ALARM+action:name:com.islam.tv.ACTION_TEST_SLEEP+action:name:com.islam.tv.ACTION_TEST_SLEEP_AND_ALARM
+ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:195:13-201:29
 action#com.islam.tv.ACTION_PRAYER_ALARM
 ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:196:17-75
 	android:name
@@ -404,30 +404,34 @@ action#com.islam.tv.ACTION_TEST_SLEEP_AND_ALARM
 ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:199:17-83
 	android:name
 		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:199:25-80
+action#com.islam.tv.ACTION_SET_ROWS_BELOW_DOCK
+ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:200:17-82
+	android:name
+		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:200:25-79
 receiver#com.islam.tv.PrayerBootReceiver
-ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:203:9-212:20
+ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:204:9-213:20
 	android:exported
-		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:205:13-36
+		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:206:13-36
 	android:name
-		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:204:13-47
+		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:205:13-47
 intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.MY_PACKAGE_REPLACED+action:name:android.intent.action.TIMEZONE_CHANGED+action:name:android.intent.action.TIME_SET
-ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:206:13-211:29
+ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:207:13-212:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:207:17-79
+ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:208:17-79
 	android:name
-		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:207:25-76
+		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:208:25-76
 action#android.intent.action.MY_PACKAGE_REPLACED
-ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:208:17-84
+ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:209:17-84
 	android:name
-		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:208:25-81
+		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:209:25-81
 action#android.intent.action.TIME_SET
-ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:209:17-73
+ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:210:17-73
 	android:name
-		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:209:25-70
+		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:210:25-70
 action#android.intent.action.TIMEZONE_CHANGED
-ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:210:17-81
+ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:211:17-81
 	android:name
-		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:210:25-78
+		ADDED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:211:25-78
 uses-sdk
 INJECTED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml

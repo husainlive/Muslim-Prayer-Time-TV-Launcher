@@ -229,6 +229,7 @@
                 <action android:name="com.islam.tv.ACTION_TEST_PRAYER_ALARM" />
                 <action android:name="com.islam.tv.ACTION_TEST_SLEEP" />
                 <action android:name="com.islam.tv.ACTION_TEST_SLEEP_AND_ALARM" />
+                <action android:name="com.islam.tv.ACTION_SET_ROWS_BELOW_DOCK" />
             </intent-filter>
         </receiver>
         <receiver

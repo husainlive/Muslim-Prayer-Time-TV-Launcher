@@ -136,7 +136,7 @@
 70    </queries>
 71
 72    <application
-72-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:51:5-213:19
+72-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:51:5-214:19
 73        android:allowBackup="false"
 73-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:56:9-36
 74        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -407,13 +407,13 @@
 222-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:190:13-58
 223
 224        <receiver
-224-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:192:9-201:20
+224-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:192:9-202:20
 225            android:name="com.islam.tv.PrayerAlarmReceiver"
 225-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:193:13-48
 226            android:exported="true" >
 226-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:194:13-36
 227            <intent-filter>
-227-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:195:13-200:29
+227-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:195:13-201:29
 228                <action android:name="com.islam.tv.ACTION_PRAYER_ALARM" />
 228-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:196:17-75
 228-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:196:25-72
@@ -426,30 +426,33 @@
 231                <action android:name="com.islam.tv.ACTION_TEST_SLEEP_AND_ALARM" />
 231-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:199:17-83
 231-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:199:25-80
-232            </intent-filter>
-233        </receiver>
-234        <receiver
-234-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:203:9-212:20
-235            android:name="com.islam.tv.PrayerBootReceiver"
-235-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:204:13-47
-236            android:exported="true" >
-236-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:205:13-36
-237            <intent-filter>
-237-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:206:13-211:29
-238                <action android:name="android.intent.action.BOOT_COMPLETED" />
-238-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:207:17-79
-238-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:207:25-76
-239                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
-239-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:208:17-84
-239-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:208:25-81
-240                <action android:name="android.intent.action.TIME_SET" />
-240-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:209:17-73
-240-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:209:25-70
-241                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
-241-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:210:17-81
-241-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:210:25-78
-242            </intent-filter>
-243        </receiver>
-244    </application>
-245
-246</manifest>
+232                <action android:name="com.islam.tv.ACTION_SET_ROWS_BELOW_DOCK" />
+232-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:200:17-82
+232-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:200:25-79
+233            </intent-filter>
+234        </receiver>
+235        <receiver
+235-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:204:9-213:20
+236            android:name="com.islam.tv.PrayerBootReceiver"
+236-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:205:13-47
+237            android:exported="true" >
+237-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:206:13-36
+238            <intent-filter>
+238-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:207:13-212:29
+239                <action android:name="android.intent.action.BOOT_COMPLETED" />
+239-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:208:17-79
+239-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:208:25-76
+240                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+240-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:209:17-84
+240-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:209:25-81
+241                <action android:name="android.intent.action.TIME_SET" />
+241-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:210:17-73
+241-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:210:25-70
+242                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+242-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:211:17-81
+242-->/home/husainpc/Documents/Antigravity Projects/Vibe Code TV/launcher/app/src/main/AndroidManifest.xml:211:25-78
+243            </intent-filter>
+244        </receiver>
+245    </application>
+246
+247</manifest>

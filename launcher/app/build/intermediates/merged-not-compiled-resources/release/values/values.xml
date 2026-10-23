@@ -141,7 +141,7 @@
     <id name="view_tree_lifecycle_owner"/>
     <integer name="columns">4</integer>
     <integer name="home_idle_clock_minutes">0</integer>
-    <integer name="rows_below_dock">0</integer>
+    <integer name="rows_below_dock">1</integer>
     <integer name="sky_intensity">0</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
     <integer name="wifi_label_width">0</integer>

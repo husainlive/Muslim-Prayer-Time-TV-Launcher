@@ -50,7 +50,7 @@
     <bool name="wallpaper_true_color">true</bool>
     <integer name="columns">4</integer>
     <integer name="home_idle_clock_minutes">0</integer>
-    <integer name="rows_below_dock">0</integer>
+    <integer name="rows_below_dock">1</integer>
     <integer name="sky_intensity">0</integer>
     <integer name="wifi_label_width">0</integer>
     <plurals name="library_app_count">

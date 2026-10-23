@@ -195,6 +195,7 @@ id ampm
 id animationsChoice
 id app
 id async
+id auroraBackground
 id azanSleepModeChoice
 id azanSoundChoice
 id azanSoundEnabledChoice

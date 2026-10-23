@@ -3000,6 +3000,17 @@ com.islam.tv.AppAdapter:
     static final float MIN_HEIGHT_FIT
     static final float TITLE_ROOM_DP
     static final float TOP_ROOM_DP
+com.islam.tv.AuroraView:
+    private static final java.lang.String ASCII_CHARS
+    private static final int BUFFER_H
+    private static final int BUFFER_W
+    private static final long FRAME_INTERVAL_MS
+    public static final java.lang.String THEME_AURORA
+    public static final java.lang.String THEME_GHOST_FIBERS
+    public static final java.lang.String THEME_GRADIENT_ASCII
+    public static final java.lang.String THEME_GRAINIENT
+    public static final java.lang.String THEME_IRIDESCENCE
+    public void <init>(android.content.Context)
 com.islam.tv.BellDrawable:
     private static final float AMPLITUDE
     private static final float BOX
@@ -3096,6 +3107,7 @@ com.islam.tv.LibraryApps:
     static boolean visible(boolean,boolean,boolean)
 com.islam.tv.MainActivity:
     static final java.lang.String ACTION_LAUNCHER_SETTINGS
+    public static final java.lang.String ACTION_WALLPAPER_CHANGED
     private static final int CPU_UNREADABLE
     private static final float HERO_ART_ALPHA
     private static final int LAUNCHER_SETTINGS_REQUEST
@@ -3129,6 +3141,7 @@ com.islam.tv.PetalShowerView:
     private static final int EDGE
     private static final double TAU
 com.islam.tv.PrayerAlarmReceiver:
+    public static final java.lang.String ACTION_SET_ROWS_BELOW_DOCK
     public static final java.lang.String ACTION_TEST_PRAYER_ALARM
     public static final java.lang.String ACTION_TEST_SLEEP
     public static final java.lang.String ACTION_TEST_SLEEP_AND_ALARM
@@ -5680,7 +5693,6 @@ androidx.recyclerview.widget.LinearLayoutManager$SavedState:
     public static void invalidateAnchor()
 androidx.recyclerview.widget.LinearLayoutManager:
     public boolean mRecycleChildrenOnDetach
-    public final void calculateExtraLayoutSpace(androidx.recyclerview.widget.RecyclerView$State,int[])
     public static androidx.recyclerview.widget.LinearLayoutManager$LayoutState createLayoutState()
     public final android.view.View findFirstPartiallyOrCompletelyInvisibleChild()
     public final int findFirstVisibleItemPosition()
@@ -5874,7 +5886,6 @@ androidx.recyclerview.widget.RecyclerView$LayoutManager:
     public abstract void onDetachedFromWindow()
     public abstract void onInitializeAccessibilityEvent()
     public abstract void onInitializeAccessibilityNodeInfo()
-    public abstract android.view.View onInterceptFocusSearch()
     public abstract void onItemsUpdated()
     public final void onMeasure(int,int)
     public abstract boolean onRequestChildFocus()
@@ -6314,6 +6325,17 @@ com.islam.tv.AppLibraryDialog:
     public static void showCatalog()
     public final void stopHighlight()
     public static android.graphics.drawable.GradientDrawable surface()
+com.islam.tv.AuroraView:
+    public android.graphics.LinearGradient skyShader
+    public static void drawAuroraAnimated()
+    public static void drawGhostFibers()
+    public static void drawGradientASCII()
+    public static void drawGrainient()
+    public static void drawIridescence()
+    public static void init()
+    public final void pauseForScroll()
+    public final void resumeAfterScroll()
+    public static void setupShaders()
 com.islam.tv.BellDrawable:
     public static void buildPaths()
     public final void drawBand(android.graphics.Canvas,android.graphics.Path)
@@ -6395,21 +6417,21 @@ com.islam.tv.LibraryApps:
     public static java.util.Set read(android.util.AtomicFile)
 com.islam.tv.MainActivity$$InternalSyntheticLambda$1$dd5816be10c70e7d5c53113626c323b3cc67f1296273f1f99a60977656b146d9$1
 com.islam.tv.MainActivity$$InternalSyntheticLambda$2$a0d4487bfc2005d27537e916d31136208f2ab294be567867727dd1b825cf8c18$0
-com.islam.tv.MainActivity$11:
+com.islam.tv.MainActivity$10:
+    public static void onChildViewAttachedToWindow()
+    public static void onChildViewDetachedFromWindow()
+com.islam.tv.MainActivity$12:
     public final float getValue()
     public final void setValue()
-com.islam.tv.MainActivity$13:
+com.islam.tv.MainActivity$14:
     public static synthetic void lambda$run$0()
-com.islam.tv.MainActivity$16:
+com.islam.tv.MainActivity$17:
     public static synthetic void lambda$onPreDraw$0()
-com.islam.tv.MainActivity$17
+com.islam.tv.MainActivity$18
 com.islam.tv.MainActivity$1:
     public static synthetic void $r8$lambda$CXk69IKX4r5kJYkMjXk7w12TqBg(com.islam.tv.MainActivity)
 com.islam.tv.MainActivity$3:
     public static synthetic void $r8$lambda$CXk69IKX4r5kJYkMjXk7w12TqBg(com.islam.tv.MainActivity)
-com.islam.tv.MainActivity$9:
-    public static void onChildViewAttachedToWindow()
-    public static void onChildViewDetachedFromWindow()
 com.islam.tv.MainActivity:
     public float glassTargetX
     public float glassTargetY
@@ -6684,7 +6706,6 @@ com.islam.tv.WallpaperPlayer:
     public static void close()
     public static synthetic void lambda$update$0()
     public static synthetic void lambda$update$1()
-    public static void showFirst()
     public static void start()
     public static void stop()
 com.islam.tv.WallpaperSize

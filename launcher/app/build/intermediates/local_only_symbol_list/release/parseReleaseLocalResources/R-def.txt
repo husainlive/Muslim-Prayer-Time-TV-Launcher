@@ -86,6 +86,7 @@ id ambient
 id ampm
 id animationsChoice
 id app
+id auroraBackground
 id azanSleepModeChoice
 id azanSoundChoice
 id azanSoundEnabledChoice
