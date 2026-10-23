@@ -473,6 +473,7 @@ beirut
 Dismiss
 success
 ACTION_ACCESSIBILITY_FOCUS
+was_screen_off
 androidx.view.accessibility.Accessibi...
 app_keys
 ACTION_LONG_CLICK
@@ -480,6 +481,7 @@ ACTION_CLEAR_FOCUS
 ACTION_SET_SELECTION
 sleep_timeout
 settings_key_keycodes
+HomeKeyService
 ACTION_SCROLL_BACKWARD
 riyadh
 title
@@ -502,6 +504,7 @@ stay_on_while_plugged_in
 label
 home
 builtin:clock
+com.islam.tv.ACTION_TEST_SLEEP
 ACTION_MOVE_WINDOW
 android.view.View$AttachInfo
 screensaver_enabled
@@ -575,6 +578,7 @@ mStableInsets
 android.car.EXTENSIONS
 dream
 adjustment_
+true
 wifi_label_width
 lahore
 https://ipapi.co/json/
@@ -610,6 +614,7 @@ stats
 dock_title
 TRACE_TAG_APP
 fill_dock
+com.islam.tv.ACTION_TEST_SLEEP_AND_ALARM
 maghrib
 LATER
 TvHome:PrayerAlarmCpuWakeLock
@@ -738,6 +743,7 @@ dock_row
 ACCESSIBILITY_CLICKABLE_SPAN_ID
 none
 ACTION_PAGE_LEFT
+com.islam.tv.ACTION_CLOSE_ALERT
 EmptyCoroutineContext
 library_home_removed.txt
 getViewRootImpl
@@ -820,6 +826,7 @@ android.support.action.showsUserInter...
 android.intent.category.LAUNCHER
 getUri
 dhaka
+wakeUp
 show_stats
 ACTION_CUT
 mAccessibilityDelegate

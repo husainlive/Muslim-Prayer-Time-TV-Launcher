@@ -209,7 +209,7 @@
         <activity
             android:name="com.islam.tv.PrayerAlertActivity"
             android:excludeFromRecents="true"
-            android:exported="false"
+            android:exported="true"
             android:launchMode="singleTask"
             android:screenOrientation="landscape"
             android:showWhenLocked="true"
@@ -223,7 +223,14 @@
 
         <receiver
             android:name="com.islam.tv.PrayerAlarmReceiver"
-            android:exported="false" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.islam.tv.ACTION_PRAYER_ALARM" />
+                <action android:name="com.islam.tv.ACTION_TEST_PRAYER_ALARM" />
+                <action android:name="com.islam.tv.ACTION_TEST_SLEEP" />
+                <action android:name="com.islam.tv.ACTION_TEST_SLEEP_AND_ALARM" />
+            </intent-filter>
+        </receiver>
         <receiver
             android:name="com.islam.tv.PrayerBootReceiver"
             android:exported="true" >

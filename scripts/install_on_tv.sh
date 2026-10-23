@@ -53,6 +53,10 @@ adb -s "$DEVICE" install -r "$APK_PATH"
 
 echo "Granting permissions..."
 adb -s "$DEVICE" shell pm grant com.islam.tv android.permission.WRITE_SECURE_SETTINGS 2>/dev/null || true
+adb -s "$DEVICE" shell appops set com.islam.tv USE_FULL_SCREEN_INTENT allow 2>/dev/null || true
+adb -s "$DEVICE" shell appops set com.islam.tv SYSTEM_ALERT_WINDOW allow 2>/dev/null || true
+adb -s "$DEVICE" shell settings put secure enabled_accessibility_services com.islam.tv/.HomeKeyService 2>/dev/null || true
+adb -s "$DEVICE" shell settings put secure accessibility_enabled 1 2>/dev/null || true
 
 echo "Setting as home activity..."
 adb -s "$DEVICE" shell cmd package set-home-activity --user 0 com.islam.tv/.MainActivity 2>/dev/null || true

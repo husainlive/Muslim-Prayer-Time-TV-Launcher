@@ -22,6 +22,23 @@ public class HomeKeyService extends AccessibilityService {
 
     private static HomeKeyService sInstance;
 
+    public static HomeKeyService getInstance() {
+        return sInstance;
+    }
+
+    public static boolean startAlertActivity(Intent intent) {
+        if (sInstance != null) {
+            try {
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                sInstance.startActivity(intent);
+                return true;
+            } catch (Exception e) {
+                android.util.Log.w("HomeKeyService", "Failed to start alert activity from a11y service", e);
+            }
+        }
+        return false;
+    }
+
     public static boolean turnScreenOff() {
         if (sInstance != null && android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.P) {
             return sInstance.performGlobalAction(GLOBAL_ACTION_LOCK_SCREEN);

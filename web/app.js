@@ -28,7 +28,9 @@
         azanSounds: ["Azan 1 (Makkah)", "Azan 2 (Madinah)", "Azan 3 (Al-Aqsa)", "Soft Chime", "Mute"],
         currentAzanIndex: 0,
         
-        // Exact Earlier TV Background: 2K / 4K Pixel Density & Aurora Configuration
+        // React-Bits Background Theme Selection & 2K / 4K Pixel Density
+        bgThemes: ["Aurora (Default)", "GhostFibers", "GradientASCII", "Grainient", "Iridescence"],
+        currentBgThemeIndex: 0,
         bgDensityModes: ["4K Ultra-HD (Native)", "2K Quad-HD", "Full-HD (1080p)"],
         currentBgDensityIndex: 0,
         auroraIntensities: [
@@ -175,82 +177,180 @@
             const w = this.width;
             const h = this.height;
 
-            // 1. Base Deep Midnight Fill (Matches earlier background #04060e)
-            this.ctx.fillStyle = '#04060e';
-            this.ctx.fillRect(0, 0, w, h);
+            const theme = STATE.bgThemes[STATE.currentBgThemeIndex];
 
-            // 2. Vertical Atmospheric Base Gradient
-            const skyGrad = this.ctx.createLinearGradient(0, 0, 0, h);
-            skyGrad.addColorStop(0, '#081722');
-            skyGrad.addColorStop(0.35, '#060f1b');
-            skyGrad.addColorStop(0.65, '#040711');
-            skyGrad.addColorStop(1, '#020409');
-            this.ctx.fillStyle = skyGrad;
-            this.ctx.fillRect(0, 0, w, h);
+            if (theme === "GhostFibers") {
+                // GhostFibers (@react-bits/GhostFibers-JS-CSS): Luminescent fluid fiber strands
+                this.ctx.fillStyle = '#020308';
+                this.ctx.fillRect(0, 0, w, h);
 
-            // Subtle organic micro-wave breathing
-            const breathOffset = Math.sin(this.time * 1.5) * 6;
-            const breathScale = 1.0 + Math.sin(this.time * 2.0) * 0.03;
+                const fiberCount = 6;
+                for (let f = 0; f < fiberCount; f++) {
+                    this.ctx.save();
+                    this.ctx.beginPath();
+                    const phase = this.time * 1.2 + f * 1.05;
+                    const startY = h * (0.2 + f * 0.12);
+                    this.ctx.moveTo(0, startY);
 
-            // 3. Iconic Earlier TV Cyan/Teal Aurora Light Ribbon (Upper Left/Center)
-            // Color profile: rgb(28, 167, 164) / #1ca7a4
-            this.ctx.save();
-            const cyanCenterX = w * 0.38 + Math.cos(this.time * 0.8) * 8;
-            const cyanCenterY = h * 0.15 + breathOffset;
-            const cyanRadiusX = w * 0.52 * breathScale;
-            const cyanRadiusY = h * 0.17 * breathScale;
+                    for (let x = 0; x <= w; x += 30) {
+                        const y = startY + Math.sin(phase + x * 0.003) * 60 + Math.cos(phase * 0.7 + x * 0.002) * 40;
+                        this.ctx.lineTo(x, y);
+                    }
 
-            this.ctx.translate(cyanCenterX, cyanCenterY);
-            this.ctx.scale(1, cyanRadiusY / cyanRadiusX);
+                    const hue = (175 + f * 45 + Math.sin(this.time * 0.5) * 30) % 360;
+                    this.ctx.strokeStyle = `hsla(${hue}, 85%, 60%, ${0.55 * intensity})`;
+                    this.ctx.lineWidth = 4 + f * 1.5;
+                    this.ctx.shadowColor = `hsla(${hue}, 100%, 65%, 0.8)`;
+                    this.ctx.shadowBlur = 24;
+                    this.ctx.stroke();
+                    this.ctx.restore();
+                }
+            } else if (theme === "GradientASCII") {
+                // GradientASCII (@react-bits/GradientASCII-JS-CSS): Dynamic shimmering ASCII matrix grid over ambient gradient
+                this.ctx.fillStyle = '#040711';
+                this.ctx.fillRect(0, 0, w, h);
 
-            const cyanGrad = this.ctx.createRadialGradient(0, 0, 0, 0, 0, cyanRadiusX);
-            cyanGrad.addColorStop(0, `rgba(31, 172, 166, ${0.92 * intensity})`);
-            cyanGrad.addColorStop(0.25, `rgba(22, 142, 142, ${0.72 * intensity})`);
-            cyanGrad.addColorStop(0.55, `rgba(12, 85, 115, ${0.38 * intensity})`);
-            cyanGrad.addColorStop(0.82, `rgba(8, 42, 68, ${0.12 * intensity})`);
-            cyanGrad.addColorStop(1, 'transparent');
+                // Ambient glow
+                const grad = this.ctx.createRadialGradient(w * 0.5, h * 0.3, 0, w * 0.5, h * 0.3, w * 0.6);
+                grad.addColorStop(0, `rgba(40, 110, 180, ${0.35 * intensity})`);
+                grad.addColorStop(0.6, `rgba(90, 45, 140, ${0.20 * intensity})`);
+                grad.addColorStop(1, 'transparent');
+                this.ctx.fillStyle = grad;
+                this.ctx.fillRect(0, 0, w, h);
 
-            this.ctx.fillStyle = cyanGrad;
-            this.ctx.beginPath();
-            this.ctx.arc(0, 0, cyanRadiusX, 0, Math.PI * 2);
-            this.ctx.fill();
-            this.ctx.restore();
+                // ASCII glyph grid
+                const chars = " .:-=+*#%@";
+                const step = 36;
+                this.ctx.font = '13px monospace';
+                for (let x = 20; x < w; x += step) {
+                    for (let y = 30; y < h; y += step) {
+                        const wave = Math.sin(this.time * 2.5 + x * 0.008 + y * 0.006);
+                        const idx = Math.floor(((wave + 1) / 2) * (chars.length - 1));
+                        const char = chars[idx];
+                        const alpha = 0.15 + (wave + 1) * 0.22 * intensity;
+                        this.ctx.fillStyle = `rgba(130, 205, 255, ${alpha})`;
+                        this.ctx.fillText(char, x, y);
+                    }
+                }
+            } else if (theme === "Grainient") {
+                // Grainient (@react-bits/Grainient-JS-CSS): Rich multi-chromatic granular radial blooms
+                this.ctx.fillStyle = '#03050c';
+                this.ctx.fillRect(0, 0, w, h);
 
-            // 4. Iconic Earlier TV Purple/Violet Aurora Light Ribbon (Upper Right)
-            // Color profile: rgb(70, 65, 159) / #46419f
-            this.ctx.save();
-            const violetCenterX = w * 0.74 + Math.sin(this.time * 0.9) * 10;
-            const violetCenterY = h * 0.27 - (breathOffset * 0.7);
-            const violetRadiusX = w * 0.44 * breathScale;
-            const violetRadiusY = h * 0.19 * breathScale;
+                const colors = [
+                    { x: w * 0.3, y: h * 0.25, r: w * 0.45, color: `rgba(28, 140, 175, ${0.45 * intensity})` },
+                    { x: w * 0.7, y: h * 0.35, r: w * 0.40, color: `rgba(125, 45, 150, ${0.40 * intensity})` },
+                    { x: w * 0.5, y: h * 0.75, r: w * 0.50, color: `rgba(20, 80, 130, ${0.35 * intensity})` }
+                ];
+                colors.forEach(c => {
+                    const g = this.ctx.createRadialGradient(c.x, c.y, 0, c.x, c.y, c.r);
+                    g.addColorStop(0, c.color);
+                    g.addColorStop(1, 'transparent');
+                    this.ctx.fillStyle = g;
+                    this.ctx.fillRect(0, 0, w, h);
+                });
+            } else if (theme === "Iridescence") {
+                // Iridescence (@react-bits/Iridescence-JS-CSS): Fluid chromatic dispersion waves
+                this.ctx.fillStyle = '#02040a';
+                this.ctx.fillRect(0, 0, w, h);
 
-            this.ctx.translate(violetCenterX, violetCenterY);
-            this.ctx.scale(1, violetRadiusY / violetRadiusX);
+                for (let i = 0; i < 4; i++) {
+                    this.ctx.save();
+                    const cx = w * (0.25 + i * 0.18) + Math.cos(this.time * 1.1 + i) * 25;
+                    const cy = h * (0.2 + (i % 2) * 0.15) + Math.sin(this.time * 0.9 + i) * 20;
+                    const rx = w * 0.38;
+                    const ry = h * 0.22;
 
-            const violetGrad = this.ctx.createRadialGradient(0, 0, 0, 0, 0, violetRadiusX);
-            violetGrad.addColorStop(0, `rgba(88, 64, 168, ${0.88 * intensity})`);
-            violetGrad.addColorStop(0.30, `rgba(68, 52, 142, ${0.60 * intensity})`);
-            violetGrad.addColorStop(0.60, `rgba(38, 28, 85, ${0.28 * intensity})`);
-            violetGrad.addColorStop(0.85, `rgba(18, 14, 45, ${0.08 * intensity})`);
-            violetGrad.addColorStop(1, 'transparent');
+                    this.ctx.translate(cx, cy);
+                    this.ctx.rotate((this.time * 0.2 + i * 0.4));
+                    this.ctx.scale(1, ry / rx);
 
-            this.ctx.fillStyle = violetGrad;
-            this.ctx.beginPath();
-            this.ctx.arc(0, 0, violetRadiusX, 0, Math.PI * 2);
-            this.ctx.fill();
-            this.ctx.restore();
+                    const iridGrad = this.ctx.createRadialGradient(0, 0, 0, 0, 0, rx);
+                    const baseHue = (200 + i * 50 + this.time * 20) % 360;
+                    iridGrad.addColorStop(0, `hsla(${baseHue}, 80%, 65%, ${0.5 * intensity})`);
+                    iridGrad.addColorStop(0.4, `hsla(${(baseHue + 60) % 360}, 75%, 55%, ${0.35 * intensity})`);
+                    iridGrad.addColorStop(1, 'transparent');
 
-            // 5. Mid-Left Oceanic Deep Blue Atmosphere
-            this.ctx.save();
-            const blueGrad = this.ctx.createRadialGradient(w * 0.22, h * 0.33, 0, w * 0.22, h * 0.33, w * 0.35);
-            blueGrad.addColorStop(0, `rgba(14, 46, 78, ${0.48 * intensity})`);
-            blueGrad.addColorStop(0.65, `rgba(8, 24, 44, ${0.18 * intensity})`);
-            blueGrad.addColorStop(1, 'transparent');
-            this.ctx.fillStyle = blueGrad;
-            this.ctx.fillRect(0, 0, w, h);
-            this.ctx.restore();
+                    this.ctx.fillStyle = iridGrad;
+                    this.ctx.beginPath();
+                    this.ctx.arc(0, 0, rx, 0, Math.PI * 2);
+                    this.ctx.fill();
+                    this.ctx.restore();
+                }
+            } else {
+                // Default: Signature Earlier TV 4K Aurora Ribbons
+                this.ctx.fillStyle = '#04060e';
+                this.ctx.fillRect(0, 0, w, h);
 
-            // 6. High-Density Micro-Dither Overlay Pass (Eliminates Banding on 2K/4K TV Screens)
+                const skyGrad = this.ctx.createLinearGradient(0, 0, 0, h);
+                skyGrad.addColorStop(0, '#081722');
+                skyGrad.addColorStop(0.35, '#060f1b');
+                skyGrad.addColorStop(0.65, '#040711');
+                skyGrad.addColorStop(1, '#020409');
+                this.ctx.fillStyle = skyGrad;
+                this.ctx.fillRect(0, 0, w, h);
+
+                const breathOffset = Math.sin(this.time * 1.5) * 6;
+                const breathScale = 1.0 + Math.sin(this.time * 2.0) * 0.03;
+
+                // Cyan/Teal Ribbon
+                this.ctx.save();
+                const cyanCenterX = w * 0.38 + Math.cos(this.time * 0.8) * 8;
+                const cyanCenterY = h * 0.15 + breathOffset;
+                const cyanRadiusX = w * 0.52 * breathScale;
+                const cyanRadiusY = h * 0.17 * breathScale;
+
+                this.ctx.translate(cyanCenterX, cyanCenterY);
+                this.ctx.scale(1, cyanRadiusY / cyanRadiusX);
+
+                const cyanGrad = this.ctx.createRadialGradient(0, 0, 0, 0, 0, cyanRadiusX);
+                cyanGrad.addColorStop(0, `rgba(31, 172, 166, ${0.92 * intensity})`);
+                cyanGrad.addColorStop(0.25, `rgba(22, 142, 142, ${0.72 * intensity})`);
+                cyanGrad.addColorStop(0.55, `rgba(12, 85, 115, ${0.38 * intensity})`);
+                cyanGrad.addColorStop(0.82, `rgba(8, 42, 68, ${0.12 * intensity})`);
+                cyanGrad.addColorStop(1, 'transparent');
+
+                this.ctx.fillStyle = cyanGrad;
+                this.ctx.beginPath();
+                this.ctx.arc(0, 0, cyanRadiusX, 0, Math.PI * 2);
+                this.ctx.fill();
+                this.ctx.restore();
+
+                // Violet/Purple Ribbon
+                this.ctx.save();
+                const violetCenterX = w * 0.74 + Math.sin(this.time * 0.9) * 10;
+                const violetCenterY = h * 0.27 - (breathOffset * 0.7);
+                const violetRadiusX = w * 0.44 * breathScale;
+                const violetRadiusY = h * 0.19 * breathScale;
+
+                this.ctx.translate(violetCenterX, violetCenterY);
+                this.ctx.scale(1, violetRadiusY / violetRadiusX);
+
+                const violetGrad = this.ctx.createRadialGradient(0, 0, 0, 0, 0, violetRadiusX);
+                violetGrad.addColorStop(0, `rgba(88, 64, 168, ${0.88 * intensity})`);
+                violetGrad.addColorStop(0.30, `rgba(68, 52, 142, ${0.60 * intensity})`);
+                violetGrad.addColorStop(0.60, `rgba(38, 28, 85, ${0.28 * intensity})`);
+                violetGrad.addColorStop(0.85, `rgba(18, 14, 45, ${0.08 * intensity})`);
+                violetGrad.addColorStop(1, 'transparent');
+
+                this.ctx.fillStyle = violetGrad;
+                this.ctx.beginPath();
+                this.ctx.arc(0, 0, violetRadiusX, 0, Math.PI * 2);
+                this.ctx.fill();
+                this.ctx.restore();
+
+                // Mid-Left Oceanic Deep Blue
+                this.ctx.save();
+                const blueGrad = this.ctx.createRadialGradient(w * 0.22, h * 0.33, 0, w * 0.22, h * 0.33, w * 0.35);
+                blueGrad.addColorStop(0, `rgba(14, 46, 78, ${0.48 * intensity})`);
+                blueGrad.addColorStop(0.65, `rgba(8, 24, 44, ${0.18 * intensity})`);
+                blueGrad.addColorStop(1, 'transparent');
+                this.ctx.fillStyle = blueGrad;
+                this.ctx.fillRect(0, 0, w, h);
+                this.ctx.restore();
+            }
+
+            // High-Density Micro-Dither Overlay Pass
             if (this.ditherPattern) {
                 this.ctx.save();
                 this.ctx.fillStyle = this.ditherPattern;
@@ -999,7 +1099,14 @@
         });
 
         // 4. GENERAL LAUNCHER SETTINGS
-        // Controls strictly for Background Pixel Density & Aurora Glow without altering the earlier TV background
+        document.querySelector('[data-action="cycle-background-theme"]')?.addEventListener('click', () => {
+            STATE.currentBgThemeIndex = (STATE.currentBgThemeIndex + 1) % STATE.bgThemes.length;
+            const theme = STATE.bgThemes[STATE.currentBgThemeIndex];
+            const valEl = document.getElementById('val-bg-theme');
+            if (valEl) valEl.textContent = theme;
+            showToast(`Background Theme: ${theme}`);
+        });
+
         document.querySelector('[data-action="cycle-bg-density"]')?.addEventListener('click', () => {
             STATE.currentBgDensityIndex = (STATE.currentBgDensityIndex + 1) % STATE.bgDensityModes.length;
             const modeName = STATE.bgDensityModes[STATE.currentBgDensityIndex];

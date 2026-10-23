@@ -176,7 +176,7 @@
 
         <activity
             android:name=".PrayerAlertActivity"
-            android:exported="false"
+            android:exported="true"
             android:theme="@style/Theme.TranslucentAlert"
             android:launchMode="singleTask"
             android:excludeFromRecents="true"
@@ -191,7 +191,14 @@
 
         <receiver
             android:name=".PrayerAlarmReceiver"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.islam.tv.ACTION_PRAYER_ALARM" />
+                <action android:name="com.islam.tv.ACTION_TEST_PRAYER_ALARM" />
+                <action android:name="com.islam.tv.ACTION_TEST_SLEEP" />
+                <action android:name="com.islam.tv.ACTION_TEST_SLEEP_AND_ALARM" />
+            </intent-filter>
+        </receiver>
 
         <receiver
             android:name=".PrayerBootReceiver"

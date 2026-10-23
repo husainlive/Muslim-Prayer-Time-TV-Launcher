@@ -21,18 +21,25 @@ import androidx.core.app.NotificationCompat;
 public class PrayerAlarmService extends Service {
     private static final String TAG = "PrayerAlarmService";
     public static final String ACTION_DISMISS = "com.islam.tv.ACTION_DISMISS_ADHAN";
+    public static final String ACTION_CLOSE_ALERT = "com.islam.tv.ACTION_CLOSE_ALERT";
     private static final String CHANNEL_ID = "prayer_channel";
     private static final int NOTIFICATION_ID = 2001;
 
     private MediaPlayer mediaPlayer;
     private PowerManager.WakeLock wakeLock;
     private PowerManager.WakeLock screenWakeLock;
+    private boolean wasScreenOff = false;
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        if (intent != null) {
+            wasScreenOff = intent.getBooleanExtra(PrayerAlarmReceiver.EXTRA_WAS_SCREEN_OFF, wasScreenOff)
+                    || "true".equalsIgnoreCase(intent.getStringExtra(PrayerAlarmReceiver.EXTRA_WAS_SCREEN_OFF));
+        }
+
         if (intent != null && ACTION_DISMISS.equals(intent.getAction())) {
             Log.d(TAG, "Dismiss action received, stopping Adhan");
-            stopSelf();
+            handleFinishedAndSleep();
             return START_NOT_STICKY;
         }
 
@@ -59,6 +66,7 @@ public class PrayerAlarmService extends Service {
         Intent alertIntent = new Intent(this, PrayerAlertActivity.class);
         alertIntent.putExtra(PrayerAlarmScheduler.EXTRA_PRAYER_NAME, prayerName);
         alertIntent.putExtra(PrayerAlarmScheduler.EXTRA_PRAYER_TIME, prayerTime);
+        alertIntent.putExtra(PrayerAlarmReceiver.EXTRA_WAS_SCREEN_OFF, wasScreenOff);
         alertIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent fullScreenPending = PendingIntent.getActivity(this, 11, alertIntent, piFlags);
 
@@ -80,10 +88,13 @@ public class PrayerAlarmService extends Service {
 
         // Display overlay or wake screen if enabled or in sleep mode
         if (pm.isNotificationOverlayEnabled() || pm.isAzanSleepModeEnabled()) {
-            try {
-                startActivity(alertIntent);
-            } catch (Exception e) {
-                Log.e(TAG, "Failed to launch PrayerAlertActivity: " + e.getMessage());
+            boolean started = HomeKeyService.startAlertActivity(alertIntent);
+            if (!started) {
+                try {
+                    startActivity(alertIntent);
+                } catch (Exception e) {
+                    Log.e(TAG, "Failed to launch PrayerAlertActivity: " + e.getMessage());
+                }
             }
         }
 
@@ -91,11 +102,28 @@ public class PrayerAlarmService extends Service {
         if (pm.isAzanSoundEnabled()) {
             playAzanSound(pm.getSelectedAzanSound());
         } else {
-            // If sound is disabled and overlay auto-dismisses, stop service when alert finishes
+            // If sound is disabled, let service stay alive briefly then finish
             Log.d(TAG, "Azan sound disabled, service running for alert");
         }
 
         return START_NOT_STICKY;
+    }
+
+    private void handleFinishedAndSleep() {
+        try {
+            Intent closeIntent = new Intent(ACTION_CLOSE_ALERT);
+            sendBroadcast(closeIntent);
+        } catch (Exception ignored) {}
+
+        if (wasScreenOff) {
+            Log.d(TAG, "Screen was asleep when Azan triggered: scheduling return to sleep mode");
+            new android.os.Handler(android.os.Looper.getMainLooper()).postDelayed(() -> {
+                boolean turnedOff = HomeKeyService.turnScreenOff();
+                Log.d(TAG, "HomeKeyService.turnScreenOff result: " + turnedOff);
+            }, 800);
+        }
+
+        stopSelf();
     }
 
     private void playAzanSound(String soundChoice) {
@@ -109,14 +137,19 @@ public class PrayerAlarmService extends Service {
 
             Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + rawRes);
 
-            // Ensure alarm audio stream is audible if TV was muted
+            // Ensure alarm & music audio streams are audible
             try {
                 AudioManager am = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
                 if (am != null) {
                     int vol = am.getStreamVolume(AudioManager.STREAM_ALARM);
                     int max = am.getStreamMaxVolume(AudioManager.STREAM_ALARM);
                     if (vol == 0 && max > 0) {
-                        am.setStreamVolume(AudioManager.STREAM_ALARM, (int) (max * 0.7f), 0);
+                        am.setStreamVolume(AudioManager.STREAM_ALARM, (int) (max * 0.75f), 0);
+                    }
+                    int volM = am.getStreamVolume(AudioManager.STREAM_MUSIC);
+                    int maxM = am.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
+                    if (volM == 0 && maxM > 0) {
+                        am.setStreamVolume(AudioManager.STREAM_MUSIC, (int) (maxM * 0.65f), 0);
                     }
                 }
             } catch (Exception ignored) {}
@@ -133,17 +166,17 @@ public class PrayerAlarmService extends Service {
 
             mediaPlayer.setOnCompletionListener(mp -> {
                 Log.d(TAG, "Adhan finished playing");
-                stopSelf();
+                handleFinishedAndSleep();
             });
 
             mediaPlayer.setOnErrorListener((mp, what, extra) -> {
                 Log.e(TAG, "MediaPlayer error: " + what + ", " + extra);
-                stopSelf();
+                handleFinishedAndSleep();
                 return true;
             });
         } catch (Exception e) {
             Log.e(TAG, "Error playing Azan audio", e);
-            stopSelf();
+            handleFinishedAndSleep();
         }
     }
 

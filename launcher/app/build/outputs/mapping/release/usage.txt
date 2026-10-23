@@ -3081,6 +3081,8 @@ com.islam.tv.HeroArt:
     private static final float SATURATION
     static final int W
     private void <init>()
+com.islam.tv.HomeKeyService:
+    public static com.islam.tv.HomeKeyService getInstance()
 com.islam.tv.InputKeyService:
     private static final java.lang.String ACTION_VIEW_INPUTS
 com.islam.tv.LastOpened:
@@ -3127,6 +3129,10 @@ com.islam.tv.PetalShowerView:
     private static final int EDGE
     private static final double TAU
 com.islam.tv.PrayerAlarmReceiver:
+    public static final java.lang.String ACTION_TEST_PRAYER_ALARM
+    public static final java.lang.String ACTION_TEST_SLEEP
+    public static final java.lang.String ACTION_TEST_SLEEP_AND_ALARM
+    public static final java.lang.String EXTRA_WAS_SCREEN_OFF
     private static final java.lang.String TAG
 com.islam.tv.PrayerAlarmScheduler:
     public static final java.lang.String ACTION_PRAYER_ALARM
@@ -3135,6 +3141,7 @@ com.islam.tv.PrayerAlarmScheduler:
     private static final java.lang.String TAG
     public void <init>()
 com.islam.tv.PrayerAlarmService:
+    public static final java.lang.String ACTION_CLOSE_ALERT
     public static final java.lang.String ACTION_DISMISS
     private static final java.lang.String CHANNEL_ID
     private static final int NOTIFICATION_ID
@@ -6522,10 +6529,11 @@ com.islam.tv.PetalShowerView:
 com.islam.tv.PrayerAlarmService:
     public static void acquireWakeLock()
     public static void createNotificationChannel()
-    public static synthetic void lambda$playAzanSound$0()
-    public static synthetic boolean lambda$playAzanSound$1()
+    public static synthetic void lambda$playAzanSound$1()
+    public static synthetic boolean lambda$playAzanSound$2()
     public static void playAzanSound()
 com.islam.tv.PrayerAlertActivity:
+    public final void finishAndClean()
     public static synthetic void lambda$onCreate$0()
 com.islam.tv.PrayerDatabase$PrayerDayTimes:
     public final java.lang.String date
@@ -6547,7 +6555,6 @@ com.islam.tv.PrayerManager:
     public final java.lang.String getSelectedAzanSound()
     public static com.islam.tv.PrayerManager$PrayerSchedule getTodaySchedule()
     public final boolean is24HourFormat()
-    public final boolean isAzanSoundEnabled()
     public final boolean isLockBarEnabled()
     public final boolean isNotificationOverlayEnabled()
     public static boolean isPrayerNotificationEnabled()

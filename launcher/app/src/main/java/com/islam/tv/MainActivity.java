@@ -239,6 +239,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
     private boolean libraryFocusPending;
     private RecyclerView.OnScrollListener pendingFocusScroll;
     private int singleRowHeightPx = 0;
+    private int rowsBelowDock = 1;
 
     private final Handler handler = new Handler(Looper.getMainLooper());
     /** Refreshes the network pill when the connection changes: at boot Wi-Fi often connects after Home is shown. */
@@ -448,8 +449,8 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         adapter.setSavedOrder(Order.ranks(Order.load(Order.file(this)), dockApps));
         grid.setAdapter(adapter);
 
-        // Fixed screen layout: shows two rows (the main dock row in the pinned bar and the 2nd row below).
-        int rowsBelowDock = cfg.rowsBelowDock;
+        // Dynamic screen layout: adapts according to rowsBelowDock setting.
+        rowsBelowDock = cfg.rowsBelowDock;
         grid.addOnLayoutChangeListener((v, l, t, r, b, ol, ot, or, ob) -> {
             int h = b - t;
             int inner = (r - l) - grid.getPaddingLeft() - grid.getPaddingRight();
@@ -464,14 +465,26 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
                 grid.setPadding(grid.getPaddingLeft(), want, grid.getPaddingRight(), (int) (24 * density));
             }
 
-            // Size gridContainer to strictly fit TWO rows (main row in pinned bar + 2nd row below)
-            int containerH = rowHeight * 2 + (int) (18 * density);
+            // Sizing gridContainer based on rowsBelowDock (0 = 1 row at bottom; >0 = dock + N rows below)
+            int visibleRows = Math.max(1, rowsBelowDock + 1);
+            int containerH = (rowsBelowDock == 0)
+                    ? (rowHeight + (int) (16 * density))
+                    : (rowHeight * visibleRows + (int) (18 * density));
+
             if (gridContainer != null) {
                 android.view.ViewGroup.LayoutParams lp = gridContainer.getLayoutParams();
                 if (lp.height != containerH) {
                     lp.height = containerH;
                     if (lp instanceof android.widget.LinearLayout.LayoutParams) {
-                        ((android.widget.LinearLayout.LayoutParams) lp).weight = 0;
+                        android.widget.LinearLayout.LayoutParams llp = (android.widget.LinearLayout.LayoutParams) lp;
+                        llp.weight = 0;
+                        if (rowsBelowDock == 0) {
+                            llp.gravity = Gravity.BOTTOM;
+                            llp.topMargin = (int) (100 * density);
+                        } else {
+                            llp.gravity = Gravity.NO_GRAVITY;
+                            llp.topMargin = (int) (56 * density);
+                        }
                     }
                     gridContainer.setLayoutParams(lp);
                 }
@@ -1333,22 +1346,29 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         updateTileTransitions();
     }
 
-    /** Fades tiles smoothly based on distance from the visible slots (row 1 pinned slot and row 2). */
+    /** Fades tiles smoothly based on distance from the visible row slots. */
     private void updateTileTransitions() {
         if (grid == null) return;
         int padTop = grid.getPaddingTop();
-        float slot1Center = padTop + (56f * density);
         float rowH = singleRowHeightPx > 0 ? singleRowHeightPx : (135f * density);
-        float slot2Center = slot1Center + rowH;
+
+        int visibleRows = Math.max(1, rowsBelowDock + 1);
+        float[] slotCenters = new float[visibleRows];
+        for (int s = 0; s < visibleRows; s++) {
+            slotCenters[s] = padTop + (56f * density) + (s * rowH);
+        }
 
         for (int i = 0; i < grid.getChildCount(); i++) {
             View child = grid.getChildAt(i);
             float childCenter = child.getTop() + (child.getHeight() * 0.5f);
-            float distToSlot1 = Math.abs(childCenter - slot1Center);
-            float distToSlot2 = Math.abs(childCenter - slot2Center);
-            float minDist = Math.min(distToSlot1, distToSlot2);
 
-            float threshold = child.getHeight() * 0.48f;
+            float minDist = Float.MAX_VALUE;
+            for (float sc : slotCenters) {
+                float d = Math.abs(childCenter - sc);
+                if (d < minDist) minDist = d;
+            }
+
+            float threshold = child.getHeight() * 0.52f;
             float alpha;
             if (minDist <= threshold) {
                 alpha = 1f;
@@ -1366,9 +1386,9 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         int color = adapter.ambientColorAt(position);
         float heroH = hero.getHeight() > 0 ? hero.getHeight() : (38f * density);
         float dockTop = gridContainer != null ? gridContainer.getTop() : dockTopInRoot;
-        float rawY = dockTop - (6f * density) - heroH;
-        if (prayerScrollView != null && rawY < prayerScrollView.getBottom() + (4f * density)) {
-            rawY = prayerScrollView.getBottom() + (4f * density);
+        float rawY = dockTop - (8f * density) - heroH;
+        if (prayerScrollView != null && rawY < prayerScrollView.getBottom() + (10f * density)) {
+            rawY = prayerScrollView.getBottom() + (10f * density);
         }
         final float y = rawY;
         boolean changed = !label.contentEquals(heroName.getText());

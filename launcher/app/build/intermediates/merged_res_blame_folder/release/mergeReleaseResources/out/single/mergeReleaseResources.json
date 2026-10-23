@@ -8,12 +8,12 @@
         "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/glass_panel.xml"
     },
     {
-        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
-    },
-    {
         "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_status_dot.xml.flat",
         "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/status_dot.xml"
+    },
+    {
+        "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-core-1.7.0-0:/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
         "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout-v21_notification_action_tombstone.xml.flat",
@@ -296,12 +296,12 @@
         "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/ic_livetv.xml"
     },
     {
-        "merged": "com.islam.tv.app-release-11:/layout_dream_clock.xml.flat",
-        "source": "com.islam.tv.app-main-12:/layout/dream_clock.xml"
-    },
-    {
         "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_ic_input.xml.flat",
         "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/ic_input.xml"
+    },
+    {
+        "merged": "com.islam.tv.app-release-11:/layout_activity_main.xml.flat",
+        "source": "com.islam.tv.app-main-12:/layout/activity_main.xml"
     },
     {
         "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout_item_input.xml.flat",
@@ -310,6 +310,10 @@
     {
         "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/drawable_ic_delete.xml.flat",
         "source": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-main-12:/drawable/ic_delete.xml"
+    },
+    {
+        "merged": "com.islam.tv.app-release-11:/layout-iw_activity_main.xml.flat",
+        "source": "com.islam.tv.app-main-12:/layout-iw/activity_main.xml"
     },
     {
         "merged": "/home/husainpc/.gradle/daemon/8.9/com.islam.tv.app-release-11:/layout_notification_template_part_chronometer.xml.flat",

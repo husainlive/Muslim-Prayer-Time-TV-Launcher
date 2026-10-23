@@ -14,10 +14,15 @@ public class PrayerAlertActivity extends Activity {
 
     private final Handler handler = new Handler(Looper.getMainLooper());
     private final Runnable autoDismissRunnable = this::dismissAlert;
+    private android.content.BroadcastReceiver closeReceiver;
+    private boolean wasScreenOff = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        wasScreenOff = getIntent() != null && (getIntent().getBooleanExtra(PrayerAlarmReceiver.EXTRA_WAS_SCREEN_OFF, false)
+                || "true".equalsIgnoreCase(getIntent().getStringExtra(PrayerAlarmReceiver.EXTRA_WAS_SCREEN_OFF)));
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O_MR1) {
             setShowWhenLocked(true);
@@ -57,16 +62,48 @@ public class PrayerAlertActivity extends Activity {
         btnDismiss.setOnClickListener(v -> dismissAlert());
         btnDismiss.requestFocus();
 
-        // Auto dismiss after 35 seconds
-        handler.postDelayed(autoDismissRunnable, 35000);
+        // Listen for close signal from PrayerAlarmService when Azan finishes
+        closeReceiver = new android.content.BroadcastReceiver() {
+            @Override
+            public void onReceive(android.content.Context context, Intent intent) {
+                finishAndClean();
+            }
+        };
+        android.content.IntentFilter filter = new android.content.IntentFilter(PrayerAlarmService.ACTION_CLOSE_ALERT);
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
+            registerReceiver(closeReceiver, filter, android.content.Context.RECEIVER_NOT_EXPORTED);
+        } else {
+            registerReceiver(closeReceiver, filter);
+        }
+
+        // If Azan sound is enabled, stay visible during full playback (~3.5 to 4.5 min) with a 5-min safety timeout.
+        // If sound is disabled, auto-dismiss after 35 seconds.
+        PrayerManager pm = PrayerManager.getInstance(this);
+        long timeoutMs = pm.isAzanSoundEnabled() ? 300_000L : 35_000L;
+        handler.postDelayed(autoDismissRunnable, timeoutMs);
     }
 
     private void dismissAlert() {
         handler.removeCallbacks(autoDismissRunnable);
         Intent dismissIntent = new Intent(this, PrayerAlarmService.class);
         dismissIntent.setAction(PrayerAlarmService.ACTION_DISMISS);
+        dismissIntent.putExtra(PrayerAlarmReceiver.EXTRA_WAS_SCREEN_OFF, wasScreenOff);
         startService(dismissIntent);
-        finish();
+        finishAndClean();
+        if (wasScreenOff) {
+            new Handler(Looper.getMainLooper()).postDelayed(() -> {
+                HomeKeyService.turnScreenOff();
+            }, 600);
+        }
+    }
+
+    private void finishAndClean() {
+        handler.removeCallbacks(autoDismissRunnable);
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+            finishAndRemoveTask();
+        } else {
+            finish();
+        }
     }
 
     @Override
@@ -81,6 +118,12 @@ public class PrayerAlertActivity extends Activity {
     @Override
     protected void onDestroy() {
         handler.removeCallbacks(autoDismissRunnable);
+        if (closeReceiver != null) {
+            try {
+                unregisterReceiver(closeReceiver);
+            } catch (Exception ignored) {}
+            closeReceiver = null;
+        }
         super.onDestroy();
     }
 }
