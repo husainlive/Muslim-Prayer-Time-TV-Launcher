@@ -3,6 +3,7 @@ package com.islam.tv;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.PowerManager;
 import android.util.Log;
@@ -48,9 +49,18 @@ public class PrayerAlarmReceiver extends BroadcastReceiver {
     public static final String ACTION_TEST_SLEEP = "com.islam.tv.ACTION_TEST_SLEEP";
 
     public static final String ACTION_TEST_SLEEP_AND_ALARM = "com.islam.tv.ACTION_TEST_SLEEP_AND_ALARM";
+    public static final String ACTION_SET_ROWS_BELOW_DOCK = "com.islam.tv.ACTION_SET_ROWS_BELOW_DOCK";
 
     @Override
     public void onReceive(Context context, Intent intent) {
+        if (intent != null && ACTION_SET_ROWS_BELOW_DOCK.equals(intent.getAction())) {
+            int rows = intent.getIntExtra("rows", 1);
+            SharedPreferences choices = context.getSharedPreferences(Config.SETTINGS_NAME, Context.MODE_PRIVATE);
+            choices.edit().putInt(Config.ROWS_BELOW_DOCK_KEY, rows).apply();
+            Log.d(TAG, "ACTION_SET_ROWS_BELOW_DOCK: set rows_below_dock to " + rows);
+            return;
+        }
+
         if (intent != null && ACTION_TEST_SLEEP.equals(intent.getAction())) {
             Log.d(TAG, "ACTION_TEST_SLEEP received, turning screen off");
             HomeKeyService.turnScreenOff();

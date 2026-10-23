@@ -21,6 +21,9 @@ public class DockDecoration extends RecyclerView.ItemDecoration {
     /** Extra band below the tiles for their names (always_show_names), in px. */
     private final float namesRoom;
 
+    private float cachedCardW = 0;
+    private float cachedCardH = 0;
+
     DockDecoration(int dockSize, float density, boolean translucent, boolean names) {
         this.dockSize = dockSize;
         this.density = density;
@@ -48,24 +51,13 @@ public class DockDecoration extends RecyclerView.ItemDecoration {
         float right = parent.getWidth() - padRight - (4f * density);
         if (right <= left) return;
 
-        float measuredCardH = 0;
-        float measuredCardW = 0;
-        float actualTop = -1;
-        float actualBottom = -1;
-
         for (int i = 0; i < parent.getChildCount(); i++) {
             View child = parent.getChildAt(i);
-            // Measure tiles currently sitting in the dock slot (at or near padTop)
-            if (Math.abs(child.getTop() - padTop) <= 30 * density) {
-                View card = child.findViewById(R.id.card);
-                if (card != null && card.getHeight() > 0) {
-                    measuredCardH = Math.max(measuredCardH, card.getHeight());
-                    measuredCardW = Math.max(measuredCardW, card.getWidth());
-                    float cTop = child.getTop() + card.getTop();
-                    float cBottom = child.getTop() + card.getBottom();
-                    if (actualTop < 0 || cTop < actualTop) actualTop = cTop;
-                    if (actualBottom < 0 || cBottom > actualBottom) actualBottom = cBottom;
-                }
+            View card = child.findViewById(R.id.card);
+            if (card != null && card.getHeight() > 0) {
+                cachedCardH = Math.max(cachedCardH, card.getHeight());
+                cachedCardW = Math.max(cachedCardW, card.getWidth());
+                break;
             }
         }
 
@@ -73,10 +65,13 @@ public class DockDecoration extends RecyclerView.ItemDecoration {
         float barBottom;
         float radius;
 
-        if (measuredCardH > 0) {
-            barTop = actualTop - (10f * density);
-            barBottom = actualBottom + namesRoom + (14f * density);
-            radius = AppAdapter.cornerRadius((int) measuredCardW, density) + (6f * density);
+        if (cachedCardH > 0) {
+            // The dock bar stays completely fixed at the top dock slot (padTop + 6dp offset)
+            float cardSlotTop = padTop + (6f * density) + (8f * density); // 6dp outRect.top + 8dp item padding
+            float cardSlotBottom = cardSlotTop + cachedCardH;
+            barTop = cardSlotTop - (10f * density);
+            barBottom = cardSlotBottom + namesRoom + (14f * density);
+            radius = AppAdapter.cornerRadius((int) cachedCardW, density) + (6f * density);
         } else {
             int tileW = AppAdapter.tileWidthPx(parent.getWidth() - padLeft - padRight, dockSize, density);
             int tileH = AppAdapter.tileHeightPx(tileW);
